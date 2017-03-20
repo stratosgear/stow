@@ -60,5 +60,4 @@ export PATH=$(ruby -e 'print Gem.user_dir')/bin:$HOME/stow/bin:$HOME/.local/bin:
 
 export TERM=xterm-256color
 
-export CHANGELOG_GITHUB_TOKEN="f0e8216e5319a927b6713ea884ee856bab5f9469"
 exec fish
