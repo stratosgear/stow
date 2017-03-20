@@ -1,0 +1,6 @@
+#!/bin/bash
+
+i3-msg "workspace 1: browse, move workspace to output VGA1"
+i3-msg "workspace 3: dev, move workspace to output VGA1"
+i3-msg "workspace 4: preview, move workspace to output VGA1"
+i3-msg "workspace 5: email, move workspace to output VGA1"

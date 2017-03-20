@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+PROGRAMS=(bash davmail git i3)
+
+for program in ${PROGRAMS[@]}; do
+  stow $program
+  echo "Configuring $program"
+done
+
+echo "Done!"

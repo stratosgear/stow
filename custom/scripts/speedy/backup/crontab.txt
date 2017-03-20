@@ -1,0 +1,6 @@
+stratos@domU-12-31-38-04-2A-12:~/scripts/backup$ crontab -l
+# m h  dom mon dow   command
+0       1       *               *       *       /home/stratos/scripts/backup/rsync_servers.sh
+30      1       1,15            *       *       /home/stratos/scripts/backup/dt_s3-backup.sh --full
+30      1       2-14,16-31      *       *       /home/stratos/scripts/backup/dt_s3-backup.sh --backup
+

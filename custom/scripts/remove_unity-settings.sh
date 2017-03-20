@@ -1,0 +1,11 @@
+mv .gnome2 .gnome2.REMOVE
+mv .gnome2_private .gnome2_private.REMOVE
+mv .gconf .gconf.REMOVE
+mv .metacity .metacity.REMOVE
+mv .cache .cache.REMOVE
+mv .config/compiz-1 .config/compiz-1.REMOVE
+mv .config/dconf .config/dconf.REMOVE
+mv .compiz-1 .compiz-1.REMOVE
+mv .fontconfig .fontconfig.REMOVE
+mv .themes .themes.REMOVE
+mv .local .local.REMOVE

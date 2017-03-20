@@ -1,0 +1,36 @@
+#!/bin/python
+
+import sys
+import os
+
+
+if len(sys.argv) != 4:
+    sys.exit('Usage: {} <TEMPLATE> <VARS> <OUTPUT>'.
+        format(os.path.basename(sys.argv[0])))
+
+base_file = sys.argv[1]
+vars_file = sys.argv[2]
+outp_file = sys.argv[3]
+
+if os.path.isfile(base_file):
+    if (os.path.isfile(vars_file)):
+
+        template = ''
+        with open(base_file) as template_f:
+             template = template_f.read()
+
+        with open(vars_file) as params:
+            for line in params:
+                key, value = line.split('=')
+                template = template.replace(key, value)
+
+        with open(outp_file, "w") as out:
+            out.write(template)
+
+    else:
+        print ('Given variables file [{}] does not exist!'.
+            format(vars_file))
+
+else:
+    print ('Given template file [{}] does not exist!'.
+        format(base_file))

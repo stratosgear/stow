@@ -1,0 +1,33 @@
+# ~/.tmuxinator/stratosgear.yml
+
+name: stratosgear
+root: ~/projects/sites/stratosgear.bitbucket.org
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - main:
+      layout: 1ad8,100x39,0,0{50x39,0,0[50x19,0,0,0,50x19,0,20,3],49x39,51,0[49x19,51,0,1,49x19,51,20,2]}
+      panes:
+        - sass:
+          - cd themes/quixote/static/css
+          - sass --watch striped.scss:striped.css
+        - bash:
+          - #empty
+        - hugo:
+          - hugo server --watch
+        - bash:
+          - #empty 

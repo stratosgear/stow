@@ -1,0 +1,2 @@
+event=battery.*
+action=/etc/acpi/low-battery-warning.sh "%e"

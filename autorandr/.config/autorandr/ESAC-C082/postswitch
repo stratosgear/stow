@@ -1,0 +1,4 @@
+#!/bin/bash
+
+i3-msg "workspace 8: aux, move workspace to output VGA1"
+i3-msg bar mode hide bar-external

@@ -1,0 +1,14 @@
+output VIRTUAL1
+off
+output VGA1
+gamma 0.769:0.769:0.714
+mode 1920x1080
+pos 1920x0
+rate 59.95
+transform 1.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,1.000000
+output eDP1
+gamma 0.769:0.769:0.714
+mode 1920x1080
+pos 0x0
+primary
+rate 60.01

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+FILENAME=$1
+LINENUMBERS=$2
+
+for hash in `git log --pretty=format:%h ${FILENAME}`
+do
+    echo "***************** Showing ${FILENAME} at ${hash}"
+    git blame -L ${LINENUMBERS} ${hash} ${FILENAME}
+done

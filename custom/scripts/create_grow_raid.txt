@@ -1,0 +1,678 @@
+# links
+# Raid and physical extends
+# http://ubuntuforums.org/showthread.php?t=1369677
+
+# LVM2 article from IBM
+# http://www.ibm.com/developerworks/library/l-lvm2/
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# What's here
+# This is a RAID + LVM2 recipe list
+# 
+# This will walk us through:
+#   Create 3 x 64MB loopback partitions
+#   Mount them
+#   Assemble a raid5 array
+#   Install lvm2 on top of that
+#   Create a ext4 partition
+#   Create some fake data (so we know if we lose data)
+#   Increase the initial partitions to 3 x 96MB
+#   Grow the raid array
+#   Resize the lvm partitions
+#   Resize the ext4 filesystem
+#   Add another partition to the raid so now it is 4x96MB
+#   Grow the raid array
+#   Resize the lvm partitions
+#   Shrink the ext4 partition (for fun)
+#
+#  (All these are NOT destructive on the inluded data)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# create local files to be used as loopback devices
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ dd if=/dev/zero of=disk1 bs=1024 count=65536 # size is 64MB
+stratos@zarozinia:/stemp$ dd if=/dev/zero of=disk2 bs=1024 count=65536 # size is 64MB
+stratos@zarozinia:/stemp$ dd if=/dev/zero of=disk3 bs=1024 count=65536 # size is 64MB
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# find used loopback device and mount new one
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo losetup -a
+stratos@zarozinia:/stemp$ sudo losetup /dev/loop0 disk1 
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# create and mark partitions as Linux Raid Autodetect
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo fdisk /dev/loop1
+
+	# p: print partition table
+	# n: create new partition
+	# t: change type to: FD
+	# w: write change to disk (Some warnings are ok)
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# find next /dev/mdX available device
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ ls -al /dev/md*
+	brw-rw---- 1 root disk 9, 0 2010-04-12 14:24 /dev/md0
+	brw-rw---- 1 root disk 9, 1 2010-04-12 14:24 /dev/md1
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# create a /dev/mdX device
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mdadm --create --verbose /dev/md2 --level=5 --raid-devices=3 /dev/loop1 /dev/loop2 /dev/loop3
+	mdadm: layout defaults to left-symmetric
+	mdadm: chunk size defaults to 64K
+	mdadm: size set to 65472K
+	mdadm: array /dev/md2 started.
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# check the status of the raid device
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mdadm --detail /dev/md2
+	/dev/md2:
+		Version : 00.90
+	  Creation Time : Tue Apr 13 09:38:56 2010
+	     Raid Level : raid5
+	     Array Size : 130944 (127.90 MiB 134.09 MB)
+	  Used Dev Size : 65472 (63.95 MiB 67.04 MB)
+	   Raid Devices : 3
+	  Total Devices : 3
+	Preferred Minor : 2
+	    Persistence : Superblock is persistent
+
+	    Update Time : Tue Apr 13 09:39:03 2010
+		  State : clean
+	 Active Devices : 3
+	Working Devices : 3
+	 Failed Devices : 0
+	  Spare Devices : 0
+
+		 Layout : left-symmetric
+	     Chunk Size : 64K
+
+		   UUID : 3c1ea54e:0a32461c:b6150be0:b4ec82ed (local to host zarozinia)
+		 Events : 0.18
+
+	    Number   Major   Minor   RaidDevice State
+	       0       7        1        0      active sync   /dev/loop1
+	       1       7        2        1      active sync   /dev/loop2
+	       2       7        3        2      active sync   /dev/loop3
+
+# So, no we have 3 x 64MB disks, as a RAID5 device,
+# giving as a 2 x 64Mb = 128MB of safe space on /dev/md2
+
+
+# Now install lvm patritions
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# First, create a Physical Volume 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo pvcreate /dev/md2
+	  Physical volume "/dev/md2" successfully created
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# check the newly created lvm Physical Volume
+# it should be completely empty
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo pvdisplay 
+	  "/dev/md2" is a new physical volume of "127.88 MB"
+	  --- NEW Physical volume ---
+	  PV Name               /dev/md2
+	  VG Name               
+	  PV Size               127.88 MB
+	  Allocatable           NO
+	  PE Size (KByte)       0
+	  Total PE              0
+	  Free PE               0
+	  Allocated PE          0
+	  PV UUID               Lqsmfa-wWBO-sxwq-Yjut-Sub1-1f7u-O2FUda
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Second, lets create a lvm Volume Group on the Physical Volume
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo vgcreate lvm-test-raid /dev/md2
+	  Volume group "lvm-test-raid" successfully created
+
+
+# Now the lvm Physical Volume contains a Volume Group
+stratos@zarozinia:/stemp$ sudo pvdisplay 
+	  --- Physical volume ---
+	  PV Name               /dev/md2
+	  VG Name               lvm-test-raid
+	  PV Size               127.88 MB / not usable 3.88 MB
+	  Allocatable           yes 
+	  PE Size (KByte)       4096
+	  Total PE              31
+	  Free PE               31
+	  Allocated PE          0
+	  PV UUID               Lqsmfa-wWBO-sxwq-Yjut-Sub1-1f7u-O2FUda
+
+
+# and the Volume group looks like
+stratos@zarozinia:/stemp$ sudo vgdisplay 
+	  --- Volume group ---
+	  VG Name               lvm-test-raid
+	  System ID             
+	  Format                lvm2
+	  Metadata Areas        1
+	  Metadata Sequence No  1
+	  VG Access             read/write
+	  VG Status             resizable
+	  MAX LV                0
+	  Cur LV                0
+	  Open LV               0
+	  Max PV                0
+	  Cur PV                1
+	  Act PV                1
+	  VG Size               124.00 MB
+	  PE Size               4.00 MB
+	  Total PE              31
+	  Alloc PE / Size       0 / 0   
+	  Free  PE / Size       31 / 124.00 MB
+	  VG UUID               pfuk6c-30zA-B9ia-bhdN-9M1F-pzDE-oKu0uG
+
+
+# The Volume Group is a container of space that can be split to smaller
+# pieces (Logical Volumes) in order to better utilize the available space
+# in the Volume Group.  The size of Logical Volumes can be dynamically 
+# increase or decrease as we need.
+
+# Notice the number of Physical Extends (PE).
+# These are the building blocks of the lvm partitions.
+# All lvm sizes will be in units of PE (4 MB in our case).
+# In our example we can play with 31 PEs.
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Let's use them all the create a lvm Logical Volume called test1
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo lvcreate -l 31 lvm-test-raid -n test1
+	  Logical volume "test1" created
+
+# and how it looks like
+stratos@zarozinia:/stemp$ sudo lvdisplay /dev/lvm-test-raid/test1
+	  --- Logical volume ---
+	  LV Name                /dev/lvm-test-raid/test1
+	  VG Name                lvm-test-raid
+	  LV UUID                ZcebOZ-93Zj-doaa-CoW3-yD2O-bOqE-WOqL96
+	  LV Write Access        read/write
+	  LV Status              available
+	  # open                 0
+	  LV Size                124.00 MB
+	  Current LE             31
+	  Segments               1
+	  Allocation             inherit
+	  Read ahead sectors     auto
+	  - currently set to     256
+	  Block device           252:2
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Finally we have a partition ready to use now
+# format it (we use ext4, here)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mkfs.ext4 /dev/lvm-test-raid/test1
+	mke2fs 1.41.9 (22-Aug-2009)
+	Filesystem label=
+	OS type: Linux
+	Block size=1024 (log=0)
+	Fragment size=1024 (log=0)
+	31744 inodes, 126976 blocks
+	6348 blocks (5.00%) reserved for the super user
+	First data block=1
+	Maximum filesystem blocks=67371008
+	16 block groups
+	8192 blocks per group, 8192 fragments per group
+	1984 inodes per group
+	Superblock backups stored on blocks: 
+		8193, 24577, 40961, 57345, 73729
+
+	Writing inode tables: done                            
+	Creating journal (4096 blocks): done
+	Writing superblocks and filesystem accounting information: done
+
+	This filesystem will be automatically checked every 31 mounts or
+	180 days, whichever comes first.  Use tune2fs -c or -i to override.
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# create a mount point and mount it 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ mkdir test1
+stratos@zarozinia:/stemp$ ls -al
+	total 196620
+	drwxr-xr-x  3 stratos stratos     4096 2010-04-13 10:28 .
+	drwxr-xr-x 26 root    root        4096 2010-04-13 07:30 ..
+	-rw-r--r--  1 stratos stratos 67108864 2010-04-13 07:32 disk1
+	-rw-r--r--  1 stratos stratos 67108864 2010-04-13 07:32 disk2
+	-rw-r--r--  1 stratos stratos 67108864 2010-04-13 07:33 disk3
+	drwxr-xr-x  2 stratos stratos     4096 2010-04-13 10:28 test1
+stratos@zarozinia:/stemp$ sudo mount /dev/lvm-test-raid/test1 test1
+stratos@zarozinia:/stemp$ sudo chown stratos:stratos test1
+
+# go into it, create a file so we know it works
+stratos@zarozinia:/stemp$ cd test1
+stratos@zarozinia:/stemp/test1$ echo 'Hello World' > hello.txt
+stratos@zarozinia:/stemp/test1$ ls -al
+	total 18
+	drwxr-xr-x 3 stratos stratos  1024 2010-04-13 10:33 .
+	drwxr-xr-x 3 stratos stratos  4096 2010-04-13 10:28 ..
+	-rw-r--r-- 1 stratos stratos    12 2010-04-13 10:33 hello.txt
+	drwx------ 2 root    root    12288 2010-04-13 10:27 lost+found
+stratos@zarozinia:/stemp/test1$ cat hello.txt 
+	Hello World
+stratos@zarozinia:/stemp/test1$ cd ..
+
+# Now.....
+# We want to grow the raid partitions
+# Example Scenario: we have a three 640GB disks
+# On each disk we have two partitions 500GB and 140GB
+# we used the 500GB partitions (three of them, in different disks)
+# to create raid5 device
+# Now, we want to use the whole disk (basically increase the 
+# 500GB partitions to be 640GB partitions)
+# The idea will be to slowly remove each 500GB partition from the 
+# raid increase its size and put it back on.  Then resize the lvm
+# that sits on top to take advantage of the space.
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# mark a disk as failed
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mdadm /dev/md2 --fail /dev/loop3
+	mdadm: set /dev/loop3 faulty in /dev/md2
+
+stratos@zarozinia:/stemp$ sudo mdadm --detail /dev/md2
+	/dev/md2:
+		Version : 00.90
+	  Creation Time : Tue Apr 13 09:38:56 2010
+	     Raid Level : raid5
+	     Array Size : 130944 (127.90 MiB 134.09 MB)
+	  Used Dev Size : 65472 (63.95 MiB 67.04 MB)
+	   Raid Devices : 3
+	  Total Devices : 3
+	Preferred Minor : 2
+	    Persistence : Superblock is persistent
+
+	    Update Time : Tue Apr 13 10:39:44 2010
+		  State : clean, degraded
+	 Active Devices : 2
+	Working Devices : 2
+	 Failed Devices : 1
+	  Spare Devices : 0
+
+		 Layout : left-symmetric
+	     Chunk Size : 64K
+
+		   UUID : 3c1ea54e:0a32461c:b6150be0:b4ec82ed (local to host zarozinia)
+		 Events : 0.19
+
+	    Number   Major   Minor   RaidDevice State
+	       0       7        1        0      active sync   /dev/loop1
+	       1       7        2        1      active sync   /dev/loop2
+	       2       0        0        2      removed
+
+	       3       7        3        -      faulty spare   /dev/loop3
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# and remove the disk
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mdadm /dev/md2 --remove /dev/loop3
+	mdadm: hot removed /dev/loop3
+stratos@zarozinia:/stemp$ sudo mdadm --detail /dev/md2
+	/dev/md2:
+		Version : 00.90
+	  Creation Time : Tue Apr 13 09:38:56 2010
+	     Raid Level : raid5
+	     Array Size : 130944 (127.90 MiB 134.09 MB)
+	  Used Dev Size : 65472 (63.95 MiB 67.04 MB)
+	   Raid Devices : 3
+	  Total Devices : 2
+	Preferred Minor : 2
+	    Persistence : Superblock is persistent
+
+	    Update Time : Tue Apr 13 12:47:43 2010
+		  State : clean, degraded
+	 Active Devices : 2
+	Working Devices : 2
+	 Failed Devices : 0
+	  Spare Devices : 0
+
+		 Layout : left-symmetric
+	     Chunk Size : 64K
+
+		   UUID : 3c1ea54e:0a32461c:b6150be0:b4ec82ed (local to host zarozinia)
+		 Events : 0.24
+
+	    Number   Major   Minor   RaidDevice State
+	       0       7        1        0      active sync   /dev/loop1
+	       1       7        2        1      active sync   /dev/loop2
+	       2       0        0        2      removed
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# remove the defunct disk3 file and recreate it as a larger file
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo losetup -d /dev/loop3
+stratos@zarozinia:/stemp$ sudo rm disk3
+stratos@zarozinia:/stemp$ dd if=/dev/zero of=disk3 bs=1024 count=98304 # 96MBs
+	98304+0 records in
+	98304+0 records out
+	100663296 bytes (101 MB) copied, 0.301745 s, 334 MB/s
+stratos@zarozinia:/stemp$ sudo losetup /dev/loop3 disk3
+stratos@zarozinia:/stemp$ sudo fdisk /dev/loop3
+	#...
+	# new partition
+	# partition type: FD
+	# write changes
+	#...
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# add it back to the raid array
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mdadm /dev/md2 --add /dev/loop3
+	mdadm: re-added /dev/loop3
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# this will take some time as the array is resynced
+# watch progress
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ cat /proc/mdstat
+	Personalities : [raid0] [raid6] [raid5] [raid4] [linear] [multipath] [raid1] [raid10] 
+	md2 : active raid5 loop3[2] loop2[1] loop1[0]
+	      130944 blocks level 5, 64k chunk, algorithm 2 [3/3] [UUU]
+	      
+	unused devices: <none>
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# or better yet, watch it while it resyncs
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo watch cat /proc/mdstat
+	Personalities : [raid0] [raid6] [raid5] [raid4] [linear] [multipath] [raid1] [raid10]
+	md2 : active raid5 loop3[3] loop2[1] loop1[0]
+	      130944 blocks level 5, 64k chunk, algorithm 2 [3/2] [UU_]
+	      [===========>.........]  recovery = 57.0% (37548/65472) finish=0.0min speed=37548K/sec
+
+	unused devices: <none>
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# now, do the same for the remaining two partitions
+# remove from array
+# recreate larger
+# reattach
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+...
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# now we are using 3x96MB partitions but the raid array still
+# thinks it is running on 3x64MB.  We have to grow the array to
+# use all available space
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mdadm --grow /dev/md2 --size=max
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# this will take some time as the array is resynced
+# watch progress
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ cat /proc/mdstat
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# now we have to resize the lvm Physical Volume
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo pvresize /dev/md2
+	  Physical volume "/dev/md2" changed
+	  1 physical volume(s) resized / 0 physical volume(s) not resized
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# notice that the size is now close to 191MB (before ~127MB)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo pvdisplay /dev/md2
+	  --- Physical volume ---
+	  PV Name               /dev/md2
+	  VG Name               lvm-test-raid
+	  PV Size               191.69 MB / not usable 3.69 MB
+	  Allocatable           yes 
+	  PE Size (KByte)       4096
+	  Total PE              47
+	  Free PE               16
+	  Allocated PE          31
+	  PV UUID               Lqsmfa-wWBO-sxwq-Yjut-Sub1-1f7u-O2FUda
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Now the PEs (Physical Extends) on the Volume Group has increased
+# from 31 before to 47 now.  
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+stratos@zarozinia:/stemp$ sudo vgdisplay lvm-test-raid
+	  --- Volume group ---
+	  VG Name               lvm-test-raid
+	  System ID             
+	  Format                lvm2
+	  Metadata Areas        1
+	  Metadata Sequence No  3
+	  VG Access             read/write
+	  VG Status             resizable
+	  MAX LV                0
+	  Cur LV                1
+	  Open LV               1
+	  Max PV                0
+	  Cur PV                1
+	  Act PV                1
+	  VG Size               188.00 MB
+	  PE Size               4.00 MB
+	  Total PE              47
+	  Alloc PE / Size       31 / 124.00 MB
+	  Free  PE / Size       16 / 64.00 MB
+	  VG UUID               pfuk6c-30zA-B9ia-bhdN-9M1F-pzDE-oKu0uG
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# The unallocated PEs can be used to create another lvm Logical
+# Volume or we can increase the existing.
+# Let's increase the existing.
+# Before we had 31 PE with 124MB capacity
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo lvdisplay /dev/lvm-test-raid/test1
+	  --- Logical volume ---
+	  LV Name                /dev/lvm-test-raid/test1
+	  VG Name                lvm-test-raid
+	  LV UUID                ZcebOZ-93Zj-doaa-CoW3-yD2O-bOqE-WOqL96
+	  LV Write Access        read/write
+	  LV Status              available
+	  # open                 1
+	  LV Size                124.00 MB
+	  Current LE             31
+	  Segments               1
+	  Allocation             inherit
+	  Read ahead sectors     auto
+	  - currently set to     256
+	  Block device           252:2
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Resize the existing Logical Volume from 31 to 47 PEs (+16 PEs)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo lvresize /dev/lvm-test-raid/test1 --extents +16
+	  Extending logical volume test1 to 188.00 MB
+	  Logical volume test1 successfully resized
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Now we have 47 PEs with 188MB capacity
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo lvdisplay /dev/lvm-test-raid/test1 
+	  --- Logical volume ---
+	  LV Name                /dev/lvm-test-raid/test1
+	  VG Name                lvm-test-raid
+	  LV UUID                ZcebOZ-93Zj-doaa-CoW3-yD2O-bOqE-WOqL96
+	  LV Write Access        read/write
+	  LV Status              available
+	  # open                 1
+	  LV Size                188.00 MB
+	  Current LE             47
+	  Segments               1
+	  Allocation             inherit
+	  Read ahead sectors     auto
+	  - currently set to     256
+	  Block device           252:2
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Well, the Logical Volume is resized but NOT the file system.
+# Look, it still reports free space in therange of 128MB
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ df -h test1
+	Filesystem            Size  Used Avail Use% Mounted on
+	/dev/mapper/lvm--test--raid-test1
+		              121M  5.6M  109M   5% /stemp/test1
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# We have to also rezise the ext4 filesystem, too.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo umount test1
+stratos@zarozinia:/stemp$ sudo e2fsck -f /dev/lvm-test-raid/test1
+	e2fsck 1.41.9 (22-Aug-2009)
+	Pass 1: Checking inodes, blocks, and sizes
+	Pass 2: Checking directory structure
+	Pass 3: Checking directory connectivity
+	Pass 4: Checking reference counts
+	Pass 5: Checking group summary information
+	/dev/lvm-test-raid/test1: 12/31744 files (0.0% non-contiguous), 9660/126976 blocks
+stratos@zarozinia:/stemp$ sudo resize2fs -p /dev/lvm-test-raid/test1
+	resize2fs 1.41.9 (22-Aug-2009)
+	Resizing the filesystem on /dev/lvm-test-raid/test1 to 192512 (1k) blocks.
+	Begin pass 1 (max = 8)
+	Extending the inode table     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	The filesystem on /dev/lvm-test-raid/test1 is now 192512 blocks long.
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Remount and check the free space now (more than 128 for sure)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mount /dev/lvm-test-raid/test1 test1
+stratos@zarozinia:/stemp$ df -h test1
+	Filesystem            Size  Used Avail Use% Mounted on
+	/dev/mapper/lvm--test--raid-test1
+		              183M  5.6M  168M   4% /stemp/test1
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Now we will add a new partition on the raid array
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+... create another loopback device
+...
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# First add a disk to the raid array as a spare
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mdadm /dev/md2 --add /dev/loop4
+	mdadm: added /dev/loop4
+stratos@zarozinia:/stemp$ sudo mdadm --detail /dev/md2
+	/dev/md2:
+		Version : 00.90
+	  Creation Time : Tue Apr 13 09:38:56 2010
+	     Raid Level : raid5
+	     Array Size : 196480 (191.91 MiB 201.20 MB)
+	  Used Dev Size : 98240 (95.95 MiB 100.60 MB)
+	   Raid Devices : 3
+	  Total Devices : 4
+	Preferred Minor : 2
+	    Persistence : Superblock is persistent
+
+	    Update Time : Tue Apr 13 16:08:54 2010
+		  State : clean
+	 Active Devices : 3
+	Working Devices : 4
+	 Failed Devices : 0
+	  Spare Devices : 1
+
+		 Layout : left-symmetric
+	     Chunk Size : 64K
+
+		   UUID : 3c1ea54e:0a32461c:b6150be0:b4ec82ed (local to host zarozinia)
+		 Events : 0.148
+
+	    Number   Major   Minor   RaidDevice State
+	       0       7        1        0      active sync   /dev/loop1
+	       1       7        2        1      active sync   /dev/loop2
+	       2       7        3        2      active sync   /dev/loop3
+
+	       3       7        4        -      spare   /dev/loop4
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# And then grow the array size
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stratos@zarozinia:/stemp$ sudo mdadm --grow --raid-devices=4 /dev/md2
+	mdadm: Need to backup 384K of critical section..
+	mdadm: ... critical section passed.
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# This will take some time (considerable time if I might say so)
+# but then the array is ready
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+stratos@zarozinia:/stemp$ sudo mdadm --detail /dev/md2
+/dev/md2:
+        Version : 00.90
+  Creation Time : Tue Apr 13 09:38:56 2010
+     Raid Level : raid5
+     Array Size : 294720 (287.86 MiB 301.79 MB)
+  Used Dev Size : 98240 (95.95 MiB 100.60 MB)
+   Raid Devices : 4
+  Total Devices : 4
+Preferred Minor : 2
+    Persistence : Superblock is persistent
+
+    Update Time : Tue Apr 13 16:15:08 2010
+          State : clean
+ Active Devices : 4
+Working Devices : 4
+ Failed Devices : 0
+  Spare Devices : 0
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+           UUID : 3c1ea54e:0a32461c:b6150be0:b4ec82ed (local to host zarozinia)
+         Events : 0.170
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       2       7        3        2      active sync   /dev/loop3
+       3       7        4        3      active sync   /dev/loop4
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# From there on resize the lvm partitions as before to claim the
+# extra space
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+...
+...
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Let's shrink our ext4 partition as an exercise
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+

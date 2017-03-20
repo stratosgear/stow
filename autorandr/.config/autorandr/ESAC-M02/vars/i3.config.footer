@@ -1,0 +1,54 @@
+# extra
+#      _        _               _
+#  ___| |_ __ _| |_ _   _ ___  | |__   __ _ _ __
+# / __| __/ _` | __| | | / __| | '_ \ / _` | '__|
+# \__ \ || (_| | |_| |_| \__ \ | |_) | (_| | |
+# |___/\__\__,_|\__|\__,_|___/ |_.__/ \__,_|_| s
+
+bar {
+    id bar-external
+    output $extscreen
+
+    font pango:Roboto Mono $fontSize
+    status_command i3blocks
+    position top
+    tray_output primary
+
+    colors {
+      background $base03
+      separator $base2
+
+      focused_workspace  $base02 $base2 $base02
+      active_workspace   $base2  $base1 $base2
+      inactive_workspace $base03 $base0 $base03
+      urgent_workspace   $base3  $red   $base3
+      binding_mode       $base3  $blue  $base3
+    }
+
+}
+bindsym $mod+$alt+bracketleft bar mode toggle bar-external
+
+
+bar {
+    id bar-external2
+    output $ext2screen
+
+    font pango:Roboto Mono $fontSize
+    status_command i3blocks
+    position top
+    tray_output primary
+
+    colors {
+      background $base03
+      separator $base2
+
+      # class            outline backround color
+      focused_workspace  $base02 $base2 $base02
+      active_workspace   $base2  $base1 $base2
+      inactive_workspace $base03 $base0 $base03
+      urgent_workspace   $base3  $red   $base3
+      binding_mode       $base3  $blue  $base3
+    }
+
+}
+bindsym $mod+$alt+backslash bar mode toggle bar-laptop
