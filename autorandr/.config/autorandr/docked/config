@@ -10,11 +10,6 @@ output HDMI2
 off
 output VIRTUAL1
 off
-output DP2-3
-gamma 0.769:0.769:0.714
-mode 1600x900
-pos 0x0
-rate 60.00
 output DP2-2
 gamma 0.769:0.769:0.714
 mode 1920x1200
@@ -25,4 +20,9 @@ output eDP1
 gamma 0.769:0.769:0.714
 mode 2560x1440
 pos 3520x0
+rate 60.00
+output DP2-3
+gamma 0.769:0.769:0.714
+mode 1600x900
+pos 0x320
 rate 60.00
