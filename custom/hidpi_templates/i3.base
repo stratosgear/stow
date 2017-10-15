@@ -207,6 +207,8 @@ bindsym $mod+Control+Right workspace next
 
 bindsym $mod+$alt+Left move workspace to output left
 bindsym $mod+$alt+Right move workspace to output right
+bindsym $mod+$alt+Up move workspace to output up
+bindsym $mod+$alt+Down move workspace to output down
 
 bindsym $mod+Control+1 move workspace to output $laptopscreen
 bindsym $mod+Control+2 move workspace to output $extscreen
@@ -418,28 +420,28 @@ bindsym $mod+x mode "$mode_system"
 # \__ \ || (_| | |_| |_| \__ \ | |_) | (_| | |
 # |___/\__\__,_|\__|\__,_|___/ |_.__/ \__,_|_|
 
-#bar {
-#    id bar-laptop
-#    output $laptopscreen
-#
-#    font pango:Roboto Mono $fontSizeLarge
-#    status_command i3blocks
-#    position top
-#    tray_output primary
-#
-#    colors {
-#      background $base03
-#      separator $base2
-#
-#      # class            outline backround color
-#      focused_workspace  $base02 $base2 $base02
-#      active_workspace   $base2  $base1 $base2
-#      inactive_workspace $base03 $base0 $base03
-#      urgent_workspace   $base3  $red   $base3
-#      binding_mode       $base3  $blue  $base3
-#    }
-#}
-#bindsym $mod+$alt+bracketleft bar mode toggle bar-laptop
+bar {
+    id bar-laptop
+    output $laptopscreen
+
+    font pango:Roboto Mono $fontSizeLarge
+    status_command i3blocks
+    position top
+    tray_output $laptopTrayMode$
+
+    colors {
+      background $base03
+      separator $base2
+
+      # class            outline backround color
+      focused_workspace  $base02 $base2 $base02
+      active_workspace   $base2  $base1 $base2
+      inactive_workspace $base03 $base0 $base03
+      urgent_workspace   $base3  $red   $base3
+      binding_mode       $base3  $blue  $base3
+    }
+}
+bindsym $mod+$alt+bracketleft bar mode toggle bar-laptop
 
 bar {
     id bar-external
@@ -448,7 +450,7 @@ bar {
     font pango:Roboto Mono $fontSize
     status_command i3blocks
     position top
-    tray_output primary
+    tray_output $extScreenTrayMode$
 
     colors {
       background $base03
@@ -464,28 +466,28 @@ bar {
 bindsym $mod+$alt+bracketright bar mode toggle bar-external
 
 
-#bar {
-#    id bar-external2
-#    output $ext2screen
-#
-#    font pango:Roboto Mono $fontSize
-#    status_command i3blocks
-#    position top
-#    tray_output primary
-#
-#    colors {
-#      background $base03
-#      separator $base2
-#
-#      # class            outline backround color
-#      focused_workspace  $base02 $base2 $base02
-#      active_workspace   $base2  $base1 $base2
-#      inactive_workspace $base03 $base0 $base03
-#      urgent_workspace   $base3  $red   $base3
-#      binding_mode       $base3  $blue  $base3
-#    }
-#}
-#bindsym $mod+$alt+backslash bar mode toggle bar-external2
+bar {
+    id bar-external2
+    output $ext2screen
+
+    font pango:Roboto Mono $fontSize
+#   status_command i3blocks
+    position top
+    tray_output $extScreen2TrayMode$
+
+    colors {
+      background $base03
+      separator $base2
+
+      # class            outline backround color
+      focused_workspace  $base02 $base2 $base02
+      active_workspace   $base2  $base1 $base2
+      inactive_workspace $base03 $base0 $base03
+      urgent_workspace   $base3  $red   $base3
+      binding_mode       $base3  $blue  $base3
+    }
+}
+bindsym $mod+$alt+backslash bar mode toggle bar-external2
 
 
 #              _               __ _             _

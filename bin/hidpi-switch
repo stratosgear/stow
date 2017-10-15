@@ -4,6 +4,8 @@ PROFILE=$AUTORANDR_CURRENT_PROFILE
 PROFILE_DIR=/home/stratos/.config/autorandr/${PROFILE}/vars
 
 REPLACE_BIN=/home/stratos/stow/bin/replace_tokens
+
+
 #   _ _____
 #  (_)___ /
 #  | | |_ \
@@ -37,8 +39,11 @@ I3_VARS=${PROFILE_DIR}/i3.vars
 
 # update i3 config
 $REPLACE_BIN ${I3_TEMPLATE} ${I3_VARS} ${I3_CONFIG}
+echo "Updated i3 config file ${I3_CONFIG}"
+
 # and restart i3
 i3-msg restart
+echo "And restarted i3"
 
 #   _                      _ _
 #  | |_ ___ _ __ _ __ ___ (_) |_ ___
