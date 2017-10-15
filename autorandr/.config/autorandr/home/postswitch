@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sleep 1
+
+xrandr --dpi 96
+
+/home/stratos/stow/bin/hidpi-switch
+
+/home/stratos/stow/bin/randomWallpapers.sh
+
+/home/stratos/stow/bin/setupLocaleSwitching.sh
