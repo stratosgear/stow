@@ -56,7 +56,7 @@ EDITOR="micro"
 #eval `dircolors ~/dotfiles/source/dircolors-solarized/dircolors.ansi-dark`
 
 # Add dotfile binaries to path
-export PATH=$(ruby -e 'print Gem.user_dir')/bin:$HOME/stow/bin:$HOME/.local/bin:~/dev/activator:$PATH
+export PATH=$(ruby -e 'print Gem.user_dir')/bin:$HOME/stow/bin:$HOME/.npm-global/bin:$HOME/.local/bin:~/dev/activator:$PATH
 
 export TERM=xterm-256color
 
