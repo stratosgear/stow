@@ -302,6 +302,7 @@ bindsym $mod+minus scratchpad show
 # open the generic run menu
 bindsym $mod+period exec --no-startup-id rofi -show run
 bindsym $mod+comma exec --no-startup-id rofi -show window
+bindsym $mod+backslash exec --no-startup-id /home/stratos/stow/bin/snippy.sh
 #bindsym $mod+period exec xfce4-popup-whiskermenu
 
 # search though open windows
