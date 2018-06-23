@@ -517,8 +517,8 @@ exec --no-startup-id ~/dotfiles/bin/randomWallpapers.sh
 
 
 #exec --no-startup-id 	gnome-settings-daemon
-exec --no-startup-id 	xflux -l 40.44689 -g -4.0048
-#exec --no-startup-id 	davmail
+exec --no-startup-id 	redshift
+exec --no-startup-id 	davmail
 exec --no-startup-id 	dropbox start
 #exec --no-startup-ip	variety
 
@@ -526,8 +526,10 @@ exec --no-startup-id 	dropbox start
 exec --no-startup-id 	xset -b
 
 exec --no-startup-id 	parcellite
-#exec --no-startup-id 	nm-applet
+exec --no-startup-id 	nm-applet
 #exec --no-startup-id 	dunst
+
+#exec --no-startup-id    emacs -daemon
 
 # switch input languages
 exec --no-startup-id 	~/dotfiles/bin/setupLocaleSwitching.sh
@@ -541,20 +543,3 @@ exec --no-startup-id 	~/dotfiles/bin/setupLocaleSwitching.sh
 #exec --no-startup-id 	ibus-daemon
 
 #exec --no-startup-id 	gnome-keyring-daemon
-
-
-## Plasma Integration
-# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-
-## Avoid tiling popups, dropdown windows from plasma
-# for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [class="plasmashell"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
