@@ -1,7 +1,7 @@
 # ~/.tmuxinator/ht3.yml
 
 name: ht3
-root: /mnt/data/projects/python/ht3
+root: /mnt/data/projects/hypervasis/ht3_python
 
 # Optional tmux socket
 # socket_name: foo
@@ -18,11 +18,20 @@ root: /mnt/data/projects/python/ht3
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
 
+startup_window: aux
+
 windows:
   - main:
-      layout: f238,199x53,0,0{99x53,0,0,2,99x53,100,0[99x17,100,0,4,99x35,100,18,5]}
+      layout: 73c3,174x44,0,0{86x44,0,0[86x22,0,0,0,86x21,0,23,3],87x44,87,0[87x22,87,0,1,87x21,87,23,2]}
       panes:
-        - source venv/bin/activate
-        - docs:
-          - git-sh
-        - git-sh
+        - services:
+          - export SHELL=(which fish)
+          - pipenv run flask runall --debug
+        - server:
+          - export SHELL=(which fish)
+          - pipenv run flask run                    
+        - frontend:
+          - cd frontend
+          - vue ui
+        - aux:
+          - tmux select-pane -t 1.4

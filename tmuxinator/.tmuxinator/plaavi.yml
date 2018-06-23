@@ -1,7 +1,7 @@
 # ~/.tmuxinator/plaavi.yml
 
 name: plaavi
-root: /mnt/data/projects/pkh/plaavi/src/pkh-plaavi
+root: /mnt/data/projects/pkh/plaavi/src/socci-plaavi
 
 # Optional tmux socket
 # socket_name: foo
