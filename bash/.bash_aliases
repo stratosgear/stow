@@ -32,3 +32,5 @@ alias kport=killport
 alias e=emacsclient $1
 
 alias m=micro
+alias gtt='docker run --rm -it -v ~:/root kriskbx/gitlab-time-tracker'
+

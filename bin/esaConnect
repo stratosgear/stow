@@ -9,3 +9,7 @@ killall wpa_supplicant
 #sudo wpa_supplicant -Dwired -ienp0s31f6 -c/etc/wpa_supplicant/wiredauth.conf -B
 rm /var/run/wpa_supplicant/eth0
 wpa_supplicant -Dwired -ieth0 -c/etc/wpa_supplicant/wiredauth.conf -B
+
+rm /var/run/wpa_supplicant/enp0s31f6
+wpa_supplicant -Dwired -ienp0s31f6 -c/etc/wpa_supplicant/wiredauth.conf -B
+

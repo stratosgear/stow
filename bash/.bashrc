@@ -57,6 +57,8 @@ EDITOR="micro"
 
 # Add dotfile binaries to path
 export PATH=$(ruby -e 'print Gem.user_dir')/bin:$HOME/stow/bin:$HOME/.npm-global/bin:$HOME/.local/bin:~/dev/activator:$PATH
+export PATH="$PATH:$HOME/go/bin"
+export GOBIN=$HOME/go/bin
 
 export TERM=xterm-256color
 
