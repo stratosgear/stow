@@ -1,0 +1,13 @@
+output VIRTUAL1
+off
+output eDP1
+gamma 0.769:0.769:0.714
+mode 1920x1080
+pos 0x0
+primary
+rate 60.01
+output DP1
+gamma 0.769:0.769:0.714
+mode 1600x1200
+pos 1920x0
+rate 60.00
