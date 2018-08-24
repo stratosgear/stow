@@ -373,7 +373,7 @@ bindcode $mod+27 mode "resize"
 
 # logout, reboot, restart
 #--------------------------------------------------
-set $Locker /home/stratos/dotfiles/bin/lock.sh
+set $Locker /home/stratos/stow/bin/glitchlock.sh
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
 mode "$mode_system" {
@@ -382,7 +382,7 @@ mode "$mode_system" {
 	 # key:e
     bindcode 26 exec --no-startup-id i3-msg exit, mode "default"
 	 # key:s
-    bindcode 39 exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindcode 39 exec --no-startup-id $Locker && sleep 1 && systemctl suspend, mode "default"
 	 # key:h
     #bindcode 43 exec --no-startup-id i3exit hibernate, mode "default"
 	 # key:r
