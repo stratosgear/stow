@@ -132,7 +132,9 @@ hide_edge_borders both
 
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/termite
+#bindsym $mod+Return exec /usr/bin/termite
+bindsym $mod+Return exec /usr/bin/alacritty
+bindsym $mod+Shift+Return exec /usr/bin/dolphin
 
 # kill focused window, key:q
 bindcode $mod+Shift+24 kill
@@ -378,7 +380,7 @@ bindcode $mod+27 mode "resize"
 
 # logout, reboot, restart
 #--------------------------------------------------
-set $Locker /home/stratos/dotfiles/bin/lock.sh
+set $Locker /home/stratos/stow/bin/glitchlock.sh
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
 mode "$mode_system" {
@@ -387,7 +389,8 @@ mode "$mode_system" {
 	 # key:e
     bindcode 26 exec --no-startup-id i3-msg exit, mode "default"
 	 # key:s
-    bindcode 39 exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    #bindcode 39 exec --no-startup-id $Locker && echo mem > /sys/power/state, mode "default"
+    bindcode 39 exec --no-startup-id $Locker && sleep 1 && systemctl suspend, mode "default"
 	 # key:h
     #bindcode 43 exec --no-startup-id i3exit hibernate, mode "default"
 	 # key:r
@@ -537,13 +540,12 @@ exec --no-startup-id 	parcellite
 #exec --no-startup-id 	nm-applet
 #exec --no-startup-id 	dunst
 
-#exec --no-startup-id    emacs -daemon
-
 # switch input languages
 exec --no-startup-id 	~/dotfiles/bin/setupLocaleSwitching.sh
 
 # natural scrolling
-#exec --no-startup-id 	xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -80, -80
+# handled by KDE touchpad settings for now
+exec --no-startup-id 	xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -80, -80
 
 
 # What is this thing doing?

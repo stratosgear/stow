@@ -127,7 +127,9 @@ hide_edge_borders both
 
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/termite
+#bindsym $mod+Return exec /usr/bin/termite
+bindsym $mod+Return exec /usr/bin/alacritty
+bindsym $mod+Shift+Return exec /usr/bin/dolphin
 
 # kill focused window, key:q
 bindcode $mod+Shift+24 kill
@@ -533,7 +535,8 @@ exec --no-startup-id 	parcellite
 exec --no-startup-id 	~/dotfiles/bin/setupLocaleSwitching.sh
 
 # natural scrolling
-#exec --no-startup-id 	xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -80, -80
+# handled by KDE touchpad settings for now
+exec --no-startup-id 	xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -80, -80
 
 
 # What is this thing doing?
