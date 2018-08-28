@@ -308,8 +308,8 @@ bindsym $mod+backslash exec --no-startup-id /home/stratos/stow/bin/snippy.sh
 # rotate wallpapers
 bindsym $mod+slash exec --no-startup-id ~/dotfiles/bin/randomWallpapers.sh
 
-# Jump to urgent window (mod + x)
-#bindcode $mod+53 [urgent=latest] focus
+# Jump to urgent window (mod + z)
+bindcode $mod+52 [urgent=latest] focus
 
 #                _                                  _
 #   __ _ ___ ___(_) __ _ _ __   __      _____  _ __| | _____ _ __   __ _  ___ ___  ___

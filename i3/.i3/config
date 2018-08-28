@@ -42,9 +42,9 @@ set $ext2screen   DP2-3
 
 set $fontSize      10
 
-set $fontSizeLarge 10
+set $fontSizeLarge 16
 
-set $dpi           144
+set $dpi           96
 
 
 #           _
@@ -313,8 +313,8 @@ bindsym $mod+backslash exec --no-startup-id /home/stratos/stow/bin/snippy.sh
 # rotate wallpapers
 bindsym $mod+slash exec --no-startup-id ~/dotfiles/bin/randomWallpapers.sh
 
-# Jump to urgent window (mod + x)
-#bindcode $mod+53 [urgent=latest] focus
+# Jump to urgent window (mod + z)
+bindcode $mod+52 [urgent=latest] focus
 
 #                _                                  _
 #   __ _ ___ ___(_) __ _ _ __   __      _____  _ __| | _____ _ __   __ _  ___ ___  ___
@@ -389,7 +389,6 @@ mode "$mode_system" {
 	 # key:e
     bindcode 26 exec --no-startup-id i3-msg exit, mode "default"
 	 # key:s
-    #bindcode 39 exec --no-startup-id $Locker && echo mem > /sys/power/state, mode "default"
     bindcode 39 exec --no-startup-id $Locker && sleep 1 && systemctl suspend, mode "default"
 	 # key:h
     #bindcode 43 exec --no-startup-id i3exit hibernate, mode "default"
@@ -436,7 +435,7 @@ bar {
     font pango:Roboto Mono $fontSizeLarge
     status_command i3blocks
     position top
-    tray_output primary
+    tray_output none
 
 
     colors {
@@ -460,7 +459,7 @@ bar {
     font pango:Roboto Mono $fontSize
     status_command i3blocks
     position top
-    tray_output none
+    tray_output primary
 
 
     colors {
