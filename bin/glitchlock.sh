@@ -54,4 +54,5 @@ file=/tmp/lock.png
 
 convert "$file" "${LOCK[@]}" "$file"
 
-i3lock -f -n "${PARAM[@]}" -i "$file" > /dev/null 2>&1
+#i3lock -f -n "${PARAM[@]}" -i "$file" > /dev/null 2>&1
+i3lock -f  -i "$file" > /dev/null 2>&1
