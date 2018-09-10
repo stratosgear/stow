@@ -129,7 +129,7 @@ hide_edge_borders both
 # start a terminal
 #bindsym $mod+Return exec /usr/bin/termite
 bindsym $mod+Return exec /usr/bin/alacritty
-bindsym $mod+Shift+Return exec /usr/bin/dolphin
+bindsym $mod+Shift+Return exec /usr/bin/thunar
 
 # kill focused window, key:q
 bindcode $mod+Shift+24 kill
@@ -168,7 +168,7 @@ bindsym $mod+Shift+Right move right
 # split in horizontal orientation, key:h
 bindcode $mod+43 split h
 
-# split in vertical orientation key:v
+# split in vertical orientation, key:v
 bindcode $mod+55 split v
 
 # enter fullscreen mode for the focused container, key:f
@@ -234,7 +234,7 @@ bindsym $mod+Shift+0 move container to workspace number $wrksp10
 bindcode $mod+Shift+54 reload
 
 # restart i3 inplace key:r (preserves your layout/session, can be used to upgrade i3)
-#bindcode $mod+Shift+27 restart
+bindcode $mod+Shift+27 restart
 
 # exit i3 (logs you out of your X session) key:e
 #bindcode $mod+Shift+26 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -528,11 +528,11 @@ exec --no-startup-id 	dropbox start
 exec --no-startup-id 	xset -b
 
 exec --no-startup-id 	parcellite
-#exec --no-startup-id 	nm-applet
+exec --no-startup-id 	nm-applet
 #exec --no-startup-id 	dunst
 
 # switch input languages
-exec --no-startup-id 	~/dotfiles/bin/setupLocaleSwitching.sh
+exec --no-startup-id 	~/stow/bin/setupLocaleSwitching.sh
 
 # natural scrolling
 # handled by KDE touchpad settings for now
@@ -543,21 +543,23 @@ exec --no-startup-id 	xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics 
 #exec 			remind -z "-ki3-nagbar -m '%s' &" &
 #exec --no-startup-id 	ibus-daemon
 
-#exec --no-startup-id 	gnome-keyring-daemon
+exec --no-startup-id 	gnome-keyring-daemon
+exec --no-startup-id 	/usr/bin/blueman-applet
 
 
-## Plasma Integration
+## Plasma Integration ######################
+
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
+#exec --no-startup-id wmctrl -c Plasma
+#for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [class="plasmashell"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
+#for_window [class="plasmashell"] floating enable;
+#for_window [class="Plasma"] floating enable; border none
+#for_window [title="plasma-desktop"] floating enable; border none
+#for_window [title="win7"] floating enable; border none
+#for_window [class="krunner"] floating enable; border none
+#for_window [class="Kmix"] floating enable; border none
+#for_window [class="Klipper"] floating enable; border none
+#for_window [class="Plasmoidviewer"] floating enable; border none
