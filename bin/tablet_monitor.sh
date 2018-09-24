@@ -61,6 +61,7 @@ trap finish EXIT
 CLIP_POS=$(xrandr | perl -ne 'print "$1" if /'$DIS_NAME'\s*connected\s*(\d*x\d*\+\d*\+\d*)/')
 echo $CLIP_POS
 # Share screen
+# x11vnc -ncache 10 -multiptr -repeat -clip $CLIP_POS
 x11vnc -multiptr -repeat -clip $CLIP_POS
 # Possible alternative is x0vncserver but it does not show the mouse cursor.
 #   x0vncserver -display :0 -geometry $DIS_NAME -overlaymode -passwordfile ~/.vnc/passwd

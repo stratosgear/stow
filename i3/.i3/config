@@ -87,16 +87,36 @@ client.background       $base03
 set $mod Mod4
 set $alt Mod1
 
-set $wrksp1 "1: www"
-set $wrksp2 "2: terms"
-set $wrksp3 "3: ide"
-set $wrksp4 "4: preview"
-set $wrksp5 "5: email"
-set $wrksp6 "6: comms"
-set $wrksp7 "7: dev"
-set $wrksp8 "8: aux"
-set $wrksp9 "9: music"
-set $wrksp10 "10: vms"
+# www
+set $wrksp1 "1:"
+
+#terms
+set $wrksp2 "2:"
+
+#ide 
+#set $wrksp3 "3: "
+set $wrksp3 "3:"
+
+# Preview
+set $wrksp4 "4:"
+
+# Email
+set $wrksp5 "5:"
+
+# Comms
+set $wrksp6 "6:"
+
+# Dev
+set $wrksp7 "7:"
+
+# AUX
+set $wrksp8 "8:"
+
+# Music
+set $wrksp9 "9:"
+
+#VMs
+set $wrksp10 "10:"
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -106,8 +126,8 @@ set $wrksp10 "10: vms"
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:Roboto Mono $fontSize
-
+font pango: Roboto Mono $fontSize
+#font pango: M+ 1m, FontAwesome, Ionicons, $fontSize
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -134,7 +154,7 @@ hide_edge_borders both
 # start a terminal
 #bindsym $mod+Return exec /usr/bin/termite
 bindsym $mod+Return exec /usr/bin/alacritty
-bindsym $mod+Shift+Return exec /usr/bin/dolphin
+bindsym $mod+Shift+Return exec /usr/bin/thunar
 
 # kill focused window, key:q
 bindcode $mod+Shift+24 kill
@@ -173,7 +193,7 @@ bindsym $mod+Shift+Right move right
 # split in horizontal orientation, key:h
 bindcode $mod+43 split h
 
-# split in vertical orientation key:v
+# split in vertical orientation, key:v
 bindcode $mod+55 split v
 
 # enter fullscreen mode for the focused container, key:f
@@ -239,7 +259,7 @@ bindsym $mod+Shift+0 move container to workspace number $wrksp10
 bindcode $mod+Shift+54 reload
 
 # restart i3 inplace key:r (preserves your layout/session, can be used to upgrade i3)
-#bindcode $mod+Shift+27 restart
+bindcode $mod+Shift+27 restart
 
 # exit i3 (logs you out of your X session) key:e
 #bindcode $mod+Shift+26 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -330,9 +350,9 @@ bindcode $mod+52 [urgent=latest] focus
 assign [class="Spring Tool Suite" instance="Spring Tool Suite"] $wrksp3
 assign [class="LiClipse" instance="LiClipse"] $wrksp3
 assign [class="Thunderbird"] $wrksp5
-assign [class="Evolution" instance="evolution"] $wrksp5
-assign [class="Skype"] $wrksp6
-assign [class="Rhythmbox" instance="rhythmbox"] $wrksp9
+#assign [class="Evolution" instance="evolution"] $wrksp5
+#assign [class="Skype"] $wrksp6
+#assign [class="Rhythmbox" instance="rhythmbox"] $wrksp9
 assign [class="VirtualBox" instance="Qt-subapplication"] $wrksp10
 
 
@@ -380,7 +400,7 @@ bindcode $mod+27 mode "resize"
 
 # logout, reboot, restart
 #--------------------------------------------------
-set $Locker /home/stratos/stow/bin/glitchlock.sh
+set $Locker /home/stratos/stow/bin/lock_blur.sh
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
 mode "$mode_system" {
@@ -433,7 +453,7 @@ bar {
     output $laptopscreen
 
     font pango:Roboto Mono $fontSizeLarge
-    status_command i3blocks
+    status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     position top
     tray_output none
 
@@ -457,7 +477,7 @@ bar {
     output $extscreen
 
     font pango:Roboto Mono $fontSize
-    status_command i3blocks
+    status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     position top
     tray_output primary
 
@@ -481,7 +501,7 @@ bar {
     output $ext2screen
 
     font pango:Roboto Mono $fontSize
-#   status_command i3blocks
+#   status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     position top
     tray_output none
 
@@ -536,11 +556,14 @@ exec --no-startup-id 	dropbox start
 exec --no-startup-id 	xset -b
 
 exec --no-startup-id 	parcellite
-#exec --no-startup-id 	nm-applet
+exec --no-startup-id 	nm-applet
 #exec --no-startup-id 	dunst
 
+# volume control based on pulseaudio
+exec --no-startup-id 	volctl
+
 # switch input languages
-exec --no-startup-id 	~/dotfiles/bin/setupLocaleSwitching.sh
+exec --no-startup-id 	~/stow/bin/setupLocaleSwitching.sh
 
 # natural scrolling
 # handled by KDE touchpad settings for now
@@ -551,21 +574,23 @@ exec --no-startup-id 	xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics 
 #exec 			remind -z "-ki3-nagbar -m '%s' &" &
 #exec --no-startup-id 	ibus-daemon
 
-#exec --no-startup-id 	gnome-keyring-daemon
+exec --no-startup-id 	gnome-keyring-daemon
+exec --no-startup-id 	/usr/bin/blueman-applet
 
 
-## Plasma Integration
+## Plasma Integration ######################
+
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
+#exec --no-startup-id wmctrl -c Plasma
+#for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [class="plasmashell"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
+#for_window [class="plasmashell"] floating enable;
+#for_window [class="Plasma"] floating enable; border none
+#for_window [title="plasma-desktop"] floating enable; border none
+#for_window [title="win7"] floating enable; border none
+#for_window [class="krunner"] floating enable; border none
+#for_window [class="Kmix"] floating enable; border none
+#for_window [class="Klipper"] floating enable; border none
+#for_window [class="Plasmoidviewer"] floating enable; border none

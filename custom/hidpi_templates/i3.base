@@ -82,16 +82,36 @@ client.background       $base03
 set $mod Mod4
 set $alt Mod1
 
-set $wrksp1 "1: www"
-set $wrksp2 "2: terms"
-set $wrksp3 "3: ide"
-set $wrksp4 "4: preview"
-set $wrksp5 "5: email"
-set $wrksp6 "6: comms"
-set $wrksp7 "7: dev"
-set $wrksp8 "8: aux"
-set $wrksp9 "9: music"
-set $wrksp10 "10: vms"
+# www
+set $wrksp1 "1:"
+
+#terms
+set $wrksp2 "2:"
+
+#ide 
+#set $wrksp3 "3: "
+set $wrksp3 "3:"
+
+# Preview
+set $wrksp4 "4:"
+
+# Email
+set $wrksp5 "5:"
+
+# Comms
+set $wrksp6 "6:"
+
+# Dev
+set $wrksp7 "7:"
+
+# AUX
+set $wrksp8 "8:"
+
+# Music
+set $wrksp9 "9:"
+
+#VMs
+set $wrksp10 "10:"
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -101,8 +121,8 @@ set $wrksp10 "10: vms"
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:Roboto Mono $fontSize
-
+font pango: Roboto Mono $fontSize
+#font pango: M+ 1m, FontAwesome, Ionicons, $fontSize
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -325,9 +345,9 @@ bindcode $mod+52 [urgent=latest] focus
 assign [class="Spring Tool Suite" instance="Spring Tool Suite"] $wrksp3
 assign [class="LiClipse" instance="LiClipse"] $wrksp3
 assign [class="Thunderbird"] $wrksp5
-assign [class="Evolution" instance="evolution"] $wrksp5
-assign [class="Skype"] $wrksp6
-assign [class="Rhythmbox" instance="rhythmbox"] $wrksp9
+#assign [class="Evolution" instance="evolution"] $wrksp5
+#assign [class="Skype"] $wrksp6
+#assign [class="Rhythmbox" instance="rhythmbox"] $wrksp9
 assign [class="VirtualBox" instance="Qt-subapplication"] $wrksp10
 
 
@@ -375,7 +395,7 @@ bindcode $mod+27 mode "resize"
 
 # logout, reboot, restart
 #--------------------------------------------------
-set $Locker /home/stratos/stow/bin/glitchlock.sh
+set $Locker /home/stratos/stow/bin/lock_blur.sh
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
 mode "$mode_system" {
@@ -428,7 +448,7 @@ bar {
     output $laptopscreen
 
     font pango:Roboto Mono $fontSizeLarge
-    status_command i3blocks
+    status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     position top
     tray_output $laptopTrayMode$
 
@@ -451,7 +471,7 @@ bar {
     output $extscreen
 
     font pango:Roboto Mono $fontSize
-    status_command i3blocks
+    status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     position top
     tray_output $extScreenTrayMode$
 
@@ -474,7 +494,7 @@ bar {
     output $ext2screen
 
     font pango:Roboto Mono $fontSize
-#   status_command i3blocks
+#   status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     position top
     tray_output $extScreen2TrayMode$
 
@@ -530,6 +550,9 @@ exec --no-startup-id 	xset -b
 exec --no-startup-id 	parcellite
 exec --no-startup-id 	nm-applet
 #exec --no-startup-id 	dunst
+
+# volume control based on pulseaudio
+exec --no-startup-id 	volctl
 
 # switch input languages
 exec --no-startup-id 	~/stow/bin/setupLocaleSwitching.sh
