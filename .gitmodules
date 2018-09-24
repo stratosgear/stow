@@ -4,3 +4,6 @@
 [submodule "i3/.i3/i3blocks-contrib"]
 	path = i3/.i3/i3blocks-contrib
 	url = https://github.com/vivien/i3blocks-contrib.git
+[submodule "i3/.i3/i3blocks-str"]
+	path = i3/.i3/i3blocks-str
+	url = https://github.com/stratosgear/i3blocks-contrib.git
