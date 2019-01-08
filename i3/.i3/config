@@ -152,8 +152,8 @@ hide_edge_borders both
 
 
 # start a terminal
-#bindsym $mod+Return exec /usr/bin/termite
-bindsym $mod+Return exec /usr/bin/alacritty
+bindsym $mod+Return exec /usr/bin/termite
+#bindsym $mod+Return exec /usr/bin/alacritty
 bindsym $mod+Shift+Return exec /usr/bin/thunar
 
 # kill focused window, key:q
