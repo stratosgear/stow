@@ -12,8 +12,8 @@ xrandr --dpi 96
 
 #sudo /home/stratos/stow/bin/esaConnect
 
-i3-msg "workspace 1: www, move workspace to output DP2-2"
-i3-msg "workspace 6: comms, move workspace to output DP2-3"
-i3-msg "workspace 3: ide, move workspace to output DP2-2"
-i3-msg "workspace 4: preview, move workspace to output DP2-3"
-i3-msg "workspace 5: email, move workspace to output DP2-2"
+i3-msg "workspace 1:, move workspace to output DP2-2"
+i3-msg "workspace 6:, move workspace to output DP2-3"
+i3-msg "workspace 3:, move workspace to output DP2-2"
+i3-msg "workspace 4:, move workspace to output DP2-3"
+i3-msg "workspace 5:, move workspace to output DP2-2"

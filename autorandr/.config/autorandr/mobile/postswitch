@@ -2,11 +2,13 @@
 
 sleep 1
 
-i3-msg "workspace 1: www, move workspace to output eDP1"
-i3-msg "workspace 6: comms, move workspace to output eDP1"
-i3-msg "workspace 3: ide, move workspace to output eDP1"
-i3-msg "workspace 4: preview, move workspace to output eDP1"
-i3-msg "workspace 5: email, move workspace to output eDP1"
+i3-msg "workspace 1: www, move workspace to output eDP1"
+i3-msg "workspace 6: comms, move workspace to output eDP1"
+i3-msg "workspace 3: ide, move workspace to output eDP1"
+i3-msg "workspace 4: preview, move workspace to output eDP1"
+i3-msg "workspace 5: email, move workspace to output eDP1"
+
+
 
 xrandr --dpi 144
 
