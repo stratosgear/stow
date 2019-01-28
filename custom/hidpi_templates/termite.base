@@ -27,7 +27,8 @@ search_wrap = true
 #icon_name = terminal
 #geometry = 640x480
 
-font = Input $fontSize$
+#font = Input $fontSize$
+font = iosevka $fontSize$
 
 # "system", "on" or "off"
 cursor_blink = system
