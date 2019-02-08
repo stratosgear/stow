@@ -133,8 +133,8 @@ force_display_urgency_hint 2000 ms
 # Switch to previous workspace by pressing the same workspace number again
 workspace_auto_back_and_forth yes
 
-new_window pixel 1
-hide_edge_borders both
+new_window pixel 2
+# hide_edge_borders both
 
 
 
@@ -147,7 +147,8 @@ hide_edge_borders both
 
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/termite
+bindsym $mod+Return exec /bin/kitty
+#bindsym $mod+Return exec /usr/bin/kitty
 #bindsym $mod+Return exec /usr/bin/alacritty
 bindsym $mod+Shift+Return exec /usr/bin/thunar
 
@@ -262,7 +263,7 @@ bindcode $mod+Shift+27 restart
 
 # keys: t, y, u
 bindcode $mod+28 border normal
-bindcode $mod+29 border 1pixel
+bindcode $mod+29 border pixel
 bindcode $mod+30 border none
 
 # laptop monitor screen brightnes controls
