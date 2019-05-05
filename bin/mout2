@@ -1,0 +1,336 @@
+#!/usr/bin/env python3
+
+import subprocess
+import json
+import sys
+import os
+
+
+CONF = "~/.config/mout"
+LAPTOP_MONITOR = "Panasonic Industry Company 0x96A2 0x00000000"
+
+
+class Mout:
+    def __init__(self):
+        self.o = self.get_outputs()
+        self.screens = self.get_all_screens()
+        self.ext_screens = self.get_external_screens()
+        self.lap_screen = self.get_laptop_screen()
+        self.profile_config = self.get_profile_name()
+        print(self.profile_config)
+
+        self.setup = {}
+
+    def get_outputs(self):
+        # result = subprocess.run(
+        #     ["swaymsg", "-t", "get_outputs", "-r"], stdout=subprocess.PIPE
+        # )
+        # output = result.stdout.decode("utf-8")
+        # return json.loads(output)
+        output = """
+    [{
+    "id": 3,
+    "name": "eDP-1",
+    "rect": {
+        "x": 3520,
+        "y": 300,
+        "width": 2560,
+        "height": 1440
+    },
+    "focus": [31],
+    "border": "none",
+    "current_border_width": 0,
+    "layout": "output",
+    "orientation": "none",
+    "percent": 0.3484573502722323,
+    "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    },
+    "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    },
+    "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    },
+    "window": null,
+    "urgent": false,
+    "floating_nodes": [],
+    "sticky": false,
+    "type": "output",
+    "active": true,
+    "primary": false,
+    "make": "Panasonic Industry Company",
+    "model": "0x96A2",
+    "serial": "0x00000000",
+    "scale": 1.0,
+    "transform": "normal",
+    "current_workspace": "4:b",
+    "modes": [{
+        "width": 2560,
+        "height": 1440,
+        "refresh": 48000
+    }, {
+        "width": 2560,
+        "height": 1440,
+        "refresh": 59999
+    }],
+    "current_mode": {
+        "width": 2560,
+        "height": 1440,
+        "refresh": 59999
+    },
+    "focused": false
+    }, {
+    "id": 18,
+    "name": "DP-5",
+    "rect": {
+        "x": 0,
+        "y": 300,
+        "width": 1600,
+        "height": 900
+    },
+    "focus": [25],
+    "border": "none",
+    "current_border_width": 0,
+    "layout": "output",
+    "orientation": "none",
+    "percent": 0.13611615245009073,
+    "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    },
+    "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    },
+    "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    },
+    "window": null,
+    "urgent": false,
+    "floating_nodes": [],
+    "sticky": false,
+    "type": "output",
+    "active": true,
+    "primary": false,
+    "make": "Goldstar Company Ltd",
+    "model": "20EN33",
+    "serial": "303NDMTMM283",
+    "scale": 1.0,
+    "transform": "normal",
+    "current_workspace": "6:a",
+    "modes": [{
+        "width": 720,
+        "height": 400,
+        "refresh": 70082
+    }, {
+        "width": 640,
+        "height": 480,
+        "refresh": 59940
+    }, {
+        "width": 640,
+        "height": 480,
+        "refresh": 75000
+    }, {
+        "width": 800,
+        "height": 600,
+        "refresh": 56250
+    }, {
+        "width": 800,
+        "height": 600,
+        "refresh": 60317
+    }, {
+        "width": 800,
+        "height": 600,
+        "refresh": 75000
+    }, {
+        "width": 832,
+        "height": 624,
+        "refresh": 74551
+    }, {
+        "width": 1024,
+        "height": 768,
+        "refresh": 60004
+    }, {
+        "width": 1024,
+        "height": 768,
+        "refresh": 75029
+    }, {
+        "width": 1280,
+        "height": 720,
+        "refresh": 60000
+    }, {
+        "width": 1152,
+        "height": 864,
+        "refresh": 75000
+    }, {
+        "width": 1280,
+        "height": 800,
+        "refresh": 59810
+    }, {
+        "width": 1440,
+        "height": 900,
+        "refresh": 59887
+    }, {
+        "width": 1600,
+        "height": 900,
+        "refresh": 60000
+    }],
+    "current_mode": {
+        "width": 1600,
+        "height": 900,
+        "refresh": 60000
+    },
+    "focused": false
+    }]"""
+        return json.loads(output)
+
+    def get_profile_name(self):
+        return os.path.join(
+            CONF, "{}.json".format("-".join(m.get("name") for m in self.ext_screens))
+        )
+
+    def get_monitor_name(self, mon):
+        return "{} {} {}".format(mon.get("make"), mon.get("model"), mon.get("serial"))
+
+    def get_all_screens(self):
+        return [{"id": m.get("name"), "name": self.get_monitor_name(m)} for m in self.o]
+
+    def get_laptop_screen(self):
+        return [m for m in self.get_all_screens() if m.get("name") == LAPTOP_MONITOR][0]
+
+    def get_external_screens(self):
+        return sorted(
+            [m for m in self.get_all_screens() if m.get("name") != LAPTOP_MONITOR]
+        )
+
+    def info(self):
+
+        for m in self.o:
+            print("ID: {}".format(m.get("name")))
+            print(
+                "  Name    : {} {} {}".format(
+                    m.get("make"), m.get("model"), m.get("serial")
+                )
+            )
+            print(
+                "  Geometry: ({}x{}) x{}".format(
+                    m.get("rect").get("x"), m.get("rect").get("y"), m.get("scale")
+                )
+            )
+            print(
+                "  Modes   : {}".format(
+                    ", ".join(
+                        [
+                            "{}x{}@{}".format(
+                                md.get("width"),
+                                md.get("height"),
+                                md.get("refresh") / 1000,
+                            )
+                            for md in m.get("modes")
+                        ]
+                    )
+                )
+            )
+            # print(m)
+
+    def set(self, params):
+        for m in params.get("screens"):
+            n = m.get("name")
+            x = m.get("x")
+            y = m.get("y")
+            w = m.get("width")
+            h = m.get("height")
+            r = m.get("resolution")
+            s = m.get("scale")
+
+            cmd = "swaymsg output {} pos {} {} res {}x{} scale {}".format(
+                n, x, y, w, h, s
+            )
+            print(cmd)
+
+    def config(self):
+
+        if len(self.ext_screens) == 0:
+
+            print("No external monitors detected.")
+            sys.exit()
+
+        elif len(self.ext_screens) == 1:
+
+            print("Detected one external monitor: " + self.ext_screens[0].get("name"))
+            dir = None
+            while not dir:
+                dir = input(
+                    "Is it on the (L)eft, (R)ight, (A)bove or (B)elow the laptop screen: "
+                ).lower()
+                if dir not in "lrab":
+                    print("Invalid direction. Try again...")
+                    dir = None
+
+            self.setup["direction"] = "horizontal" if dir in "lr" else "vertical"
+            # now put them in order, from left to right, or top to bottom
+            if dir in "la":
+                self.setup["order"] = [self.ext_screens[0], self.lap_screen]
+            else:
+                self.setup["order"] = [self.lap_screen, self.ext_screens[0]]
+
+            align = None
+            while not align:
+                if dir in "ab":
+                    align = input(
+                        "Do you want it (L)eft, (M)iddle or (R)ight aligned with your laptop screen: "
+                    ).lower()
+                    if align not in "lmr":
+                        print("Invalid alignment. Try again...")
+                        align = None
+                else:
+                    align = input(
+                        "Do you want it (T)op, (C)enter or (B)ottom aligned with your laptop screen: "
+                    ).lower()
+                    if align not in "tcb":
+                        print("Invalid alignment. Try again...")
+                        align = None
+            print(dir)
+            print(align)
+        else:
+            # multiple ext monitors
+            pass
+
+    def apply(self):
+
+        print("." + self.profile_config)
+
+        if os.path.isfile(conf_file):
+            with open(conf_file, "r") as c:
+                params = json.load(c)
+
+                set(params)
+        else:
+            # self.setup()
+            pass
+
+
+mout = Mout()
+if len(sys.argv) == 1:
+    mout.apply()
+elif sys.argv[1] == "info":
+    mout.info()
+elif sys.argv[1] == "config":
+    mout.config()

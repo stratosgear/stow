@@ -1,0 +1,74 @@
+#!/bin/bash
+
+LAPTOP_WIDTH="2560" 
+LAPTOP_HEIGHT="1440"
+LAPTOP_NAME="\"Panasonic Industry Company 0x96A2 0x00000000\""
+
+
+if [[ ( "$1" -ne "docked" && "$1" -ne "mobile" ) && "$2" == "" ]]; then
+    echo "Where is the external monitor located?"
+    echo "Will need a [left|right|up|down] direction."
+    exit
+fi
+
+
+help() {
+    echo 'Usage: mout [setup] [left|right|up]'
+    echo '[left|right|up] is where the external monitor(s) are'
+    echo '                setup in relationship with the laptop.'
+    echo ''
+    echo "Monitor output setups that I know of:"
+    echo "  * docked            * ESAC-M002"
+    echo "  * mobile            "
+    echo "  * home              "
+    exit    
+
+}
+
+set_monitors() {
+    # echo "param 2: $1"
+    # echo "Width: $EXTMON_WIDTH"
+    # echo "height: $EXTMON_HEIGHT"
+    if [ "$1" == "left" ]; then
+        set -x  
+        sway output $EXTMON_NAME pos 0                0 res "$EXTMON_WIDTH"x"$EXTMON_HEIGHT" scale 1
+        sway output $LAPTOP_NAME pos $EXTMON_WIDTH    0 res 2560x1440                        scale 1
+    elif [ "$1" == "right" ]; then
+        set -x  
+        sway output $LAPTOP_NAME pos 0    0 res 2560x1440 scale 1
+        sway output $EXTMON_NAME pos 2560 0 res "$EXTMON_WIDTH"x"$EXTMON_HEIGHT" scale 1
+    elif [ "$1" == "up" ]; then
+        set -x  
+        sway output $EXTMON_NAME pos 0 0              res "$EXTMON_WIDTH"x"$EXTMON_HEIGHT" scale 1
+        sway output $LAPTOP_NAME pos 0 $EXTMON_HEIGHT res 2560x1440                    scale 1
+    else
+        echo "What direction is that?"
+        help
+    fi
+}
+
+if [ "$1" == "show" ]; then
+    set -x
+    swaymsg -t get_outputs 
+
+elif [ "$1" == "docked" ]; then
+    # Activates display of command executed
+    set -x
+    sway output '"Goldstar Company Ltd 20EN33 303NDMTMM283"'     pos 0    300 res 1600x900  scale 1
+    sway output '"Dell Inc. DELL U2412M 0FFXD46R5Y6S"'           pos 1600 0   res 1920x1200 scale 1
+    sway output $LAPTOP_NAME pos 3520 300 res 2560x1440 scale 1
+
+elif [ "$1" == "mobile" ]; then
+    set -x
+    sway output '"Panasonic Industry Company 0x96A2 0x00000000"' pos 0    0   res 2560x1440 scale 1.5
+
+elif [ "$1" == "home" ]; then
+
+    EXTMON_NAME="\"Samsung Electric Company SyncMaster H1AK500000\""
+    EXTMON_WIDTH="1680"
+    EXTMON_HEIGHT="1050"
+    set_monitors $2
+
+else
+    help
+fi
