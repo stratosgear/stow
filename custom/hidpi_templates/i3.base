@@ -420,7 +420,8 @@ mode "$mode_system" {
 #bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+x mode "$mode_system"
 
-
+bindsym $mod+Shift+v exec --no-startup-id ~/stow/bin/webcamtoggle.sh
+bindsym $mod+Shift+b exec --no-startup-id ~/stow/bin/vlc_screen_share.sh
 
 # switch keyboard layout
 #--------------------------------------------------
@@ -524,6 +525,19 @@ bindsym $mod+$alt+backslash bar mode toggle bar-external2
 for_window [class="File-roller" instance="file-roller"] floating enable
 for_window [class="com-google-gwt-dev-DevMod" instance="sun-awt-X11-XFramePeer"] floating enable
 #for_window [title="Write:.*" class="Thunderbird"] floating enable
+
+# Bindings to make the webcam float and stick.
+for_window [title="mpvfloat"] floating enable
+for_window [title="mpvfloat"] sticky enable
+for_window [title="mpvfloat"] border pixel 0
+no_focus [title="mpvfloat"]
+for_window [title="vlcwebcamfeed"] floating enable
+for_window [title="vlcwebcamfeed"] sticky enable
+for_window [title="vlcwebcamfeed"] border pixel 0
+no_focus [title="vlcwebcamfeed"]
+
+for_window [title="vlcscreensharing"] to output DP2-3
+
 
 #      _             _
 #  ___| |_ __ _ _ __| |_ _   _ _ __     __ _ _ __  _ __  ___

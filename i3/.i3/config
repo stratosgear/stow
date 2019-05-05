@@ -35,7 +35,7 @@
 
 
 set $laptopscreen eDP1
-set $extscreen    DP2-2
+set $extscreen    DP1
 
 set $ext2screen   DP2-3
 
@@ -138,8 +138,8 @@ force_display_urgency_hint 2000 ms
 # Switch to previous workspace by pressing the same workspace number again
 workspace_auto_back_and_forth yes
 
-new_window pixel 1
-hide_edge_borders both
+new_window pixel 2
+# hide_edge_borders both
 
 
 
@@ -152,7 +152,8 @@ hide_edge_borders both
 
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/termite
+bindsym $mod+Return exec /bin/kitty
+#bindsym $mod+Return exec /usr/bin/kitty
 #bindsym $mod+Return exec /usr/bin/alacritty
 bindsym $mod+Shift+Return exec /usr/bin/thunar
 
@@ -267,7 +268,7 @@ bindcode $mod+Shift+27 restart
 
 # keys: t, y, u
 bindcode $mod+28 border normal
-bindcode $mod+29 border 1pixel
+bindcode $mod+29 border pixel
 bindcode $mod+30 border none
 
 # laptop monitor screen brightnes controls
@@ -424,7 +425,8 @@ mode "$mode_system" {
 #bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+x mode "$mode_system"
 
-
+bindsym $mod+Shift+v exec --no-startup-id ~/stow/bin/webcamtoggle.sh
+bindsym $mod+Shift+b exec --no-startup-id ~/stow/bin/vlc_screen_share.sh
 
 # switch keyboard layout
 #--------------------------------------------------
@@ -532,6 +534,19 @@ for_window [class="File-roller" instance="file-roller"] floating enable
 for_window [class="com-google-gwt-dev-DevMod" instance="sun-awt-X11-XFramePeer"] floating enable
 #for_window [title="Write:.*" class="Thunderbird"] floating enable
 
+# Bindings to make the webcam float and stick.
+for_window [title="mpvfloat"] floating enable
+for_window [title="mpvfloat"] sticky enable
+for_window [title="mpvfloat"] border pixel 0
+no_focus [title="mpvfloat"]
+for_window [title="vlcwebcamfeed"] floating enable
+for_window [title="vlcwebcamfeed"] sticky enable
+for_window [title="vlcwebcamfeed"] border pixel 0
+no_focus [title="vlcwebcamfeed"]
+
+for_window [title="vlcscreensharing"] to output DP2-3
+
+
 #      _             _
 #  ___| |_ __ _ _ __| |_ _   _ _ __     __ _ _ __  _ __  ___
 # / __| __/ _` | '__| __| | | | '_ \   / _` | '_ \| '_ \/ __|
@@ -549,7 +564,7 @@ exec --no-startup-id ~/dotfiles/bin/randomWallpapers.sh
 #exec --no-startup-id 	gnome-settings-daemon
 exec --no-startup-id 	xflux -l 40.44689 -g -4.0048
 #exec --no-startup-id 	davmail
-exec --no-startup-id 	dropbox start
+#exec --no-startup-id 	dropbox start
 #exec --no-startup-ip	variety
 
 # do not beep on terminal
