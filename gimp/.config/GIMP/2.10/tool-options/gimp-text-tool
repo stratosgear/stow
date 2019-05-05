@@ -1,0 +1,9 @@
+# GIMP gimp-text-tool options
+
+(palette "Default")
+(font "Futura Bold")
+(font-size 138.000000)
+(justify right)
+(line-spacing -15.000000)
+
+# end of gimp-text-tool options

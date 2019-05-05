@@ -1,0 +1,7 @@
+# GIMP gimp-color-picker-tool options
+
+(average-radius 6.000000)
+(sample-average yes)
+(use-info-window yes)
+
+# end of gimp-color-picker-tool options

@@ -1,0 +1,8 @@
+# GIMP gimp-fuzzy-select-tool options
+
+(operation add)
+(feather-radius 2.000000)
+(select-transparent no)
+(threshold 9.700000)
+
+# end of gimp-fuzzy-select-tool options

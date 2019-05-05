@@ -1,0 +1,6 @@
+# GIMP gimp-perspective-tool options
+
+(direction backward)
+(show-preview no)
+
+# end of gimp-perspective-tool options
