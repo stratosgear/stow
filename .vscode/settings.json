@@ -1,0 +1,11 @@
+{
+    // Makes all files ending in period, shellscripts
+    "files.associations": {
+        "**/bin/**/*.": "shellscript"
+    },
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "/usr/bin/python3"
+}
