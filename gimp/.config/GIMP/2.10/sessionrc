@@ -11,8 +11,8 @@
     (size 638 1179))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 5 28)
-    (size 1670 1017)
+    (position 6 62)
+    (size 1694 892)
     (open-on-exit)
     (aux-info
         (left-docks-width "206")
@@ -61,7 +61,7 @@
                     (edit-active "true")
                     (current-data "2. Hardness 050"))))
         (book
-            (position 665)
+            (position 641)
             (current-page 0)
             (dockable "gimp-brush-grid"
                 (tab-style automatic)
@@ -81,13 +81,12 @@
     (size 1110 720))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 209 121)
+    (position 222 81)
     (size 1262 830))
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")
-    (position 329 185)
-    (size 1262 830)
-    (monitor 1))
+    (position 120 979)
+    (size 1262 830))
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
     (position 93 320)
@@ -134,8 +133,7 @@
     (position 1033 557))
 (session-info "toplevel"
     (factory-entry "gimp-operation-tool-dialog")
-    (position 1084 362)
-    (monitor 1))
+    (position 1006 299))
 
 (hide-docks no)
 (single-window-mode yes)

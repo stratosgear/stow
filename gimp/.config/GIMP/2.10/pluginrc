@@ -2742,6 +2742,8 @@
         (proc-arg 4 "filename" "The name of the file to load")
         (proc-arg 4 "raw-filename" "The name entered")
         (proc-arg 13 "image" "Output image")))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable" 1554661011
+    (has-init))
 (plug-in-def "${gimp_plug_in_dir}/plug-ins/file-csource/file-csource" 1554661011
     (proc-def "file-csource-save" 1
          "Dump image data in RGB(A) format for C source"
@@ -3787,10 +3789,10 @@
         (proc-arg 16 "drawable" "Input drawable (not used)")
         (proc-arg 0 "link-after-alignment" "Link the visible layers after alignment { TRUE, FALSE }")
         (proc-arg 0 "use-bottom" "use the bottom layer as the base of alignment { TRUE, FALSE }")))
-(plug-in-def "${gimp_plug_in_dir}/plug-ins/gmic_gimp" 1556628585
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/gmic_gimp" 1558788340
     (proc-def "plug-in-gmic-qt" 1
-         "G'MIC-Qt (2.6.1)"
-         "G'MIC-Qt (2.6.1)"
+         "G'MIC-Qt (2.6.4)"
+         "G'MIC-Qt (2.6.4)"
          "Sébastien Fourey"
          "Sébastien Fourey"
          "2017"
