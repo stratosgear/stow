@@ -1,0 +1,386 @@
+#!/usr/bin/env python3
+
+import subprocess
+import json
+import sys
+import os
+import hashlib
+import signal
+
+# EDIT ME:
+# Gotta now where the laptop monitor is mapped to
+LAPTOP_MONITOR = "eDP-1"
+
+DOT_CONFIG = path = os.getenv("XDG_CONFIG_HOME", os.path.expanduser("~/.config"))
+APP_NAME = "mout"
+
+
+def keyboardInterruptHandler(signal, frame):
+    print("\nQuiting? Fine by me!")
+    exit(0)
+
+
+signal.signal(signal.SIGINT, keyboardInterruptHandler)
+
+
+class Mout:
+    def __init__(self):
+        self.all_screens = self.get_outputs()
+        self.ext_screens = self.get_external_screens()
+        self.lap_screen = self.get_laptop_screen()
+        self.profile_config = self.get_config_name()
+
+        self.mapped_screens = []
+
+    def get_outputs(self):
+        """ Ask sway about screen configuration"""
+        result = subprocess.run(
+            ["swaymsg", "-t", "get_outputs", "-r"], stdout=subprocess.PIPE
+        )
+        output = result.stdout.decode("utf-8")
+        return sorted(json.loads(output), key=lambda x: self.get_monitor_name(x))
+
+    def current_monitors_fingerprint(self):
+        connected_screens = "-".join(self.get_monitor_name(m) for m in self.all_screens)
+
+        return hashlib.sha256(connected_screens.encode()).hexdigest()[:12]
+
+    def get_config_name(self):
+        """Get path to a screen configuration profile file, based on the list
+        of currently connected screens """
+
+        config_name = "{}.json".format(self.current_monitors_fingerprint())
+        return os.path.join(DOT_CONFIG, APP_NAME, config_name)
+
+    def get_monitor_name(self, mon):
+        """ Construct a user friendly monitor name"""
+        return "{} {} {}".format(mon["make"], mon["model"], mon["serial"])
+
+    def get_laptop_screen(self):
+        """ Get laptop screen"""
+        return [m for m in self.all_screens if m["name"] == LAPTOP_MONITOR][0]
+
+    def get_external_screens(self):
+        """ Get a list of external screens only"""
+
+        return [m for m in self.all_screens if m["name"] != LAPTOP_MONITOR]
+
+    def print_info(self):
+        """Print current screen configuration"""
+
+        for m in self.all_screens:
+            print(f"ID: {m['name']}")
+            print(f'  Name     : {m["make"]} {m["model"]} {m["serial"]}')
+            print(f'  Position : {m["rect"]["x"]}x{m["rect"]["y"]}')
+            print(
+                f'  Geometry : ({m["rect"]["width"]}x{m["rect"]["height"]}) x{m["scale"]}'
+            )
+            print(
+                "  Modes    : {}".format(
+                    ", ".join(
+                        [
+                            "{}x{}@{}".format(
+                                md["width"], md["height"], md["refresh"] / 1000
+                            )
+                            for md in m["modes"]
+                        ]
+                    )
+                )
+            )
+        print(
+            "\nConnected monitors fingerprint: {}".format(
+                self.current_monitors_fingerprint()
+            )
+        )
+
+    def setup(self, params):
+        """ Use sway to set a screen configuration"""
+        NULL = open(os.devnull, "w")
+
+        print("Applying monitor settings:")
+        for m in params:
+            n = self.get_monitor_name(m)
+            x = m["rect"]["x"]
+            y = m["rect"]["y"]
+            w = m["rect"]["width"]
+            h = m["rect"]["height"]
+            # r = m["resolution"]
+            s = m["scale"]
+
+            cmd = [
+                "sway",
+                "output",
+                f"'{n}'",
+                "pos",
+                f"{x}",
+                f"{y}",
+                "res",
+                f"{w}x{h}",
+                "scale",
+                f"{s}",
+            ]
+            print("  " + " ".join(cmd))
+
+            subprocess.Popen(cmd, stdout=NULL)
+
+    def map_screen(self, screen, direction=None, alignment="t"):
+
+        if not direction:
+            # this is the initial screen in the mapped_screens
+            screen["rect"]["x"] = 0
+            screen["rect"]["y"] = 0
+            self.mapped_screens = [screen]
+        elif direction == "l":
+            es = self.mapped_screens[0]
+
+            ex = es["rect"]["x"]
+            ey = es["rect"]["y"]
+            ew = es["rect"]["width"]
+            eh = es["rect"]["height"]
+            sw = screen["rect"]["width"]
+            sh = screen["rect"]["height"]
+            vd = eh - sh  # vertical difference in height
+
+            # easy to set the 'x' of the new screen
+            screen["rect"]["x"] = ex - sw
+
+            # workout the 'y', depending on alignment
+            if alignment == "t":
+                screen["rect"]["y"] = ey
+            elif alignment == "m":
+                screen["rect"]["y"] = ey + int(vd / 2)
+            else:
+                screen["rect"]["y"] = ey + vd
+            self.mapped_screens.insert(0, screen)
+
+        elif direction == "r":
+            es = self.mapped_screens[-1]
+
+            ex = es["rect"]["x"]
+            ey = es["rect"]["y"]
+            ew = es["rect"]["width"]
+            eh = es["rect"]["height"]
+            sw = screen["rect"]["width"]
+            sh = screen["rect"]["height"]
+            vd = ew - sw  # vertical difference in height
+
+            # easy to set the 'x' of the new screen
+            screen["rect"]["x"] = ex + ew
+
+            # workout the 'y', depending on alignment
+            if alignment == "t":
+                screen["rect"]["y"] = ey
+            elif alignment == "m":
+                screen["rect"]["y"] = ey + int(vd / 2)
+            else:
+                screen["rect"]["y"] = ey + vd
+            self.mapped_screens.append(screen)
+
+    def normalize_mapped_screens(self):
+
+        # print("before:")
+        # for m in self.mapped_screens:
+        #     print(m["rect"])
+        minX = 100000
+        minY = 100000
+        for m in self.mapped_screens:
+            minX = min(minX, m["rect"]["x"])
+            minY = min(minY, m["rect"]["y"])
+
+        for m in self.mapped_screens:
+            m["rect"]["x"] -= minX
+            m["rect"]["y"] -= minY
+
+        print("after:")
+        for m in self.mapped_screens:
+            print(m["rect"])
+
+    def config(self):
+
+        if len(self.ext_screens) == 0:
+
+            print("No external monitors detected.")
+            sys.exit()
+
+        self.map_screen(self.lap_screen)
+
+        # iterate over all external screens
+        for m in self.ext_screens:
+
+            print("Setting up external screen: {}".format(self.get_monitor_name(m)))
+            print(f"    Screen geometry: {m['rect']}")
+
+            xpos = None
+            while not xpos:
+                xpos = input(
+                    "Do you want it on the (L)eft or (R)ight of the laptop screen: "
+                ).lower()
+                if xpos not in "lr":
+                    print("Hello? L or R please... Try again!")
+                    xpos = None
+
+            laptop_screen_height = self.lap_screen["rect"]["height"]
+            ext_screen_height = m["rect"]["height"]
+            if laptop_screen_height != ext_screen_height:
+                print(
+                    f"Screen heights for laptop({laptop_screen_height}px) and external monitor ({ext_screen_height}px) differ."
+                )
+                valign = None
+                while not valign:
+                    valign = input(
+                        "Do you want them (T)op, (M)iddle or (B)ottom aligned: "
+                    ).lower()
+                    if valign not in "tmb":
+                        print("Hello? T, M or B please... Try again!")
+                        valign = None
+            else:
+                # If same size, let's assume top alignment
+                valign = "t"
+
+            self.map_screen(m, xpos, valign)
+
+        self.normalize_mapped_screens()
+
+        self.save_config()
+
+        self.setup(self.mapped_screens)
+
+    def save_config(self):
+
+        config_name = input(
+            "Please provide a configuration name for this setup: "
+        ).lower()
+
+        params_to_save = {"config_name": config_name}
+        monitor_params = []
+        for m in self.mapped_screens:
+            p = {
+                "make": m["make"],
+                "model": m["model"],
+                "serial": m["serial"],
+                "rect": {
+                    "x": m["rect"]["x"],
+                    "y": m["rect"]["y"],
+                    "width": m["rect"]["width"],
+                    "height": m["rect"]["height"],
+                },
+                "scale": m["scale"],
+            }
+            monitor_params.append(p)
+        params_to_save["config_params"] = monitor_params
+
+        # print("To save: {}".format(params_to_save))
+
+        if os.path.isfile(self.profile_config):
+            with open(self.profile_config, "r+") as c:
+                params = json.load(c)
+                params.extend([params_to_save])
+                c.seek(0)
+                c.write(json.dumps(params, indent=4, sort_keys=True))
+        else:
+            os.makedirs(os.path.dirname(self.profile_config), exist_ok=True)
+            with open(self.profile_config, "w") as c:
+                c.write(json.dumps([params_to_save], indent=4, sort_keys=True))
+
+    def apply(self):
+        """ Try to apply a saved screen profile"""
+
+        if not self.apply_config():
+            self.config()
+
+    def apply_config(self):
+
+        if os.path.isfile(self.profile_config):
+            print(f"Loading monitor configuration from: {self.profile_config}")
+            with open(self.profile_config, "r") as c:
+                params = json.load(c)
+
+            to_apply = None
+            if len(params) == 1:
+                print(f"  Profile Name: {params[0]['config_name']}")
+                to_apply = params[0]["config_params"]
+            else:
+                print(
+                    "There are multiple configurations for the current monitor setup:"
+                )
+                for i, c in enumerate(params):
+                    print(f'{i+1}. {c["config_name"]}')
+                params_len = len(params)
+                prof_ind = None
+                while not prof_ind:
+                    prof_ind = input(f"Which one to apply (1-{params_len}): ")
+                    try:
+                        prof_ind = int(prof_ind)
+
+                        if int(prof_ind) < 1 or prof_ind > params_len:
+                            print(
+                                f"Hello? Something between 1 and {params_len} please."
+                            )
+                            prof_ind = None
+                    except (TypeError, ValueError) as e:
+                        print(f"Hello? Was expecting a number. Try again? ")
+                        prof_ind = None
+
+                to_apply = params[prof_ind - 1]["config_params"]
+            self.setup(to_apply)
+            return True
+
+        else:
+            return False
+
+    def profiles(self):
+
+        if os.path.isfile(self.profile_config):
+            print(f"Loading monitor configuration from: {self.profile_config}")
+            with open(self.profile_config, "r") as c:
+                params = json.load(c)
+
+            for prof in params:
+                print(f"\nProfile Name: {prof['config_name']}")
+
+                p = prof["config_params"]
+
+                for m in p:
+                    print("  Monitor: {}".format(self.get_monitor_name(m)))
+                    print("    Position: {}x{}".format(m["rect"]["x"], m["rect"]["y"]))
+                    print(
+                        "    Geometry: ({}x{}) x{}".format(
+                            m["rect"]["width"], m["rect"]["height"], m["scale"]
+                        )
+                    )
+        else:
+            print("Current monitor configuration setup does not contain any profiles.")
+
+    def help(self):
+        print(
+            """mout (Multi-monitor Output) v1.0
+
+mout is a Sway Multimonitor configurator.
+
+Commands:
+
+info       Display current list of connected monitors as reported by Sway
+config     Create a new profile based on the currently connected monitors
+profiles   List pre-configured profiles for current monitor configuration
+
+Running `mout` with no command line parameters will try to load a profile
+from the list of available profiles for this monitor configuration setup.
+
+        """
+        )
+
+
+mout = Mout()
+
+if len(sys.argv) == 1:
+    # Called mout with no params:
+    # Try to apply an existing profile based on the currently connected monitors
+    mout.apply()
+elif sys.argv[1] == "info":
+    mout.print_info()
+elif sys.argv[1] == "profiles":
+    mout.profiles()
+elif sys.argv[1] == "-h":
+    mout.help()
+elif sys.argv[1] == "config":
+    mout.config()
