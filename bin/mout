@@ -60,7 +60,7 @@ elif [ "$1" == "docked" ]; then
 
 elif [ "$1" == "mobile" ]; then
     set -x
-    sway output '"Panasonic Industry Company 0x96A2 0x00000000"' pos 0    0   res 2560x1440 scale 1.5
+    sway output '"Panasonic Industry Company 0x96A2 0x00000000"' pos 0    0   res 2560x1440 scale 1.4
 
 elif [ "$1" == "home" ]; then
 
