@@ -35,7 +35,7 @@
 
 
 set $laptopscreen eDP1
-set $extscreen    DP1
+set $extscreen    DP2-2
 
 set $ext2screen   DP2-3
 
@@ -564,7 +564,7 @@ exec --no-startup-id ~/dotfiles/bin/randomWallpapers.sh
 #exec --no-startup-id 	gnome-settings-daemon
 exec --no-startup-id 	xflux -l 40.44689 -g -4.0048
 #exec --no-startup-id 	davmail
-#exec --no-startup-id 	dropbox start
+exec --no-startup-id 	dropbox start
 #exec --no-startup-ip	variety
 
 # do not beep on terminal
