@@ -1,4 +1,4 @@
-; gimp GtkAccelMap rc-file         -*- scheme -*-
+; gimp-2.10 GtkAccelMap rc-file         -*- scheme -*-
 ; this file is an automated accelerator map dump
 ;
 ; (gtk_accel_path "<Actions>/plug-in/plug-in-spyrogimp" "")
@@ -328,6 +328,7 @@
 ; (gtk_accel_path "<Actions>/channels/channels-selection-intersect" "")
 ; (gtk_accel_path "<Actions>/plug-in/plug-in-cartoon" "")
 ; (gtk_accel_path "<Actions>/view/view-softproof-intent-perceptual" "")
+; (gtk_accel_path "<Actions>/tools/tools-offset" "")
 (gtk_accel_path "<Actions>/edit/edit-clear" "")
 ; (gtk_accel_path "<Actions>/image/image-convert-float" "")
 ; (gtk_accel_path "<Actions>/view/view-scroll-down" "")
@@ -757,6 +758,7 @@
 ; (gtk_accel_path "<Actions>/context/context-palette-foreground-set" "")
 ; (gtk_accel_path "<Actions>/tools/tools-paintbrush-spacing-set" "")
 ; (gtk_accel_path "<Actions>/gradient-editor/gradient-editor-save-left-02" "")
+; (gtk_accel_path "<Actions>/filters/filters-offset" "<Primary><Shift>o")
 ; (gtk_accel_path "<Actions>/filters/filters-softglow" "")
 ; (gtk_accel_path "<Actions>/vectors/vectors-select-top" "")
 ; (gtk_accel_path "<Actions>/context/context-brush-shape-square" "")
@@ -936,7 +938,6 @@
 ; (gtk_accel_path "<Actions>/context/context-palette-select-first" "")
 ; (gtk_accel_path "<Actions>/layers/layers-lock-position" "")
 ; (gtk_accel_path "<Actions>/tools/tools-object-1-next" "")
-; (gtk_accel_path "<Actions>/patterns/patterns-copy-location" "")
 ; (gtk_accel_path "<Actions>/dialogs/dialogs-device-status" "")
 ; (gtk_accel_path "<Actions>/view/view-scroll-vertical" "")
 (gtk_accel_path "<Actions>/view/view-show-selection" "<Primary>h")
@@ -953,8 +954,8 @@
 ; (gtk_accel_path "<Actions>/plug-in/script-fu-gradient-example" "")
 ; (gtk_accel_path "<Actions>/filters/filters-color-rotate" "")
 ; (gtk_accel_path "<Actions>/dockable/dialogs-dynamics" "")
+; (gtk_accel_path "<Actions>/patterns/patterns-copy-location" "")
 ; (gtk_accel_path "<Actions>/plug-in/gimp-online-roadmap" "")
-; (gtk_accel_path "<Actions>/drawable/drawable-offset" "<Primary><Shift>o")
 ; (gtk_accel_path "<Actions>/filters/filters-vignette" "")
 ; (gtk_accel_path "<Actions>/filters/filters-edge-neon" "")
 (gtk_accel_path "<Actions>/plug-in/plug_in_colortoalpha" "<Primary><Shift>a")
@@ -965,8 +966,8 @@
 ; (gtk_accel_path "<Actions>/layers/layers-mask-add-button" "")
 ; (gtk_accel_path "<Actions>/layers/layers-color-tag-orange" "")
 ; (gtk_accel_path "<Actions>/plug-in/python-fu-gradient-save-as-css" "")
-; (gtk_accel_path "<Actions>/plug-in/script-fu-coffee-stain" "")
 ; (gtk_accel_path "<Actions>/view/view-display-filters" "")
+; (gtk_accel_path "<Actions>/plug-in/script-fu-coffee-stain" "")
 ; (gtk_accel_path "<Actions>/context/context-swatch-background-first" "")
 ; (gtk_accel_path "<Actions>/layers/layers-composite-mode-intersection" "")
 ; (gtk_accel_path "<Actions>/filters/filters-noise-rgb" "")

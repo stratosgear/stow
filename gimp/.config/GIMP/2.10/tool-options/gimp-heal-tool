@@ -3,7 +3,7 @@
 (brush "2. Hardness 050")
 (dynamics "Dynamics Off")
 (palette "Default")
-(brush-size 6.000000)
+(brush-size 45.000000)
 (brush-hardness 0.500000)
 
 # end of gimp-heal-tool options
