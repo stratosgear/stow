@@ -100,25 +100,29 @@ class Mout:
         print("Applying monitor settings:")
         for m in params:
             n = self.get_monitor_name(m)
-            x = m["rect"]["x"]
-            y = m["rect"]["y"]
-            w = m["rect"]["width"]
-            h = m["rect"]["height"]
-            # r = m["resolution"]
-            s = m["scale"]
+            onoff = m["state"]
 
-            cmd = [
-                "sway",
-                "output",
-                f"'{n}'",
-                "pos",
-                f"{x}",
-                f"{y}",
-                "res",
-                f"{w}x{h}",
-                "scale",
-                f"{s}",
-            ]
+            if onoff == "on":
+                x = m["rect"]["x"]
+                y = m["rect"]["y"]
+                w = m["rect"]["width"]
+                h = m["rect"]["height"]
+                s = m["scale"]
+
+                cmd = [
+                    "sway",
+                    "output",
+                    f"'{n}'",
+                    "pos",
+                    f"{x}",
+                    f"{y}",
+                    "res",
+                    f"{w}x{h}",
+                    "scale",
+                    f"{s}",
+                ]
+            else:
+                cmd = ["sway", "output", f"'{n}'", "disable"]
             print("  " + " ".join(cmd))
 
             subprocess.Popen(cmd, stdout=NULL)
