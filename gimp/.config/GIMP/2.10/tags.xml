@@ -3892,61 +3892,19 @@
   <resource identifier="Droid Arabic Kufi Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Droid Arabic Naskh" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Arabic Naskh Bold" checksum="(null)">
-  </resource>
-
   <resource identifier="Droid Naskh Shift Alt" checksum="(null)">
   </resource>
 
   <resource identifier="Droid Sans" checksum="(null)">
   </resource>
 
-  <resource identifier="Droid Sans Arabic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Armenian" checksum="(null)">
-  </resource>
-
   <resource identifier="Droid Sans Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Devanagari" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Ethiopic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Ethiopic Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Fallback" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Georgian" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Hebrew" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Hebrew Semi-Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Japanese" checksum="(null)">
   </resource>
 
   <resource identifier="Droid Sans Mono" checksum="(null)">
   </resource>
 
-  <resource identifier="Droid Sans Tamil" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Tamil Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Droid Sans Thai" checksum="(null)">
+  <resource identifier="Droid Sans Semi-Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Droid Serif" checksum="(null)">
