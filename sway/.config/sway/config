@@ -49,12 +49,11 @@ input * xkb_options "grp:shifts_toggle"
 
 
 set $laptopscreen 'Panasonic Industry Company 0x96A2 0x00000000'
+bindswitch lid:on output $laptopscreen disable
+bindswitch lid:off output $laptopscreen enable
 
 # Home
 set $extscreen 'Samsung Electric Company SyncMaster H1AK500000' 
-# ESA
-# set $extscreen    'Dell Inc. DELL U2412M 0FFXD46R5Y6S' 
-
 set $ext2screen   'Goldstar Company Ltd 20EN33 303NDMTMM283'
 
 
@@ -287,9 +286,13 @@ bindcode $mod+30 border none
 # -----------------------------------------------------------------------------------------
 bindsym $mod+F5 exec light -U 5 && pkill -SIGRTMIN+1 i3blocks
 bindsym $mod+F6 exec light -A 5 && pkill -SIGRTMIN+1 i3blocks
+# For the above to work the user has to belong to the 'video' group
+# As sudo: gpasswd -a user group 
+# Gotta logout/login for group changes to take effect
 
-bindcode 228 exec xbacklight -dec 5
-bindcode 229 exec xbacklight -inc 5
+# X11 way of binding to brightnes
+# bindcode 228 exec xbacklight -dec 5
+# bindcode 229 exec xbacklight -inc 5
 
 
 # Pulse Audio controls
@@ -468,11 +471,63 @@ bar {
 
     font pango:Noto Mono $fontSizeLarge
     status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
-    # dstart bar in debug mode
+    # start bar in debug mode
     # follow log messages with: tail -f /tmp/i3blocks.err
-    status_command 2>/tmp/i3blocks.err SCRIPT_DIR=~/.i3/i3blocks-str i3blocks -vvv | tee /tmp/i3blocks.out
+    # status_command 2>/tmp/i3blocks.err SCRIPT_DIR=~/.i3/i3blocks-str i3blocks -vvv | tee /tmp/i3blocks.out
     position top
     tray_output all
+
+
+    colors {
+      background $base03
+      separator $base2
+
+      # class            outline backround color
+      focused_workspace  $base02 $base2 $base02
+      active_workspace   $base2  $base1 $base2
+      inactive_workspace $base03 $base0 $base03
+      urgent_workspace   $base3  $red   $base3
+      binding_mode       $base3  $blue  $base3
+    }
+}
+
+bar {
+    id bar-extscreen
+    output $extscreen
+
+    font pango:Noto Mono 12
+    status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
+    # start bar in debug mode
+    # follow log messages with: tail -f /tmp/i3blocks.err
+    # status_command 2>/tmp/i3blocks.err SCRIPT_DIR=~/.i3/i3blocks-str i3blocks -vvv | tee /tmp/i3blocks.out
+    position top
+    tray_output all
+
+
+    colors {
+      background $base03
+      separator $base2
+
+      # class            outline backround color
+      focused_workspace  $base02 $base2 $base02
+      active_workspace   $base2  $base1 $base2
+      inactive_workspace $base03 $base0 $base03
+      urgent_workspace   $base3  $red   $base3
+      binding_mode       $base3  $blue  $base3
+    }
+}
+
+bar {
+    id bar-ext2screen
+    output $ext2screen
+
+    font pango:Noto Mono 12
+    # status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
+    # dstart bar in debug mode
+    # follow log messages with: tail -f /tmp/i3blocks.err
+    #status_command 2>/tmp/i3blocks.err SCRIPT_DIR=~/.i3/i3blocks-str i3blocks -vvv | tee /tmp/i3blocks.out
+    position bottom
+    #tray_output all
 
 
     colors {
