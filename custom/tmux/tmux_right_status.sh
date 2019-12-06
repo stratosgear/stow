@@ -22,7 +22,7 @@ fi
 if [ "$WIDTH" -ge "$SMALL" ]; then
   UNAME="#[fg=colour252,bg=colour236,nobold,noitalics,nounderscore]$SEP#[fg=colour16,bg=colour252,bold,noitalics,nounderscore] $(uname -n)"
 fi
-BATTERY="#[fg=colour252,bg=colour236,nobold,noitalics,nounderscore]$SEP#[fg=colour16,bg=colour252,bold,noitalics,nounderscore] ⚡ $(~/dotfiles/custom/tmux/battery.sh)"
+BATTERY="#[fg=colour252,bg=colour232,nobold,noitalics,nounderscore]$SEP#[fg=colour16,bg=colour252,bold,noitalics,nounderscore] ⚡ $(~/stow/custom/tmux/battery.sh)"
 DATE="#[fg=colour236,bg=colour252,nobold,noitalics,nounderscore]$SEP#[fg=colour247,bg=colour236,nobold,noitalics,nounderscore] $CALENDAR $(date +'%D')"
 TIME="#[fg=colour252,bg=colour236,nobold,noitalics,nounderscore]$SEPE#[fg=colour252,bg=colour236,bold,noitalics,nounderscore] $CLOCK $(date +'%H:%M')"
 
