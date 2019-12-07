@@ -18,12 +18,12 @@
 # This allows ANY external keyboard to have the CAPSLOCK mounted correctly
 #
 # get list of sway inputs: swaymsg -t get_inputs
-# input "3389:1:USBPS2" {
-#    xkb_options caps:super
-# }
-# input "1:1:AT_Translated_Set_2_keyboard" {
-#    xkb_options caps:super
-# }
+ input "3141:30979:SONiX_USB_DEVICE_Keyboard" {
+    xkb_options caps:super
+ }
+ input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_options caps:super
+ }
 ############################################################################
 
 
@@ -338,10 +338,12 @@ bindsym $mod+minus scratchpad show
 # open only apps with .desktop entries
 #bindsym $mod+period exec i3-dmenu-desktop --dmenu='rofi -dmenu'
 # open the generic run menu
-bindsym $mod+period exec rofi -show run
 bindsym $mod+comma exec rofi -show window
 bindsym $mod+backslash exec /home/stratos/stow/bin/snippy.sh
 #bindsym $mod+period exec xfce4-popup-whiskermenu
+
+bindsym $mod+m exec rofi -show run
+bindsym $mod+period exec albert toggle
 
 # search though open windows
 
@@ -635,6 +637,9 @@ for_window [title="vlcscreensharing"] to output DP2-3
 # This maybe should be handled outside of here?
 # exec xrandr --dpi $dpi
 
+exec /usr/bin/albert
+
+
 # Load a startup wallpaper image
 # exec ~/dotfiles/bin/randomWallpapers.sh
 
@@ -667,6 +672,11 @@ exec 	parcellite
 #exec 			remind -z "-ki3-nagbar -m '%s' &" &
 #exec 	ibus-daemon
 
+# Notification daemon
+# https://github.com/emersion/mako
+exec mako
+
+
 exec 	gnome-keyring-daemon
 #exec 	/usr/bin/blueman-applet
 
@@ -675,7 +685,7 @@ exec 	gnome-keyring-daemon
 
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
 #exec wmctrl -c Plasma
-#for_window [title="Desktop — Plasma"] kill; floating enable; border none
+#for_window [title="Desktop - Plasma"] kill; floating enable; border none
 
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
@@ -688,7 +698,7 @@ exec 	gnome-keyring-daemon
 #for_window [class="Klipper"] floating enable; border none
 #for_window [class="Plasmoidviewer"] floating enable; border none
 
-gaps inner 5
+gaps inner 16
 gaps outer 0
-#smart_gaps on
+smart_gaps on
 smart_borders on
