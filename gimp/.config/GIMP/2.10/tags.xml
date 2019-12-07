@@ -247,10 +247,10 @@
   <resource identifier="${mypaint_brushes_dir}/experimental/1pixel.myb" checksum="edc5df19469776f35d08d24f9248c406">
   </resource>
 
-  <resource identifier="${mypaint_brushes_dir}/ramon/2B_pencil.myb" checksum="7136280b33d2f2cb27c2cfcc96c57ce4">
+  <resource identifier="${mypaint_brushes_dir}/deevad/2B_pencil.myb" checksum="abaa73df608d192d62bd3a33636cf1ba">
   </resource>
 
-  <resource identifier="${mypaint_brushes_dir}/deevad/2B_pencil.myb" checksum="abaa73df608d192d62bd3a33636cf1ba">
+  <resource identifier="${mypaint_brushes_dir}/ramon/2B_pencil.myb" checksum="7136280b33d2f2cb27c2cfcc96c57ce4">
   </resource>
 
   <resource identifier="${mypaint_brushes_dir}/deevad/4H_pencil.myb" checksum="2718434e495370fb4d96d217a3c524c2">
@@ -1423,10 +1423,10 @@
   <resource identifier="Advent Pro Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Advent Pro weight=255" checksum="(null)">
+  <resource identifier="Advent Pro weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Advent Pro weight=255" checksum="(null)">
+  <resource identifier="Advent Pro weight=250" checksum="(null)">
   </resource>
 
   <resource identifier="Aguafina Script" checksum="(null)">
@@ -1540,10 +1540,10 @@
   <resource identifier="Alegreya Sans SC Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Alegreya Sans SC weight=255" checksum="(null)">
+  <resource identifier="Alegreya Sans SC weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Alegreya Sans SC weight=255 Italic" checksum="(null)">
+  <resource identifier="Alegreya Sans SC weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Alegreya Sans Ultra-Bold" checksum="(null)">
@@ -1552,10 +1552,10 @@
   <resource identifier="Alegreya Sans Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Alegreya Sans weight=255" checksum="(null)">
+  <resource identifier="Alegreya Sans weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Alegreya Sans weight=255 Italic" checksum="(null)">
+  <resource identifier="Alegreya Sans weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Alegreya SC" checksum="(null)">
@@ -1867,22 +1867,22 @@
   <resource identifier="Archivo VF Beta Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Archivo VF Beta weight=471" checksum="(null)">
+  <resource identifier="Archivo VF Beta weight=468" checksum="(null)">
   </resource>
 
-  <resource identifier="Archivo VF Beta weight=471 Italic" checksum="(null)">
+  <resource identifier="Archivo VF Beta weight=468 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Archivo VF Beta weight=546" checksum="(null)">
+  <resource identifier="Archivo VF Beta weight=545" checksum="(null)">
   </resource>
 
-  <resource identifier="Archivo VF Beta weight=546 Italic" checksum="(null)">
+  <resource identifier="Archivo VF Beta weight=545 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Archivo VF Beta weight=625" checksum="(null)">
+  <resource identifier="Archivo VF Beta weight=622" checksum="(null)">
   </resource>
 
-  <resource identifier="Archivo VF Beta weight=625 Italic" checksum="(null)">
+  <resource identifier="Archivo VF Beta weight=622 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Aref Ruqaa" checksum="(null)">
@@ -1924,10 +1924,10 @@
   <resource identifier="Arima Madurai Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Arima Madurai weight=255" checksum="(null)">
+  <resource identifier="Arima Madurai weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Arima Madurai weight=280" checksum="(null)">
+  <resource identifier="Arima Madurai weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Arimo" checksum="(null)">
@@ -2092,13 +2092,13 @@
   <resource identifier="Asap Condensed VF Beta" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap Condensed VF Beta weight=480" checksum="(null)">
+  <resource identifier="Asap Condensed VF Beta weight=477" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap Condensed VF Beta weight=577" checksum="(null)">
+  <resource identifier="Asap Condensed VF Beta weight=576" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap Condensed VF Beta weight=673" checksum="(null)">
+  <resource identifier="Asap Condensed VF Beta weight=670" checksum="(null)">
   </resource>
 
   <resource identifier="Asap Italic" checksum="(null)">
@@ -2128,22 +2128,22 @@
   <resource identifier="Asap VF Beta Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap VF Beta weight=585" checksum="(null)">
+  <resource identifier="Asap VF Beta weight=584" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap VF Beta weight=585 Italic" checksum="(null)">
+  <resource identifier="Asap VF Beta weight=584 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap VF Beta weight=692" checksum="(null)">
+  <resource identifier="Asap VF Beta weight=689" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap VF Beta weight=692 Italic" checksum="(null)">
+  <resource identifier="Asap VF Beta weight=689 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap weight=489" checksum="(null)">
+  <resource identifier="Asap weight=486" checksum="(null)">
   </resource>
 
-  <resource identifier="Asap weight=597" checksum="(null)">
+  <resource identifier="Asap weight=596" checksum="(null)">
   </resource>
 
   <resource identifier="Asar" checksum="(null)">
@@ -2167,7 +2167,7 @@
   <resource identifier="Assistant Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Assistant weight=280" checksum="(null)">
+  <resource identifier="Assistant weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Astloch" checksum="(null)">
@@ -2197,7 +2197,7 @@
   <resource identifier="Athiti Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Athiti weight=280" checksum="(null)">
+  <resource identifier="Athiti weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Atma" checksum="(null)">
@@ -2350,10 +2350,10 @@
   <resource identifier="Bai Jamjuree Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Bai Jamjuree weight=280" checksum="(null)">
+  <resource identifier="Bai Jamjuree weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Bai Jamjuree weight=280 Italic" checksum="(null)">
+  <resource identifier="Bai Jamjuree weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Baloo" checksum="(null)">
@@ -2443,16 +2443,16 @@
   <resource identifier="Barlow Condensed, Ultra-Bold Italic Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow Condensed, weight=255 Condensed" checksum="(null)">
+  <resource identifier="Barlow Condensed, weight=250 Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow Condensed, weight=255 Italic Condensed" checksum="(null)">
+  <resource identifier="Barlow Condensed, weight=250 Italic Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow Condensed, weight=280 Condensed" checksum="(null)">
+  <resource identifier="Barlow Condensed, weight=275 Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow Condensed, weight=280 Italic Condensed" checksum="(null)">
+  <resource identifier="Barlow Condensed, weight=275 Italic Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Barlow Heavy" checksum="(null)">
@@ -2524,16 +2524,16 @@
   <resource identifier="Barlow Semi Condensed, Ultra-Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow Semi Condensed, weight=255 Italic Semi-Condensed" checksum="(null)">
+  <resource identifier="Barlow Semi Condensed, weight=250 Italic Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow Semi Condensed, weight=255 Semi-Condensed" checksum="(null)">
+  <resource identifier="Barlow Semi Condensed, weight=250 Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow Semi Condensed, weight=280 Italic Semi-Condensed" checksum="(null)">
+  <resource identifier="Barlow Semi Condensed, weight=275 Italic Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow Semi Condensed, weight=280 Semi-Condensed" checksum="(null)">
+  <resource identifier="Barlow Semi Condensed, weight=275 Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Barlow Ultra-Bold" checksum="(null)">
@@ -2542,16 +2542,16 @@
   <resource identifier="Barlow Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow weight=255" checksum="(null)">
+  <resource identifier="Barlow weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow weight=255 Italic" checksum="(null)">
+  <resource identifier="Barlow weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow weight=280" checksum="(null)">
+  <resource identifier="Barlow weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Barlow weight=280 Italic" checksum="(null)">
+  <resource identifier="Barlow weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Barrio" checksum="(null)">
@@ -2656,7 +2656,7 @@
   <resource identifier="BioRhyme Expanded, Ultra-Bold Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="BioRhyme Expanded, weight=280 Expanded" checksum="(null)">
+  <resource identifier="BioRhyme Expanded, weight=275 Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="BioRhyme Light" checksum="(null)">
@@ -2665,7 +2665,7 @@
   <resource identifier="BioRhyme Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="BioRhyme weight=280" checksum="(null)">
+  <resource identifier="BioRhyme weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Biryani" checksum="(null)">
@@ -2686,7 +2686,7 @@
   <resource identifier="Biryani Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Biryani weight=280" checksum="(null)">
+  <resource identifier="Biryani weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Bitstream Charter" checksum="(null)">
@@ -2872,25 +2872,25 @@
   <resource identifier="Cabin VF Beta Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Cabin VF Beta weight=398" checksum="(null)">
+  <resource identifier="Cabin VF Beta weight=395" checksum="(null)">
   </resource>
 
-  <resource identifier="Cabin VF Beta weight=449 Italic" checksum="(null)">
+  <resource identifier="Cabin VF Beta weight=446 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Cabin VF Beta weight=461" checksum="(null)">
+  <resource identifier="Cabin VF Beta weight=458" checksum="(null)">
   </resource>
 
-  <resource identifier="Cabin VF Beta weight=491" checksum="(null)">
+  <resource identifier="Cabin VF Beta weight=488" checksum="(null)">
   </resource>
 
-  <resource identifier="Cabin VF Beta weight=499 Italic" checksum="(null)">
+  <resource identifier="Cabin VF Beta weight=496 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Cabin VF Beta weight=540" checksum="(null)">
+  <resource identifier="Cabin VF Beta weight=538" checksum="(null)">
   </resource>
 
-  <resource identifier="Cabin VF Beta weight=540 Italic" checksum="(null)">
+  <resource identifier="Cabin VF Beta weight=538 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Caesar Dressing" checksum="(null)">
@@ -2914,7 +2914,7 @@
   <resource identifier="Cairo Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Cairo weight=280" checksum="(null)">
+  <resource identifier="Cairo weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Caladea" checksum="(null)">
@@ -3028,10 +3028,10 @@
   <resource identifier="Catamaran Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Catamaran weight=255" checksum="(null)">
+  <resource identifier="Catamaran weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Catamaran weight=280" checksum="(null)">
+  <resource identifier="Catamaran weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Caudex" checksum="(null)">
@@ -3091,10 +3091,10 @@
   <resource identifier="Chakra Petch Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Chakra Petch weight=280" checksum="(null)">
+  <resource identifier="Chakra Petch weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Chakra Petch weight=280 Italic" checksum="(null)">
+  <resource identifier="Chakra Petch weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Changa" checksum="(null)">
@@ -3121,7 +3121,7 @@
   <resource identifier="Changa Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Changa weight=280" checksum="(null)">
+  <resource identifier="Changa weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Chango" checksum="(null)">
@@ -3151,7 +3151,7 @@
   <resource identifier="Chathura Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Chathura weight=255" checksum="(null)">
+  <resource identifier="Chathura weight=250" checksum="(null)">
   </resource>
 
   <resource identifier="Chau Philomene One" checksum="(null)">
@@ -3526,6 +3526,12 @@
   <resource identifier="Crimson Pro" checksum="(null)">
   </resource>
 
+  <resource identifier="Crimson Pro ExtraLight, weight=550" checksum="(null)">
+  </resource>
+
+  <resource identifier="Crimson Pro ExtraLight, weight=550 Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Crimson Pro Italic" checksum="(null)">
   </resource>
 
@@ -3541,40 +3547,34 @@
   <resource identifier="Crimson Pro Ultra-Heavy Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=280" checksum="(null)">
+  <resource identifier="Crimson Pro weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=280 Italic" checksum="(null)">
+  <resource identifier="Crimson Pro weight=275 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=415" checksum="(null)">
+  <resource identifier="Crimson Pro weight=412" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=415 Italic" checksum="(null)">
+  <resource identifier="Crimson Pro weight=412 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=551" checksum="(null)">
+  <resource identifier="Crimson Pro weight=687" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=551 Italic" checksum="(null)">
+  <resource identifier="Crimson Pro weight=687 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=690" checksum="(null)">
+  <resource identifier="Crimson Pro weight=825" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=690 Italic" checksum="(null)">
+  <resource identifier="Crimson Pro weight=825 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=835" checksum="(null)">
+  <resource identifier="Crimson Pro weight=962" checksum="(null)">
   </resource>
 
-  <resource identifier="Crimson Pro weight=835 Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Crimson Pro weight=972" checksum="(null)">
-  </resource>
-
-  <resource identifier="Crimson Pro weight=972 Italic" checksum="(null)">
+  <resource identifier="Crimson Pro weight=962 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Crimson Text" checksum="(null)">
@@ -3697,7 +3697,7 @@
   <resource identifier="Decovar Alpha" checksum="(null)">
   </resource>
 
-  <resource identifier="Decovar Alpha" checksum="(null)">
+  <resource identifier="Decovar Alpha Regular24" checksum="(null)">
   </resource>
 
   <resource identifier="decsess.pcf" checksum="(null)">
@@ -4021,7 +4021,7 @@
   <resource identifier="Ek Mukta Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Ek Mukta weight=280" checksum="(null)">
+  <resource identifier="Ek Mukta weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Electrolize" checksum="(null)">
@@ -4042,10 +4042,10 @@
   <resource identifier="El Messiri Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="El Messiri weight=481" checksum="(null)">
+  <resource identifier="El Messiri weight=478" checksum="(null)">
   </resource>
 
-  <resource identifier="El Messiri weight=578" checksum="(null)">
+  <resource identifier="El Messiri weight=577" checksum="(null)">
   </resource>
 
   <resource identifier="Elsie" checksum="(null)">
@@ -4093,10 +4093,10 @@
   <resource identifier="Encode Sans Condensed, Ultra-Bold Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Condensed, weight=255 Condensed" checksum="(null)">
+  <resource identifier="Encode Sans Condensed, weight=250 Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Condensed, weight=280 Condensed" checksum="(null)">
+  <resource identifier="Encode Sans Condensed, weight=275 Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Expanded, Bold Expanded" checksum="(null)">
@@ -4120,10 +4120,10 @@
   <resource identifier="Encode Sans Expanded, Ultra-Bold Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Expanded, weight=255 Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Expanded, weight=250 Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Expanded, weight=280 Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Expanded, weight=275 Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Heavy" checksum="(null)">
@@ -4159,10 +4159,10 @@
   <resource identifier="Encode Sans Semi Condensed, Ultra-Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Semi Condensed, weight=255 Semi-Condensed" checksum="(null)">
+  <resource identifier="Encode Sans Semi Condensed, weight=250 Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Semi Condensed, weight=280 Semi-Condensed" checksum="(null)">
+  <resource identifier="Encode Sans Semi Condensed, weight=275 Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi Expanded, Bold Semi-Expanded" checksum="(null)">
@@ -4186,19 +4186,19 @@
   <resource identifier="Encode Sans Semi Expanded, Ultra-Bold Semi-Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Semi Expanded, weight=255 Semi-Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Semi Expanded, weight=250 Semi-Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Semi Expanded, weight=280 Semi-Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Semi Expanded, weight=275 Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans weight=255" checksum="(null)">
+  <resource identifier="Encode Sans weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans weight=280" checksum="(null)">
+  <resource identifier="Encode Sans weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Engagement" checksum="(null)">
@@ -4294,16 +4294,16 @@
   <resource identifier="Exo 2 Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Exo 2 weight=255" checksum="(null)">
+  <resource identifier="Exo 2 weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Exo 2 weight=255" checksum="(null)">
+  <resource identifier="Exo 2 weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Exo 2 weight=255 Italic" checksum="(null)">
+  <resource identifier="Exo 2 weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Exo 2 weight=255 Italic" checksum="(null)">
+  <resource identifier="Exo 2 weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Exo Bold" checksum="(null)">
@@ -4345,16 +4345,16 @@
   <resource identifier="Exo Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Exo weight=255" checksum="(null)">
+  <resource identifier="Exo weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Exo weight=255 Italic" checksum="(null)">
+  <resource identifier="Exo weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Exo weight=280" checksum="(null)">
+  <resource identifier="Exo weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Exo weight=280 Italic" checksum="(null)">
+  <resource identifier="Exo weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Expletus Sans" checksum="(null)">
@@ -4411,10 +4411,10 @@
   <resource identifier="Fahkwang Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Fahkwang weight=280" checksum="(null)">
+  <resource identifier="Fahkwang weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Fahkwang weight=280 Italic" checksum="(null)">
+  <resource identifier="Fahkwang weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Fanwood Text" checksum="(null)">
@@ -4477,22 +4477,22 @@
   <resource identifier="Faustina VF Beta Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Faustina VF Beta weight=476" checksum="(null)">
+  <resource identifier="Faustina VF Beta weight=473" checksum="(null)">
   </resource>
 
-  <resource identifier="Faustina VF Beta weight=498 Italic" checksum="(null)">
+  <resource identifier="Faustina VF Beta weight=495 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Faustina VF Beta weight=557" checksum="(null)">
+  <resource identifier="Faustina VF Beta weight=556" checksum="(null)">
   </resource>
 
-  <resource identifier="Faustina VF Beta weight=611 Italic" checksum="(null)">
+  <resource identifier="Faustina VF Beta weight=608 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Faustina VF Beta weight=646" checksum="(null)">
+  <resource identifier="Faustina VF Beta weight=643" checksum="(null)">
   </resource>
 
-  <resource identifier="Faustina VF Beta weight=731 Italic" checksum="(null)">
+  <resource identifier="Faustina VF Beta weight=721 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Federant" checksum="(null)">
@@ -4522,7 +4522,7 @@
   <resource identifier="Fira Code Medium" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Code weight=453" checksum="(null)">
+  <resource identifier="Fira Code weight=450" checksum="(null)">
   </resource>
 
   <resource identifier="Fira Mono" checksum="(null)">
@@ -4729,16 +4729,16 @@
   <resource identifier="Fira Sans Condensed, Ultra-Light Italic Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans Condensed, weight=255 Condensed" checksum="(null)">
+  <resource identifier="Fira Sans Condensed, weight=250 Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans Condensed, weight=255 Italic Condensed" checksum="(null)">
+  <resource identifier="Fira Sans Condensed, weight=250 Italic Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans Condensed, weight=280 Condensed" checksum="(null)">
+  <resource identifier="Fira Sans Condensed, weight=275 Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans Condensed, weight=280 Italic Condensed" checksum="(null)">
+  <resource identifier="Fira Sans Condensed, weight=275 Italic Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Fira Sans Extra Condensed, Bold Italic Condensed" checksum="(null)">
@@ -4783,16 +4783,16 @@
   <resource identifier="Fira Sans Extra Condensed, Ultra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans Extra Condensed, weight=255 Italic Condensed" checksum="(null)">
+  <resource identifier="Fira Sans Extra Condensed, weight=250 Italic Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans Extra Condensed, weight=255 Ultra-Condensed" checksum="(null)">
+  <resource identifier="Fira Sans Extra Condensed, weight=250 Ultra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans Extra Condensed, weight=280 Italic Condensed" checksum="(null)">
+  <resource identifier="Fira Sans Extra Condensed, weight=275 Italic Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans Extra Condensed, weight=280 Ultra-Condensed" checksum="(null)">
+  <resource identifier="Fira Sans Extra Condensed, weight=275 Ultra-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Fira Sans Heavy" checksum="(null)">
@@ -4876,10 +4876,10 @@
   <resource identifier="Fira Sans Ultra-Light Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans weight=960" checksum="(null)">
+  <resource identifier="Fira Sans weight=950" checksum="(null)">
   </resource>
 
-  <resource identifier="Fira Sans weight=960 Italic" checksum="(null)">
+  <resource identifier="Fira Sans weight=950 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Fjalla One" checksum="(null)">
@@ -5083,7 +5083,7 @@
   <resource identifier="Gemunu Libre ExtraBold, Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Gemunu Libre ExtraLight, weight=280" checksum="(null)">
+  <resource identifier="Gemunu Libre ExtraLight, weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Gemunu Libre Light, Light" checksum="(null)">
@@ -5218,10 +5218,10 @@
   <resource identifier="Gothic A1 Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Gothic A1 weight=255" checksum="(null)">
+  <resource identifier="Gothic A1 weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Gothic A1 weight=280" checksum="(null)">
+  <resource identifier="Gothic A1 weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Goudy Bookletter 1911," checksum="(null)">
@@ -5338,7 +5338,7 @@
   <resource identifier="Heebo Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Heebo weight=255" checksum="(null)">
+  <resource identifier="Heebo weight=250" checksum="(null)">
   </resource>
 
   <resource identifier="Henny Penny" checksum="(null)">
@@ -5962,10 +5962,10 @@
   <resource identifier="Josefin Sans Std Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Josefin Sans weight=255" checksum="(null)">
+  <resource identifier="Josefin Sans weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Josefin Sans weight=255 Italic" checksum="(null)">
+  <resource identifier="Josefin Sans weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Josefin Slab" checksum="(null)">
@@ -5992,10 +5992,10 @@
   <resource identifier="Josefin Slab Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Josefin Slab weight=255" checksum="(null)">
+  <resource identifier="Josefin Slab weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Josefin Slab weight=255 Italic" checksum="(null)">
+  <resource identifier="Josefin Slab weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Joti One" checksum="(null)">
@@ -6103,10 +6103,10 @@
   <resource identifier="K2D Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="K2D weight=280" checksum="(null)">
+  <resource identifier="K2D weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="K2D weight=280 Italic" checksum="(null)">
+  <resource identifier="K2D weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Kadwa" checksum="(null)">
@@ -6172,16 +6172,16 @@
   <resource identifier="Kanit Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Kanit weight=255" checksum="(null)">
+  <resource identifier="Kanit weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Kanit weight=255 Italic" checksum="(null)">
+  <resource identifier="Kanit weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Kanit weight=280" checksum="(null)">
+  <resource identifier="Kanit weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Kanit weight=280 Italic" checksum="(null)">
+  <resource identifier="Kanit weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Kantumruy Regular," checksum="(null)">
@@ -6334,10 +6334,10 @@
   <resource identifier="Kodchasan Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Kodchasan weight=280" checksum="(null)">
+  <resource identifier="Kodchasan weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Kodchasan weight=280 Italic" checksum="(null)">
+  <resource identifier="Kodchasan weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="KoHo" checksum="(null)">
@@ -6370,10 +6370,10 @@
   <resource identifier="KoHo Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="KoHo weight=280" checksum="(null)">
+  <resource identifier="KoHo weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="KoHo weight=280 Italic" checksum="(null)">
+  <resource identifier="KoHo weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Kokoro" checksum="(null)">
@@ -6442,10 +6442,10 @@
   <resource identifier="Krub Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Krub weight=280" checksum="(null)">
+  <resource identifier="Krub weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Krub weight=280 Italic" checksum="(null)">
+  <resource identifier="Krub weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Kumar One" checksum="(null)">
@@ -6607,16 +6607,16 @@
   <resource identifier="Lato Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Lato weight=255" checksum="(null)">
+  <resource identifier="Lato weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Lato weight=255 Italic" checksum="(null)">
+  <resource identifier="Lato weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Lato weight=280" checksum="(null)">
+  <resource identifier="Lato weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Lato weight=280 Italic" checksum="(null)">
+  <resource identifier="Lato weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="League Script" checksum="(null)">
@@ -6655,13 +6655,13 @@
   <resource identifier="Lemonada Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Lemonada weight=321" checksum="(null)">
+  <resource identifier="Lemonada weight=315" checksum="(null)">
   </resource>
 
-  <resource identifier="Lemonada weight=608" checksum="(null)">
+  <resource identifier="Lemonada weight=605" checksum="(null)">
   </resource>
 
-  <resource identifier="Lemonada weight=747" checksum="(null)">
+  <resource identifier="Lemonada weight=736" checksum="(null)">
   </resource>
 
   <resource identifier="Liberation Mono" checksum="(null)">
@@ -6778,16 +6778,16 @@
   <resource identifier="Libre Franklin Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Libre Franklin weight=255" checksum="(null)">
+  <resource identifier="Libre Franklin weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Libre Franklin weight=255 Italic" checksum="(null)">
+  <resource identifier="Libre Franklin weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Libre Franklin weight=280" checksum="(null)">
+  <resource identifier="Libre Franklin weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Libre Franklin weight=280 Italic" checksum="(null)">
+  <resource identifier="Libre Franklin weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Life Savers" checksum="(null)">
@@ -6889,7 +6889,7 @@
   <resource identifier="Londrina Solid Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Londrina Solid weight=255" checksum="(null)">
+  <resource identifier="Londrina Solid weight=250" checksum="(null)">
   </resource>
 
   <resource identifier="Lora" checksum="(null)">
@@ -6949,7 +6949,7 @@
   <resource identifier="Mada Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Mada weight=280" checksum="(null)">
+  <resource identifier="Mada weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Magra" checksum="(null)">
@@ -6976,7 +6976,7 @@
   <resource identifier="Maitree Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Maitree weight=280" checksum="(null)">
+  <resource identifier="Maitree weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Major Mono Display" checksum="(null)">
@@ -7015,10 +7015,10 @@
   <resource identifier="Mali Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Mali weight=280" checksum="(null)">
+  <resource identifier="Mali weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Mali weight=280 Italic" checksum="(null)">
+  <resource identifier="Mali weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Mallanna" checksum="(null)">
@@ -7072,10 +7072,10 @@
   <resource identifier="Markazi Text Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Markazi Text weight=494" checksum="(null)">
+  <resource identifier="Markazi Text weight=491" checksum="(null)">
   </resource>
 
-  <resource identifier="Markazi Text weight=611" checksum="(null)">
+  <resource identifier="Markazi Text weight=608" checksum="(null)">
   </resource>
 
   <resource identifier="Marko One" checksum="(null)">
@@ -7114,7 +7114,7 @@
   <resource identifier="Martel Sans Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Martel Sans weight=280" checksum="(null)">
+  <resource identifier="Martel Sans weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Martel Semi-Bold" checksum="(null)">
@@ -7123,7 +7123,7 @@
   <resource identifier="Martel Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Martel weight=255" checksum="(null)">
+  <resource identifier="Martel weight=250" checksum="(null)">
   </resource>
 
   <resource identifier="Marvel" checksum="(null)">
@@ -7234,10 +7234,10 @@
   <resource identifier="Maven Pro VF Beta Heavy" checksum="(null)">
   </resource>
 
-  <resource identifier="Maven Pro VF Beta weight=551" checksum="(null)">
+  <resource identifier="Maven Pro VF Beta weight=550" checksum="(null)">
   </resource>
 
-  <resource identifier="Maven Pro VF Beta weight=760" checksum="(null)">
+  <resource identifier="Maven Pro VF Beta weight=750" checksum="(null)">
   </resource>
 
   <resource identifier="McLaren" checksum="(null)">
@@ -7423,7 +7423,7 @@
   <resource identifier="Mitr Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Mitr weight=280" checksum="(null)">
+  <resource identifier="Mitr weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Modak" checksum="(null)">
@@ -7519,16 +7519,16 @@
   <resource identifier="Montserrat Alternates Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Montserrat Alternates weight=255" checksum="(null)">
+  <resource identifier="Montserrat Alternates weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Montserrat Alternates weight=255 Italic" checksum="(null)">
+  <resource identifier="Montserrat Alternates weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Montserrat Alternates weight=280" checksum="(null)">
+  <resource identifier="Montserrat Alternates weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Montserrat Alternates weight=280 Italic" checksum="(null)">
+  <resource identifier="Montserrat Alternates weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Montserrat Bold" checksum="(null)">
@@ -7576,16 +7576,16 @@
   <resource identifier="Montserrat Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Montserrat weight=255" checksum="(null)">
+  <resource identifier="Montserrat weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Montserrat weight=255 Italic" checksum="(null)">
+  <resource identifier="Montserrat weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Montserrat weight=280" checksum="(null)">
+  <resource identifier="Montserrat weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Montserrat weight=280 Italic" checksum="(null)">
+  <resource identifier="Montserrat weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Moul" checksum="(null)">
@@ -7621,7 +7621,7 @@
   <resource identifier="Mplus 1p Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Mplus 1p weight=255" checksum="(null)">
+  <resource identifier="Mplus 1p weight=250" checksum="(null)">
   </resource>
 
   <resource identifier="Mr Bedfort" checksum="(null)">
@@ -7666,7 +7666,7 @@
   <resource identifier="Mukta Mahee Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Mukta Mahee weight=280" checksum="(null)">
+  <resource identifier="Mukta Mahee weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Mukta Malar" checksum="(null)">
@@ -7687,7 +7687,7 @@
   <resource identifier="Mukta Malar Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Mukta Malar weight=280" checksum="(null)">
+  <resource identifier="Mukta Malar weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Mukta Medium" checksum="(null)">
@@ -7717,10 +7717,10 @@
   <resource identifier="Mukta Vaani Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Mukta Vaani weight=280" checksum="(null)">
+  <resource identifier="Mukta Vaani weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Mukta weight=280" checksum="(null)">
+  <resource identifier="Mukta weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Muli" checksum="(null)">
@@ -7795,10 +7795,10 @@
   <resource identifier="Muli Ultra-Light Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli weight=280" checksum="(null)">
+  <resource identifier="Muli weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli weight=280 Italic" checksum="(null)">
+  <resource identifier="Muli weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="MUTT ClearlyU Alternate Glyphs Wide" checksum="(null)">
@@ -7921,7 +7921,7 @@
   <resource identifier="Neuton Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Neuton weight=280" checksum="(null)">
+  <resource identifier="Neuton weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="New Rocker" checksum="(null)">
@@ -8020,10 +8020,10 @@
   <resource identifier="Niramit Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Niramit weight=280" checksum="(null)">
+  <resource identifier="Niramit weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Niramit weight=280 Italic" checksum="(null)">
+  <resource identifier="Niramit weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Nixie One" checksum="(null)">
@@ -13657,10 +13657,10 @@
   <resource identifier="Nunito Sans Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Nunito Sans weight=280" checksum="(null)">
+  <resource identifier="Nunito Sans weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Nunito Sans weight=280 Italic" checksum="(null)">
+  <resource identifier="Nunito Sans weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Nunito Semi-Bold" checksum="(null)">
@@ -13675,10 +13675,10 @@
   <resource identifier="Nunito Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Nunito weight=280" checksum="(null)">
+  <resource identifier="Nunito weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Nunito weight=280 Italic" checksum="(null)">
+  <resource identifier="Nunito weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="OdorMeanChey" checksum="(null)">
@@ -13846,7 +13846,7 @@
   <resource identifier="Oswald Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Oswald weight=280" checksum="(null)">
+  <resource identifier="Oswald weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Overlock" checksum="(null)">
@@ -13918,16 +13918,16 @@
   <resource identifier="Overpass Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Overpass weight=255" checksum="(null)">
+  <resource identifier="Overpass weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Overpass weight=255 Italic" checksum="(null)">
+  <resource identifier="Overpass weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Overpass weight=280" checksum="(null)">
+  <resource identifier="Overpass weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Overpass weight=280 Italic" checksum="(null)">
+  <resource identifier="Overpass weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Over the Rainbow" checksum="(null)">
@@ -13996,10 +13996,10 @@
   <resource identifier="Palanquin Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Palanquin weight=255" checksum="(null)">
+  <resource identifier="Palanquin weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Palanquin weight=280" checksum="(null)">
+  <resource identifier="Palanquin weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Pangolin" checksum="(null)">
@@ -14161,13 +14161,13 @@
   <resource identifier="Podkova VF Beta Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Podkova VF Beta weight=484" checksum="(null)">
+  <resource identifier="Podkova VF Beta weight=481" checksum="(null)">
   </resource>
 
-  <resource identifier="Podkova VF Beta weight=583" checksum="(null)">
+  <resource identifier="Podkova VF Beta weight=582" checksum="(null)">
   </resource>
 
-  <resource identifier="Podkova VF Beta weight=696" checksum="(null)">
+  <resource identifier="Podkova VF Beta weight=693" checksum="(null)">
   </resource>
 
   <resource identifier="PoetsenOne" checksum="(null)">
@@ -14239,16 +14239,16 @@
   <resource identifier="Poppins Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Poppins weight=255" checksum="(null)">
+  <resource identifier="Poppins weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Poppins weight=255 Italic" checksum="(null)">
+  <resource identifier="Poppins weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Poppins weight=280" checksum="(null)">
+  <resource identifier="Poppins weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Poppins weight=280 Italic" checksum="(null)">
+  <resource identifier="Poppins weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Porter Sans Block" checksum="(null)">
@@ -14341,7 +14341,7 @@
   <resource identifier="Pridi Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Pridi weight=280" checksum="(null)">
+  <resource identifier="Pridi weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Princess Sofia" checksum="(null)">
@@ -14392,16 +14392,16 @@
   <resource identifier="Prompt Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Prompt weight=255" checksum="(null)">
+  <resource identifier="Prompt weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Prompt weight=255 Italic" checksum="(null)">
+  <resource identifier="Prompt weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Prompt weight=280" checksum="(null)">
+  <resource identifier="Prompt weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Prompt weight=280 Italic" checksum="(null)">
+  <resource identifier="Prompt weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Prosto One" checksum="(null)">
@@ -14626,16 +14626,16 @@
   <resource identifier="Raleway Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Raleway weight=255" checksum="(null)">
+  <resource identifier="Raleway weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Raleway weight=255 Italic" checksum="(null)">
+  <resource identifier="Raleway weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Raleway weight=280" checksum="(null)">
+  <resource identifier="Raleway weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Raleway weight=280 Italic" checksum="(null)">
+  <resource identifier="Raleway weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Ramabhadra" checksum="(null)">
@@ -14839,10 +14839,10 @@
   <resource identifier="RobotoMono Nerd Font Mono" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Mono weight=255" checksum="(null)">
+  <resource identifier="Roboto Mono weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Mono weight=255 Italic" checksum="(null)">
+  <resource identifier="Roboto Mono weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto Slab" checksum="(null)">
@@ -14854,19 +14854,19 @@
   <resource identifier="Roboto Slab Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Slab weight=255" checksum="(null)">
+  <resource identifier="Roboto Slab weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto weight=255" checksum="(null)">
+  <resource identifier="Roboto weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto weight=255" checksum="(null)">
+  <resource identifier="Roboto weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto weight=255 Italic" checksum="(null)">
+  <resource identifier="Roboto weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto weight=255 Italic" checksum="(null)">
+  <resource identifier="Roboto weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Rochester" checksum="(null)">
@@ -14908,25 +14908,25 @@
   <resource identifier="Rokkitt Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Rokkitt weight=199" checksum="(null)">
+  <resource identifier="Rokkitt weight=198" checksum="(null)">
   </resource>
 
-  <resource identifier="Rokkitt weight=255" checksum="(null)">
+  <resource identifier="Rokkitt weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Rokkitt weight=272" checksum="(null)">
+  <resource identifier="Rokkitt weight=267" checksum="(null)">
   </resource>
 
-  <resource identifier="Rokkitt weight=280" checksum="(null)">
+  <resource identifier="Rokkitt weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Rokkitt weight=527" checksum="(null)">
+  <resource identifier="Rokkitt weight=526" checksum="(null)">
   </resource>
 
-  <resource identifier="Rokkitt weight=638" checksum="(null)">
+  <resource identifier="Rokkitt weight=635" checksum="(null)">
   </resource>
 
-  <resource identifier="Rokkitt weight=779" checksum="(null)">
+  <resource identifier="Rokkitt weight=768" checksum="(null)">
   </resource>
 
   <resource identifier="Romanesco" checksum="(null)">
@@ -14977,7 +14977,7 @@
   <resource identifier="Rounded Mplus 1c Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Rounded Mplus 1c weight=255" checksum="(null)">
+  <resource identifier="Rounded Mplus 1c weight=250" checksum="(null)">
   </resource>
 
   <resource identifier="Rozha One" checksum="(null)">
@@ -15094,10 +15094,10 @@
   <resource identifier="Saira Condensed, Ultra-Bold Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Saira Condensed, weight=255 Condensed" checksum="(null)">
+  <resource identifier="Saira Condensed, weight=250 Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Saira Condensed, weight=280 Condensed" checksum="(null)">
+  <resource identifier="Saira Condensed, weight=275 Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Saira ExtraCondensed, Bold Extra-Condensed" checksum="(null)">
@@ -15121,10 +15121,10 @@
   <resource identifier="Saira ExtraCondensed, Ultra-Bold Extra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Saira ExtraCondensed, weight=255 Extra-Condensed" checksum="(null)">
+  <resource identifier="Saira ExtraCondensed, weight=250 Extra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Saira ExtraCondensed, weight=280 Extra-Condensed" checksum="(null)">
+  <resource identifier="Saira ExtraCondensed, weight=275 Extra-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Saira Heavy" checksum="(null)">
@@ -15160,19 +15160,19 @@
   <resource identifier="Saira SemiCondensed, Ultra-Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Saira SemiCondensed, weight=255 Semi-Condensed" checksum="(null)">
+  <resource identifier="Saira SemiCondensed, weight=250 Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Saira SemiCondensed, weight=280 Semi-Condensed" checksum="(null)">
+  <resource identifier="Saira SemiCondensed, weight=275 Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Saira Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Saira weight=255" checksum="(null)">
+  <resource identifier="Saira weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Saira weight=280" checksum="(null)">
+  <resource identifier="Saira weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Salsa" checksum="(null)">
@@ -15280,16 +15280,16 @@
   <resource identifier="Sarabun Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Sarabun weight=255" checksum="(null)">
+  <resource identifier="Sarabun weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Sarabun weight=255 Italic" checksum="(null)">
+  <resource identifier="Sarabun weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Sarabun weight=280" checksum="(null)">
+  <resource identifier="Sarabun weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Sarabun weight=280 Italic" checksum="(null)">
+  <resource identifier="Sarabun weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Sarala" checksum="(null)">
@@ -15682,7 +15682,7 @@
   <resource identifier="Source Code Pro Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Pro weight=280" checksum="(null)">
+  <resource identifier="Source Code Pro weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Source Sans Pro" checksum="(null)">
@@ -15715,10 +15715,10 @@
   <resource identifier="Source Sans Pro Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Sans Pro weight=280" checksum="(null)">
+  <resource identifier="Source Sans Pro weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Sans Pro weight=280 Italic" checksum="(null)">
+  <resource identifier="Source Sans Pro weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Source Serif Pro" checksum="(null)">
@@ -15736,7 +15736,7 @@
   <resource identifier="Source Serif Pro Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Serif Pro weight=280" checksum="(null)">
+  <resource identifier="Source Serif Pro weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Space Mono" checksum="(null)">
@@ -15814,10 +15814,10 @@
   <resource identifier="Spectral SC Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Spectral SC weight=280" checksum="(null)">
+  <resource identifier="Spectral SC weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Spectral SC weight=280 Italic" checksum="(null)">
+  <resource identifier="Spectral SC weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Spectral Semi-Bold" checksum="(null)">
@@ -15832,10 +15832,10 @@
   <resource identifier="Spectral Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Spectral weight=280" checksum="(null)">
+  <resource identifier="Spectral weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Spectral weight=280 Italic" checksum="(null)">
+  <resource identifier="Spectral weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Spicy Rice" checksum="(null)">
@@ -16150,7 +16150,7 @@
   <resource identifier="Tajawal Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Tajawal weight=280" checksum="(null)">
+  <resource identifier="Tajawal weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Tangerine" checksum="(null)">
@@ -16207,16 +16207,16 @@
   <resource identifier="Taviraj Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Taviraj weight=255" checksum="(null)">
+  <resource identifier="Taviraj weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Taviraj weight=255 Italic" checksum="(null)">
+  <resource identifier="Taviraj weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Taviraj weight=280" checksum="(null)">
+  <resource identifier="Taviraj weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Taviraj weight=280 Italic" checksum="(null)">
+  <resource identifier="Taviraj weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Teko" checksum="(null)">
@@ -16597,10 +16597,10 @@
   <resource identifier="Titillium Web Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Titillium Web weight=280" checksum="(null)">
+  <resource identifier="Titillium Web weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Titillium Web weight=280 Italic" checksum="(null)">
+  <resource identifier="Titillium Web weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Trade Winds" checksum="(null)">
@@ -16660,16 +16660,16 @@
   <resource identifier="Trirong Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Trirong weight=255" checksum="(null)">
+  <resource identifier="Trirong weight=250" checksum="(null)">
   </resource>
 
-  <resource identifier="Trirong weight=255 Italic" checksum="(null)">
+  <resource identifier="Trirong weight=250 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Trirong weight=280" checksum="(null)">
+  <resource identifier="Trirong weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Trirong weight=280 Italic" checksum="(null)">
+  <resource identifier="Trirong weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Trocchi" checksum="(null)">
@@ -16936,28 +16936,28 @@
   <resource identifier="Vollkorn SC Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Vollkorn weight=480" checksum="(null)">
+  <resource identifier="Vollkorn weight=477" checksum="(null)">
   </resource>
 
-  <resource identifier="Vollkorn weight=480 Italic" checksum="(null)">
+  <resource identifier="Vollkorn weight=477 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Vollkorn weight=562" checksum="(null)">
+  <resource identifier="Vollkorn weight=561" checksum="(null)">
   </resource>
 
-  <resource identifier="Vollkorn weight=562 Italic" checksum="(null)">
+  <resource identifier="Vollkorn weight=561 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Vollkorn weight=664" checksum="(null)">
+  <resource identifier="Vollkorn weight=661" checksum="(null)">
   </resource>
 
-  <resource identifier="Vollkorn weight=664 Italic" checksum="(null)">
+  <resource identifier="Vollkorn weight=661 Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Vollkorn weight=782" checksum="(null)">
+  <resource identifier="Vollkorn weight=772" checksum="(null)">
   </resource>
 
-  <resource identifier="Vollkorn weight=782 Italic" checksum="(null)">
+  <resource identifier="Vollkorn weight=772 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Voltaire" checksum="(null)">
@@ -17011,10 +17011,10 @@
   <resource identifier="Work Sans Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Work Sans weight=265" checksum="(null)">
+  <resource identifier="Work Sans weight=260" checksum="(null)">
   </resource>
 
-  <resource identifier="Work Sans weight=285" checksum="(null)">
+  <resource identifier="Work Sans weight=280" checksum="(null)">
   </resource>
 
   <resource identifier="Yaldevi Colombo" checksum="(null)">
@@ -17023,7 +17023,7 @@
   <resource identifier="Yaldevi Colombo Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Yaldevi Colombo ExtraLight, weight=280" checksum="(null)">
+  <resource identifier="Yaldevi Colombo ExtraLight, weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Yaldevi Colombo Light, Light" checksum="(null)">
@@ -17044,7 +17044,7 @@
   <resource identifier="Yanone Kaffeesatz Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Yanone Kaffeesatz weight=280" checksum="(null)">
+  <resource identifier="Yanone Kaffeesatz weight=275" checksum="(null)">
   </resource>
 
   <resource identifier="Yantramanav" checksum="(null)">
@@ -17062,7 +17062,7 @@
   <resource identifier="Yantramanav Medium" checksum="(null)">
   </resource>
 
-  <resource identifier="Yantramanav weight=255" checksum="(null)">
+  <resource identifier="Yantramanav weight=250" checksum="(null)">
   </resource>
 
   <resource identifier="Yatra One" checksum="(null)">
