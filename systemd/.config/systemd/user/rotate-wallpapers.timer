@@ -1,0 +1,10 @@
+[Unit]
+Description=Rotate Wallpapers on schedule
+ 
+[Timer]
+OnUnitActiveSec=53min
+Persistent=false
+Unit=change-wallpapers.service
+ 
+[Install]
+WantedBy=default.target

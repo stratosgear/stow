@@ -1,0 +1,10 @@
+[Unit]
+Description=Change Wallpapers
+
+[Service]
+#Type=oneshot
+#Environment=DISPLAY=:0
+ExecStart=/home/stratos/stow/bin/set_walls
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# https://stackoverflow.com/questions/50311320/systemd-and-sway-socket-not-detected
+WALLPAPERS_DIR="/home/stratos/Pictures/Wallpapers/RogerDean"
+NEW=$(ls $WALLPAPERS_DIR | shuf -n 1)
+NEW_SWAY_WALL=$WALLPAPERS_DIR/$NEW
+
+monitors=`swaymsg -t get_outputs -r | jq '.[] | (.make + " " + .model + " " + .serial)'`
+IFS='
+'
+
+for i in $monitors
+do
+    swaymsg -s $SWAYSOCK output $i bg $NEW_SWAY_WALL fill
+    echo $i
+done

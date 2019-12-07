@@ -62,4 +62,5 @@ export GOBIN=$HOME/go/bin
 
 export TERM=xterm-256color
 
+systemctl --user import-environment
 exec fish

@@ -347,7 +347,7 @@ bindsym $mod+backslash exec /home/stratos/stow/bin/snippy.sh
 
 
 # rotate wallpapers
-bindsym $mod+slash exec ~/dotfiles/bin/randomWallpapers.sh
+bindsym $mod+slash exec /home/stratos/stow/bin/set_walls
 
 # Jump to urgent window (mod + z)
 bindcode $mod+52 [urgent=latest] focus
