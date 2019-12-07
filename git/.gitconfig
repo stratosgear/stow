@@ -61,6 +61,10 @@ delete-merged-branches = !sh -c 'git branch --merged master | grep -v master | x
 # alias = !git config --list | grep 'alias\.' | sed 's/alias\.\([^=]*\)=\(.*\)/\1\t=> \2/' | sort
 la = config -l | grep alias | cut -c 7-
 restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
+	plog = log --graph --decorate --pretty=format:\"%C(yellow)%h %Cblue%>(8,trunc)%ad %Cred%d %Creset%s %Cgreen%<(5)%aN%Creset\" --date=relative --all
+	merged = !echo \"List of merged branches:\" && git branch --merged $([[ $1 != \"-f\" ]] && git rev-parse master) | egrep -v \"(^\\*|^\\s*(master|develop)$)\" | xargs -n 1 echo
+	cleanup = !echo \"Removing merged branches:\" && git branch --merged $([[ $1 != \"-f\" ]] && git rev-parse master) | egrep -v \"(^\\*|^\\s*(master|develop)$)\" | xargs git branch -d
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
 # Store credentials to keyring:  http://blog.iqandreas.com/git/storing-https-authentication-in-ubuntu-and-arch-linux/
 [credential]
