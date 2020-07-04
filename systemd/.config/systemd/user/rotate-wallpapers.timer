@@ -2,8 +2,9 @@
 Description=Rotate Wallpapers on schedule
  
 [Timer]
+OnStartupSec=30
 OnUnitActiveSec=53min
-Persistent=false
+Persistent=true
 Unit=change-wallpapers.service
  
 [Install]

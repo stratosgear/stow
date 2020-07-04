@@ -1,0 +1,11 @@
+[Unit]
+Description=Automated Borg Backup of /mnt/data/backedup_data
+Wants = network-online.target
+After = network.target network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=borgmatic
+
+[Install]
+WantedBy=default.target

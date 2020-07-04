@@ -1,0 +1,17 @@
+[Unit]
+Description=Test simple system timer
+
+#I can manually start the timer
+RefuseManualStart=no
+
+#I can manually stop the timer 
+RefuseManualStop=no 
+
+[Timer]
+Persistent=false 
+OnBootSec=80 
+OnCalendar=*:0/2
+RandomizedDelaySec=5sec
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for Automated Borg Backup
+
+[Timer]
+OnCalendar=10:10 
+Unit=borg-backup.service
+RandomizedDelaySec=300sec
+
+[Install]
+WantedBy=timers.target
