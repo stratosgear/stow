@@ -64,3 +64,5 @@ export TERM=xterm-256color
 
 systemctl --user import-environment
 exec fish
+
+source /home/stratos/.config/broot/launcher/bash/br

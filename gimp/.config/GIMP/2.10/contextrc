@@ -1,14 +1,16 @@
 # GIMP user context
 
-(tool "gimp-smudge-tool")
-(paint-info "gimp-smudge")
-(brush "2. Hardness 050")
+(tool "gimp-rect-select-tool")
+(paint-info "gimp-paintbrush")
+(foreground (color-rgb 1 1 1))
+(background (color-rgb 0 0 0))
+(brush "2. Star")
 (dynamics "Dynamics Off")
 (mybrush "100% Opaque")
 (pattern "Pine")
 (gradient "FG to BG (RGB)")
 (palette "Default")
-(font "Futura Bold")
+(font "Neucha")
 (tool-preset "Core Pointer")
 
 # end of user context

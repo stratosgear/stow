@@ -11,8 +11,8 @@
     (size 638 1179))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 5 55)
-    (size 1670 990)
+    (position 0 39)
+    (size 1828 989)
     (open-on-exit)
     (aux-info
         (left-docks-width "206")
@@ -59,9 +59,9 @@
                 (tab-style automatic)
                 (aux-info
                     (edit-active "true")
-                    (current-data "2. Hardness 050"))))
+                    (current-data "2. Star"))))
         (book
-            (position 641)
+            (position 637)
             (current-page 0)
             (dockable "gimp-brush-grid"
                 (tab-style automatic)
@@ -77,24 +77,23 @@
                     (show-button-bar "true"))))))
 (session-info "toplevel"
     (factory-entry "gimp-preferences-dialog")
-    (position 285 176)
+    (position 285 174)
     (size 1110 720))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 283 115)
-    (size 1262 830))
+    (position 5 39)
+    (size 1670 990))
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")
-    (position 5 55)
+    (position 79 28)
     (size 1670 990))
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
-    (position 209 121)
-    (size 1262 830))
+    (position 5 39)
+    (size 1670 990))
 (session-info "toplevel"
     (factory-entry "gimp-image-new-dialog")
-    (position 989 581)
-    (monitor 1))
+    (position 649 404))
 (session-info "toplevel"
     (factory-entry "gimp-perspective-tool-dialog")
     (position 238 572)
@@ -107,8 +106,7 @@
     (position 2130 196))
 (session-info "toplevel"
     (factory-entry "gimp-toolbox-color-dialog")
-    (position 0 -320)
-    (monitor 0))
+    (position 626 341))
 (session-info "toplevel"
     (factory-entry "gimp-scale-tool-dialog")
     (position 1915 582))
@@ -134,6 +132,10 @@
 (session-info "toplevel"
     (factory-entry "gimp-operation-tool-dialog")
     (position 1006 299))
+(session-info "toplevel"
+    (factory-entry "gimp-text-tool-dialog")
+    (position 668 411)
+    (size 344 247))
 
 (hide-docks no)
 (single-window-mode yes)

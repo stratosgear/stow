@@ -1,0 +1,15 @@
+#!/bin/bash
+
+title="Power Menu"
+widthpercent=10
+
+typeset -A menu
+menu=(
+    [1 Lock]="/home/stratos/stow/bin/sway_lock_blur.sh"
+    [2 Logout]="swaymsg exit"
+    [3 Suspend]="/home/stratos/stow/bin/sway_lock_blur.sh && sleep 1 && systemctl suspend"
+    [4 Hibernate]="i3exit hibernate"
+    [5 Reboot]="systemctl reboot"
+    [6 Shutdown]="systemctl poweroff"
+)
+

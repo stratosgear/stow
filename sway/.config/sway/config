@@ -57,9 +57,9 @@ set $extscreen 'Samsung Electric Company SyncMaster H1AK500000'
 set $ext2screen   'Goldstar Company Ltd 20EN33 303NDMTMM283'
 
 
-set $fontSize      10
+set $fontSize      8
 
-set $fontSizeLarge 16
+set $fontSizeLarge 14
 
 
 #           _
@@ -91,7 +91,7 @@ set $green     #859900
 
 # https://i3wm.org/docs/userguide.html#_changing_colors
 # class                 border  backgr. text    indicator child_border
-client.focused          $base01 $base1 $base02 #2e9ef4   #285577
+client.focused          $base01 $base1 $base02 #2e9ef4   $orange
 client.focused_inactive $base01 $base0 $base2  #484e50   #5f676a
 client.unfocused        $base01 $base02 $base2 #292d2e   $base01
 client.urgent           #2f343a $red    $base2 #900000   $red
@@ -153,6 +153,9 @@ force_display_urgency_hint 2000 ms
 workspace_auto_back_and_forth yes
 
 default_border pixel 1
+
+# this seems to be the only option that allows a single i3 container
+# to NOT HAVE ANY gaps around it.
 hide_edge_borders both
 
 
@@ -321,6 +324,11 @@ bindsym --release Print exec teiler
 #bindsym --release $mod+Print exec teiler --togglecast
 
 
+# Webcam
+# -----------------------------------------------------------------------------------------
+bindsym $mod+Shift+v exec ~/stow/bin/webcamtoggle.sh
+bindsym $mod+Shift+b exec ~/stow/bin/vlc_screen_share.sh
+
 
 # scratchpad
 # -----------------------------------------------------------------------------------------
@@ -331,6 +339,9 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
+# Logout/Reboot/Restart menu
+# -----------------------------------------------------------------------------------------
+bindsym $mod+x exec /home/stratos/stow/bin/rofigen /home/stratos/stow/bin/logoutrebootrestart
 
 
 # rofi - run dialog and application switcher
@@ -343,6 +354,7 @@ bindsym $mod+backslash exec /home/stratos/stow/bin/snippy.sh
 #bindsym $mod+period exec xfce4-popup-whiskermenu
 
 bindsym $mod+m exec rofi -show run
+bindsym $mod+n exec networkmanager_dmenu
 bindsym $mod+period exec albert toggle
 
 # search though open windows
@@ -362,16 +374,23 @@ bindcode $mod+52 [urgent=latest] focus
 #                  |___/                                    |_|
 
 
-# move applications to specific workspaces
-# find window class and instance with xprop (from a terminal)
-# xprop replies with: WM_CLASS(STRING) = "instance", "class"
-assign [class="Spring Tool Suite" instance="Spring Tool Suite"] $wrksp3
-assign [class="LiClipse" instance="LiClipse"] $wrksp3
-assign [class="Thunderbird"] $wrksp5
-#assign [class="Evolution" instance="evolution"] $wrksp5
-#assign [class="Skype"] $wrksp6
-#assign [class="Rhythmbox" instance="rhythmbox"] $wrksp9
+### move applications to specific workspaces
+### find window class and instance with xprop (from a terminal)
+### xprop replies with: WM_CLASS(STRING) = "instance", "class"
+### In sway with: `swaymsg -t get_tree`  (Does not always work)
+### Found this: Xwayland windows have window_properties.class and
+###    window_properties.instance (and others) set. Wayland ones have app_id set.
+
+# assign [class="Spring Tool Suite" instance="Spring Tool Suite"] $wrksp3
+# assign [class="LiClipse" instance="LiClipse"] $wrksp3
+# assign [class="Evolution" instance="evolution"] $wrksp5
+# assign [class="Skype"] $wrksp6
+# assign [class="Rhythmbox" instance="rhythmbox"] $wrksp9
+
 assign [class="VirtualBox" instance="Qt-subapplication"] $wrksp10
+assign [class="Thunderbird"] $wrksp5
+assign [app_id="io.github.quodlibet.QuodLibet"] $wrksp10
+assign [class="ICE-SSB-pkhchat" instance="Qt-Navigator"] $wrksp6
 
 
 
@@ -418,32 +437,34 @@ bindcode $mod+27 mode "resize"
 
 # logout, reboot, restart
 #--------------------------------------------------
-set $Locker /home/stratos/stow/bin/sway_lock_blur.sh
+# Has been replaced with a nicer ROFI menu (same keybinding)
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
-mode "$mode_system" {
-    # key:l
-    bindcode 46 exec $Locker, mode "default"
-	 # key:e
-    bindcode 26 exec swaymsg exit, mode "default"
-	 # key:s
-    bindcode 39 exec $Locker && sleep 1 && systemctl suspend, mode "default"
-	 # key:h
-    #bindcode 43 exec i3exit hibernate, mode "default"
-	 # key:r
-    bindcode 27 exec systemctl reboot, mode "default"
-	 # key:
-    bindcode 53 exec systemctl poweroff, mode "default"
+#set $Locker /home/stratos/stow/bin/sway_lock_blur.sh
+#
+#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
+#mode "$mode_system" {
+#    # key:l
+#    bindcode 46 exec $Locker, mode "default"
+#	 # key:e
+#    bindcode 26 exec swaymsg exit, mode "default"
+#	 # key:s
+#    bindcode 39 exec $Locker && sleep 1 && systemctl suspend, mode "default"
+#	 # key:h
+#    #bindcode 43 exec i3exit hibernate, mode "default"
+#	 # key:r
+#    bindcode 27 exec systemctl reboot, mode "default"
+#	 # key:
+#    bindcode 53 exec systemctl poweroff, mode "default"
+#
+#    # back to normal: Enter or Escape
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+##bindsym $mod+Pause mode "$mode_system"
+#bindsym $mod+x mode "$mode_system"
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-#bindsym $mod+Pause mode "$mode_system"
-bindsym $mod+x mode "$mode_system"
 
-bindsym $mod+Shift+v exec ~/stow/bin/webcamtoggle.sh
-bindsym $mod+Shift+b exec ~/stow/bin/vlc_screen_share.sh
+
 
 # switch keyboard layout
 #--------------------------------------------------
@@ -471,7 +492,7 @@ bar {
     id bar-laptop
     output $laptopscreen
 
-    font pango:Noto Mono $fontSizeLarge
+    font pango:Noto Mono $fontSize
     status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     # start bar in debug mode
     # follow log messages with: tail -f /tmp/i3blocks.err
@@ -497,7 +518,7 @@ bar {
     id bar-extscreen
     output $extscreen
 
-    font pango:Noto Mono 12
+    font pango:Noto Mono $fontSize
     status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     # start bar in debug mode
     # follow log messages with: tail -f /tmp/i3blocks.err
@@ -523,7 +544,7 @@ bar {
     id bar-ext2screen
     output $ext2screen
 
-    font pango:Noto Mono 12
+    font pango:Noto Mono $fontSize
     # status_command SCRIPT_DIR=~/.i3/i3blocks-str i3blocks
     # dstart bar in debug mode
     # follow log messages with: tail -f /tmp/i3blocks.err
@@ -637,8 +658,8 @@ for_window [title="vlcscreensharing"] to output DP2-3
 # This maybe should be handled outside of here?
 # exec xrandr --dpi $dpi
 
-exec /usr/bin/albert
-
+#exec /usr/bin/albert
+exec /home/stratos/stow/bin/start_albert.sh
 
 # Load a startup wallpaper image
 # exec ~/dotfiles/bin/randomWallpapers.sh
@@ -667,6 +688,8 @@ exec 	parcellite
 # handled by KDE touchpad settings for now
 #exec 	xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -80, -80
 
+# set inactive windows as transparent: set transparency in script
+exec --no-startup-id python /home/stratos/stow/bin/inactive-window-transparency.py
 
 # What is this thing doing?
 #exec 			remind -z "-ki3-nagbar -m '%s' &" &
@@ -689,7 +712,7 @@ exec 	gnome-keyring-daemon
 
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
-#for_window [class="plasmashell"] floating enable;
+#frstoor_window [class="plasmashell"] floating enable;
 #for_window [class="Plasma"] floating enable; border none
 #for_window [title="plasma-desktop"] floating enable; border none
 #for_window [title="win7"] floating enable; border none
@@ -698,7 +721,10 @@ exec 	gnome-keyring-daemon
 #for_window [class="Klipper"] floating enable; border none
 #for_window [class="Plasmoidviewer"] floating enable; border none
 
-gaps inner 16
+
+
+# gaps settings
+gaps inner 8
 gaps outer 0
-smart_gaps on
+smart_gaps yes
 smart_borders on

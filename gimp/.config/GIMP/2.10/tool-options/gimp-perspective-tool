@@ -1,5 +1,6 @@
 # GIMP gimp-perspective-tool options
 
+(background (color-rgb 0 0 0))
 (direction backward)
 (show-preview no)
 

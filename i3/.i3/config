@@ -35,9 +35,9 @@
 
 
 set $laptopscreen eDP1
-set $extscreen    DP2-2
+set $extscreen    DP-2-2
 
-set $ext2screen   DP2-3
+set $ext2screen   DP-2-3
 
 
 set $fontSize      10
@@ -591,6 +591,9 @@ exec --no-startup-id 	xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics 
 
 exec --no-startup-id 	gnome-keyring-daemon
 exec --no-startup-id 	/usr/bin/blueman-applet
+
+# Newer version of Compton, to avoid tearing.
+exec --no-startup-id picom
 
 
 ## Plasma Integration ######################
