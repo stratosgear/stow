@@ -1,0 +1,123 @@
+# Remove ctrl+b as the magic key and assign the classic ctrl+a of gnu screen
+# easier to type, too
+unbind C-b
+set -g prefix C-a
+
+# AND, allow C-A a to send C-A to application
+bind C-a send-prefix
+
+# make the first window number start at 1
+set -g base-index 1
+setw -g pane-base-index 1
+
+# UTF-8
+# Shouldn;t be need in latest versions
+set-option -g status-utf8 on
+
+
+# Mouse operations not supported on old tmux versions
+#set -g mouse-select-pane on
+#setw -g mouse on
+
+# look good
+set -g default-terminal "xterm-256color"
+#set -g default-terminal "tmux-256color"
+
+
+# Set a longish scrollbuffer 
+set -g history-limit 5000
+
+
+# Set window notifications
+setw -g monitor-activity on
+set -g visual-activity on
+
+# maximize and restore window panes
+unbind +
+bind + new-window -d -n tmp \; swap-pane -s tmp.0 \; select-window -t tmp
+unbind -
+bind - last-window \; swap-pane -s tmp.0 \; kill-window -t tmp
+
+# bind easier to remember split window shortcuts
+bind-key | split-window -h
+bind-key - split-window -v 
+
+# Send keystrokes to all panes. (acts a toggle button)
+bind-key a set-window-option synchronize-panes
+
+#bind C-y set-window-option synchronize-panes on \; set-window-option status-bg red \; display-message "Panes synchronized."
+#bind C-u set-window-option synchronize-panes off \; set-window-option status-bg green \; display-message "Panes un-synchronized."
+
+# bind pane switching shortcuts to Alt+arrow
+# (also work with C+a then arrows)
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+
+#set -g status-fg colour231
+#set -g status-bg colour234
+
+set -g status-fg colour231
+set -g status-bg colour234
+set -g status-left-length 20
+set -g status-left '#[fg=colour16,bg=colour254,bold] #S #[fg=colour254,bg=colour234,nobold]'
+set -g status-right "#[fg=colour16,bg=colour255,bold] %a %b %d '%y #[fg=colour254,bg=colour234,nobold] %H:%M:%S #[fg=colour16,bg=colour255,bold] #H"
+set -g status-right-length 150
+
+#set-window-option -g window-status-fg colour249
+#set -g window-status-style fg=red
+#set-window-option -g window-status-activity-attr none
+#set-window-option -g window-status-bell-attr none
+#set-window-option -g window-status-activity-fg yellow
+#set -g window-status-activity-style fg=yellow
+#set-window-option -g window-status-bell-fg red
+#set -g window-status-bell fg=red
+
+#set -g window-style 'bg=black'
+#set -g window-active-style 'bg=colour238'
+
+#set -g pane-border-bg colour235
+#set -g pane-border-fg colour238
+#set -g pane-active-border-bg colour236
+#set -g pane-active-border-fg colour51
+
+#setw -g window-style bg=colour237
+#setw -g window-active-style bg=black
+
+#set -g window-style 'bg=colour238'
+#set -g window-active-style 'bg=black'
+
+#set-option -g status on
+#set-option -g status-interval 2
+#set-option -g status-utf8 on
+#set-option -g status-justify "centre"
+#set-option -g status-left-length 60
+#set-option -g status-right-length 90
+##set-option -g status-left "#(~/workspaces/sources/tmux-powerline/powerline.sh left)"
+##set-option -g status-right "#(~/workspaces/sources/tmux-powerline/powerline.sh right)"
+#set-option -g status-left "#(/home/stratos/stripts/vendors/erikw/tmux-powerline/powerline.sh left)"
+#set-option -g status-right "#(/home/stratos/stripts/vendors/erikw/tmux-powerline/powerline.sh right)"
+#set-window-option -g window-status-current-format "#[fg=colour148, bg=colour52]⮀#[fg=colour255, bg=colour52] #I ⮁ #W #[fg=colour52, bg=colour148]⮀"
+
+
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Provides a prefix+X key to kill the current session
+# unfortunately, docker-compose services seems to continue running afterwards
+# set -g @plugin 'tmux-plugins/tmux-sessionist'
+
+set -g @plugin 'davidscholberg/tmux-cluster'
+
+# Provides a prefix+C to kill current session
+# Might need to run it twice to kill all windows
+# Cleanly closes all docker-compose panes too.
+set -g @plugin 'jlipps/tmux-safekill'
+
+if "test ! -d ~/.tmux/plugins/tpm" \
+   "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
+
+

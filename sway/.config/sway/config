@@ -320,7 +320,7 @@ bindsym $mod+F1 exec pactl set-sink-mute 0 toggle
 # * selected area... (click and move mouse)
 #bindsym --release Shift+Print exec scrot -s '%Y-%m-%dT%H%M%S.png' -e 'mv $f ~/Downloads && eog ~/Downloads/$f'
 
-bindsym --release Print exec teiler
+bindsym --release $mod+Print exec /home/stratos/stow/bin/sway_screenshot.sh
 #bindsym --release $mod+Print exec teiler --togglecast
 
 

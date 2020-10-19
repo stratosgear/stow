@@ -25,8 +25,8 @@ LOCK=~/stow/bin/assets/stop.png
 LOCKARGS=""
  
 # All options are here: http://www.imagemagick.org/Usage/blur/#blur_args
-#BLURTYPE="0x5" # 7.52s
-BLURTYPE="0x2" # 4.39s
+BLURTYPE="0x5" # 7.52s
+#BLURTYPE="0x2" # 4.39s
 #BLURTYPE="5x3" # 3.80s
 #BLURTYPE="2x8" # 2.90s
 #BLURTYPE="2x3" # 2.92s
@@ -35,8 +35,10 @@ for OUTPUT in `swaymsg -t get_outputs | jq -r '.[] | select(.active == true) | .
 do
     IMAGE=/tmp/$OUTPUT-lock.png
     grim -o $OUTPUT $IMAGE
-    #convert $IMAGE -blur $BLURTYPE -font Liberation-Sans -pointsize 26 -fill white -gravity center -comment 'Type password to unlock' - | composite -gravity center $LOCK - $IMAGE
-    corrupter -mag 1 -boffset 1  -meanabber 20 $IMAGE $IMAGE
+    # convert $IMAGE -blur $BLURTYPE -font Liberation-Sans -pointsize 26 -fill white -gravity center -comment 'Type password to unlock' - | composite -gravity center $LOCK - $IMAGE
+    # corrupter -mag 1 -boffset 1  -meanabber 20 $IMAGE $IMAGE
+    convert -noise 5x5 $IMAGE $IMAGE
+    # convert -blur $BLURTYPE $IMAGE $IMAGE
     composite -gravity center $LOCK $IMAGE $IMAGE
     LOCKARGS="${LOCKARGS} --image ${OUTPUT}:${IMAGE}"
     IMAGES="${IMAGES} ${IMAGE}"
