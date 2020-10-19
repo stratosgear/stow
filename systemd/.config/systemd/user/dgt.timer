@@ -1,0 +1,18 @@
+[Unit]
+Description=Scrape DGT for a cita
+
+# I can manually start the timer
+RefuseManualStart=no
+
+# I can manually stop the timer 
+RefuseManualStop=no 
+
+[Timer]
+Persistent=false 
+#OnBootSec=80 
+OnCalendar=*:0/10
+Unit=dgt.service
+RandomizedDelaySec=30sec
+
+[Install]
+WantedBy=timers.target

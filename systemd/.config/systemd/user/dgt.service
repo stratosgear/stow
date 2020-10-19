@@ -1,0 +1,12 @@
+[Unit]
+Description=Scrape DGT for appointments
+Wants = network-online.target
+After = network.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/mnt/data/projects/hypervasis/selenium/canje_de_permiso/cli
+ExecStart=/mnt/data/projects/hypervasis/selenium/canje_de_permiso/cli/.venv/bin/python dgt.py
+
+[Install]
+WantedBy=default.target
