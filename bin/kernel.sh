@@ -1,10 +1,7 @@
 #!/bin/bash
 
-echo "Installed kernel:"
-echo "pacman -Q linux"
+echo "Installed kernel: (from: pacman -Q linux)"
 pacman -Q linux
-
 echo ""
-echo "Running kernel:"
-echo "uname -r"
+echo "Running kernel: (from: uname -r)"
 uname -r
