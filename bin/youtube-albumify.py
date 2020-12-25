@@ -113,10 +113,11 @@ class Albumify:
         """ Generate a mp3 playlist of the ordered tracks """
 
         with open(playlist_name, "w") as pl:
-            pl.write("#EXTM3U")
+            pl.write("#EXTM3U\n")
             for t in tracks:
+                print(int(t.get("id")))
                 trackfilename = self.get_valid_track_filename(
-                    t.get("id"), t.get("title"), t.get("artist")
+                    int(t.get("id")), t.get("title"), t.get("artist")
                 )
                 track_len = f"ffprobe -show_streams {trackfilename} -v fatal | grep duration= | cut -d '=' -f 2 | cut -d '.' -f 1"
                 secs_output = subprocess.run(
@@ -129,7 +130,7 @@ class Albumify:
 
     def get_valid_track_filename(self, id, title, artist):
         """ Get a sane filename for a saved track """
-        return self.get_valid_filename(f"{id}.{title}-{artist}.mp3")
+        return self.get_valid_filename(f"{id:02d}.{title}-{artist}.mp3")
 
     def call_external_program(self, desc, cmd, show=False):
         """ Call an external program and show the std output """
@@ -197,7 +198,7 @@ class Albumify:
         for t in self.tracks:
             # Cut to length
             trackfilename = self.get_valid_track_filename(
-                t.get("id"), t.get("title"), t.get("artist")
+                int(t.get("id")), t.get("title"), t.get("artist")
             )
             if t.get("end", ""):
                 cut_command = f"ffmpeg -ss {t.get('start')} -to {t.get('end')} -i {outfile}.mp3 -c copy {trackfilename}"
@@ -254,8 +255,8 @@ if __name__ == "__main__":
         # ask for uploading now, so we can do all the tasks right away and the
         # user can walk away from the process without having to answer more
         # questions later on.
-        upload = alb.ask_upload()
+        #upload = alb.ask_upload()
         alb.download_cut_id()
 
-        if upload:
-            alb.upload()
+        # if upload:
+        #     alb.upload()
