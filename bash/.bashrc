@@ -24,7 +24,6 @@ shopt -s checkwinsize
 
 PS1='[\u@\h \W]\$ '
 
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -49,8 +48,6 @@ fi
 
 EDITOR="micro"
 
-# Setup a cool prompt
-#source ~/dotfiles/source/liquidprompt/liquidprompt
 
 # Load up solarized colorscheme for dircolors (ls ouput)
 #eval `dircolors ~/dotfiles/source/dircolors-solarized/dircolors.ansi-dark`
@@ -63,6 +60,25 @@ export GOBIN=$HOME/go/bin
 export TERM=xterm-256color
 
 systemctl --user import-environment
-exec fish
 
-source /home/stratos/.config/broot/launcher/bash/br
+# Do not allow poetry to change the prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# Set XDG Base Directories
+# https://wiki.archlinux.org/index.php/XDG_Base_Directory
+XDG_CONFIG_HOME=$HOME/.config
+XDG_CACHE_HOME=$HOME/.cache
+XDG_DATA_HOME=$HOME/.local/share
+
+
+# Add Radicle to path
+export PATH="$HOME/.radicle/bin:$PATH"
+
+# Init pyenv
+eval "$(pyenv init -)"
+
+# source /home/stratos/.config/broot/launcher/bash/br
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
+
+eval "$(starship init bash)"

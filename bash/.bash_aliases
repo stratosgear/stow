@@ -19,8 +19,6 @@ alias tmuxl='tmux list-sessions'
 alias tmuxa='tmux attach-session -t $1'
 alias tmuxk='tmux kill-session -t $1'
 
-alias tmux-pplaavi="ssh pplaavi01 -t '/usr/bin/tmux -S /home/plaaviops/tmux/stratos.sock attach'"
-#alias tmux-pplaavi="ssh pplaavi01 -t 'if tmux -S /home/plaaviops/tmux/stratos.sock has -t AO-PPS; then reattach-to-user-namespace tmux -S /home/plaaviops/tmux/stratos.sock attach; else reattach-to-user-namespace tmux -S /home/plaaviops/tmux/stratos.sock new -s AO-PPS; fi'"
 
 # kill process holding port open
 function killport() {
@@ -29,10 +27,7 @@ function killport() {
 
 alias kport=killport
 
-alias e=emacsclient $1
-
 alias m=micro
 alias gtt='docker run --rm -it -v ~:/root kriskbx/gitlab-time-tracker'
 
 alias wp='which python'
-alias tl='tmuxp load .'
