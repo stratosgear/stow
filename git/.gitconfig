@@ -1,7 +1,7 @@
 [user]
 	email = stratos@gerakakis.net
 	name = Stratos Gerakakis
-	signingkey = 48D88152
+	signingkey = E9DDEA893B615936
 [color]
  ui = true
  branch = auto
@@ -67,6 +67,7 @@
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	merged-remote = !echo \"List of remote merged branches:\" && git branch -r --merged origin/master | grep -v master | grep \"origin/\" | cut -d \"/\" -f 2-
 	cleanup-remote = !echo \"List of remote merged branches:\" && git branch -r --merged origin/master | grep -v master | grep \"origin/\" | cut -d \"/\" -f 2- | xargs -n 1 git push --delete origin
+	resign = "{ git rebase --exec 'git commit --amend --no-edit -n -S' -i ; }; re"
 
 # Store credentials to keyring:  http://blog.iqandreas.com/git/storing-https-authentication-in-ubuntu-and-arch-linux/
 [credential]
@@ -104,3 +105,5 @@
 	rebase = true
 [fetch]
 	prune = true
+[commit]
+	pgpsign = true
