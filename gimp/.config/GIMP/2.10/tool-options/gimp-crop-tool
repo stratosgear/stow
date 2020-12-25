@@ -2,6 +2,7 @@
 
 (desired-fixed-size-height 300)
 (desired-fixed-size-width 300)
+(fixed-rule-active yes)
 (overridden-fixed-aspect yes)
 (overridden-fixed-size yes)
 

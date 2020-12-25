@@ -55,7 +55,7 @@
   <resource identifier="${gimp_data_dir}/brushes/Media/Acrylic-04.gih" checksum="11311bde958533f3b7ada598af5c6d46">
   </resource>
 
-  <resource identifier="${gimp_data_dir}/brushes/Media/Acrylic-05.gih" checksum="69d6b269dffc2db6a6f44b380aaf1e5e">
+  <resource identifier="${gimp_data_dir}/brushes/Media/Acrylic-05.gih" checksum="50cfa85464d38b04c719770e045f4e3c">
   </resource>
 
   <resource identifier="${gimp_data_dir}/brushes/Legacy/confetti.gih" checksum="d136b60fdd9cf41693a485a329b32e95">
@@ -1345,66 +1345,6 @@
   <resource identifier="Adamina" checksum="(null)">
   </resource>
 
-  <resource identifier="Adobe Courier" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Courier Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Courier Bold Oblique" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Courier Medium Oblique" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Helvetica" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Helvetica Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Helvetica Bold Oblique" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Helvetica Medium Oblique" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe New Century Schoolbook" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe New Century Schoolbook Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe New Century Schoolbook Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe New Century Schoolbook Medium Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Times" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Times Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Times Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Times Medium Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Utopia" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Utopia Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Utopia Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Adobe Utopia Medium Italic" checksum="(null)">
-  </resource>
-
   <resource identifier="Advent Pro" checksum="(null)">
   </resource>
 
@@ -1801,9 +1741,6 @@
   <resource identifier="Antonio Ultra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Arabic Newspaper" checksum="(null)">
-  </resource>
-
   <resource identifier="Arapey" checksum="(null)">
   </resource>
 
@@ -2012,75 +1949,6 @@
   </resource>
 
   <resource identifier="Arya Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Asana Math" checksum="(null)">
   </resource>
 
   <resource identifier="Asap" checksum="(null)">
@@ -2869,30 +2737,6 @@
   <resource identifier="Bhavuka" checksum="(null)">
   </resource>
 
-  <resource identifier="B&amp;H Lucida Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="B&amp;H Lucida Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="B&amp;H LucidaBright" checksum="(null)">
-  </resource>
-
-  <resource identifier="B&amp;H LucidaBright Medium Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="B&amp;H Lucida Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="B&amp;H Lucida Medium Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="B&amp;H LucidaTypewriter Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="B&amp;H LucidaTypewriter Medium" checksum="(null)">
-  </resource>
-
   <resource identifier="Bigelow Rules" checksum="(null)">
   </resource>
 
@@ -3004,22 +2848,10 @@
   <resource identifier="Biryani weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Bitstream Charter" checksum="(null)">
+  <resource identifier="Bitter" checksum="(null)">
   </resource>
 
-  <resource identifier="Bitstream Charter Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Bitstream Charter Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Bitstream Charter Medium Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Bitstream Terminal" checksum="(null)">
-  </resource>
-
-  <resource identifier="Bitstream Terminal Bold" checksum="(null)">
+  <resource identifier="Bitter" checksum="(null)">
   </resource>
 
   <resource identifier="Bitter" checksum="(null)">
@@ -3028,7 +2860,100 @@
   <resource identifier="Bitter Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="Bitter Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Heavy Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Bitter Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Ultra-Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitter Ultra-Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Black And White Picture" checksum="(null)">
@@ -3074,18 +2999,6 @@
   </resource>
 
   <resource identifier="Boogaloo" checksum="(null)">
-  </resource>
-
-  <resource identifier="Bookerly" checksum="(null)">
-  </resource>
-
-  <resource identifier="Bookerly Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Bookerly Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Bookerly Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Bowlby One" checksum="(null)">
@@ -3364,7 +3277,19 @@
   <resource identifier="Catamaran" checksum="(null)">
   </resource>
 
+  <resource identifier="Catamaran" checksum="(null)">
+  </resource>
+
+  <resource identifier="Catamaran" checksum="(null)">
+  </resource>
+
   <resource identifier="Catamaran Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Catamaran Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Catamaran Heavy" checksum="(null)">
   </resource>
 
   <resource identifier="Catamaran Heavy" checksum="(null)">
@@ -3373,19 +3298,34 @@
   <resource identifier="Catamaran Light" checksum="(null)">
   </resource>
 
+  <resource identifier="Catamaran Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Catamaran Medium" checksum="(null)">
+  </resource>
+
   <resource identifier="Catamaran Medium" checksum="(null)">
   </resource>
 
   <resource identifier="Catamaran Semi-Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="Catamaran Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Catamaran Thin" checksum="(null)">
+  </resource>
+
   <resource identifier="Catamaran Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Catamaran weight=250" checksum="(null)">
+  <resource identifier="Catamaran Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Catamaran weight=275" checksum="(null)">
+  <resource identifier="Catamaran Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Catamaran Ultra-Light" checksum="(null)">
   </resource>
 
   <resource identifier="Caudex" checksum="(null)">
@@ -3598,6 +3538,9 @@
   <resource identifier="Cinzel" checksum="(null)">
   </resource>
 
+  <resource identifier="Cinzel" checksum="(null)">
+  </resource>
+
   <resource identifier="Cinzel Bold" checksum="(null)">
   </resource>
 
@@ -3608,6 +3551,9 @@
   </resource>
 
   <resource identifier="Cinzel Decorative Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cinzel Heavy" checksum="(null)">
   </resource>
 
   <resource identifier="Cinzel Heavy" checksum="(null)">
@@ -3931,6 +3877,18 @@
   <resource identifier="Crete Round Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Crimson" checksum="(null)">
+  </resource>
+
+  <resource identifier="Crimson Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Crimson Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Crimson Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Crimson Pro" checksum="(null)">
   </resource>
 
@@ -3985,6 +3943,12 @@
   <resource identifier="Crimson Pro Ultra-Light Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Crimson Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Crimson Semi-Bold Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Crimson Text" checksum="(null)">
   </resource>
 
@@ -4019,9 +3983,6 @@
   </resource>
 
   <resource identifier="Cuprum Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="cursor.pcf" checksum="(null)">
   </resource>
 
   <resource identifier="Cute Font" checksum="(null)">
@@ -4078,9 +4039,6 @@
   <resource identifier="Days One" checksum="(null)">
   </resource>
 
-  <resource identifier="deccurs.pcf" checksum="(null)">
-  </resource>
-
   <resource identifier="Decovar Alpha" checksum="(null)">
   </resource>
 
@@ -4130,15 +4088,6 @@
   </resource>
 
   <resource identifier="Decovar Alpha Regular24" checksum="(null)">
-  </resource>
-
-  <resource identifier="decsess.pcf" checksum="(null)">
-  </resource>
-
-  <resource identifier="DEC Terminal" checksum="(null)">
-  </resource>
-
-  <resource identifier="DEC Terminal Bold" checksum="(null)">
   </resource>
 
   <resource identifier="DejaVu Math TeX Gyre" checksum="(null)">
@@ -4328,6 +4277,9 @@
   </resource>
 
   <resource identifier="Dokdo" checksum="(null)">
+  </resource>
+
+  <resource identifier="Domine" checksum="(null)">
   </resource>
 
   <resource identifier="Domine" checksum="(null)">
@@ -4624,10 +4576,25 @@
   <resource identifier="Encode Sans Bold Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Encode Sans Bold Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Bold Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Encode Sans Bold Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Bold Semi-Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Condensed" checksum="(null)">
@@ -4636,16 +4603,7 @@
   <resource identifier="Encode Sans Condensed, Bold Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Condensed, Bold Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Condensed, Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Condensed, Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Condensed, Heavy Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Condensed, Heavy Condensed" checksum="(null)">
@@ -4654,34 +4612,16 @@
   <resource identifier="Encode Sans Condensed, Light Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Condensed, Light Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Condensed, Medium Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Condensed, Medium Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Condensed, Semi-Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Condensed, Semi-Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Condensed, Thin Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Condensed Thin, Light Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Condensed, Ultra-Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Condensed, Ultra-Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Condensed, Ultra-Light Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Condensed, weight=250 Condensed" checksum="(null)">
@@ -4693,7 +4633,7 @@
   <resource identifier="Encode Sans Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Expanded, Bold Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Expanded, Bold Expanded" checksum="(null)">
@@ -4702,16 +4642,7 @@
   <resource identifier="Encode Sans Expanded, Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Expanded, Expanded" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Expanded, Heavy Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Expanded, Heavy Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Expanded, Light Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Expanded, Light Expanded" checksum="(null)">
@@ -4720,31 +4651,16 @@
   <resource identifier="Encode Sans Expanded, Medium Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Expanded, Medium Expanded" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Expanded, Semi-Bold Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Expanded, Semi-Bold Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Expanded, Thin Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Expanded, Thin Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Expanded, Ultra-Bold Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Expanded, Ultra-Bold Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Expanded, weight=250 Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Expanded, Ultra-Light Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans Expanded, Ultra-Light Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Expanded, weight=275 Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Heavy" checksum="(null)">
@@ -4759,25 +4675,49 @@
   <resource identifier="Encode Sans Heavy Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Encode Sans Heavy Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Heavy Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Encode Sans Heavy Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Heavy Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Light" checksum="(null)">
+  <resource identifier="Encode Sans Heavy Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Heavy Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Light" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Light Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Light Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Light Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Light Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Light Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Light Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Medium" checksum="(null)">
@@ -4792,10 +4732,22 @@
   <resource identifier="Encode Sans Medium Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Encode Sans Medium Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Medium Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Encode Sans Medium Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Medium Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Medium Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Medium Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi-Bold" checksum="(null)">
@@ -4810,10 +4762,25 @@
   <resource identifier="Encode Sans Semi-Bold Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Encode Sans Semi-Bold Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Semi-Bold Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Encode Sans Semi-Bold Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi-Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Semi-Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Semi-Bold Semi-Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi-Condensed" checksum="(null)">
@@ -4822,49 +4789,22 @@
   <resource identifier="Encode Sans Semi Condensed, Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans SemiCondensed, Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Semi Condensed, Heavy Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiCondensed, Heavy Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi Condensed, Light Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans SemiCondensed, Light Semi-Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Semi Condensed, Medium Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiCondensed, Medium Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi Condensed, Semi-Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans SemiCondensed, Semi-Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Semi Condensed, Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans SemiCondensed, Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiCondensed, Thin Semi-Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Semi Condensed, Ultra-Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiCondensed, Ultra-Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiCondensed, Ultra-Light Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi Condensed, weight=250 Semi-Condensed" checksum="(null)">
@@ -4873,52 +4813,28 @@
   <resource identifier="Encode Sans Semi Condensed, weight=275 Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans Semi Expanded, Bold Semi-Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Semi-Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans SemiExpanded, Bold Semi-Expanded" checksum="(null)">
+  <resource identifier="Encode Sans Semi Expanded, Bold Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi Expanded, Heavy Semi-Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans SemiExpanded, Heavy Semi-Expanded" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Semi Expanded, Light Semi-Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiExpanded, Light Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi Expanded, Medium Semi-Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans SemiExpanded, Medium Semi-Expanded" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Semi Expanded, Semi-Bold Semi-Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiExpanded, Semi-Bold Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi Expanded, Semi-Expanded" checksum="(null)">
   </resource>
 
-  <resource identifier="Encode Sans SemiExpanded, Semi-Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiExpanded, Thin Semi-Expanded" checksum="(null)">
-  </resource>
-
   <resource identifier="Encode Sans Semi Expanded, Ultra-Bold Semi-Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiExpanded, Ultra-Bold Semi-Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="Encode Sans SemiExpanded, Ultra-Light Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Semi Expanded, weight=250 Semi-Expanded" checksum="(null)">
@@ -4939,10 +4855,22 @@
   <resource identifier="Encode Sans Thin Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Encode Sans Thin Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Thin Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Encode Sans Thin Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Thin Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Thin Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Thin Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Ultra-Bold" checksum="(null)">
@@ -4957,10 +4885,22 @@
   <resource identifier="Encode Sans Ultra-Bold Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Encode Sans Ultra-Bold Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Ultra-Bold Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Encode Sans Ultra-Bold Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Ultra-Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Ultra-Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Ultra-Bold Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Ultra-Light" checksum="(null)">
@@ -4975,10 +4915,22 @@
   <resource identifier="Encode Sans Ultra-Light Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Encode Sans Ultra-Light Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Ultra-Light Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Encode Sans Ultra-Light Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Encode Sans Ultra-Light Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Ultra-Light Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Encode Sans Ultra-Light Semi-Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Engagement" checksum="(null)">
@@ -4997,6 +4949,108 @@
   </resource>
 
   <resource identifier="Enriqueta Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Ultra-Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Epilogue Ultra-Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Erica One" checksum="(null)">
@@ -5836,9 +5890,6 @@
   <resource identifier="Fondamento Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="FontAwesome" checksum="(null)">
-  </resource>
-
   <resource identifier="Font Awesome 5 Brands" checksum="(null)">
   </resource>
 
@@ -5884,9 +5935,6 @@
   <resource identifier="Freehand" checksum="(null)">
   </resource>
 
-  <resource identifier="FreeMono" checksum="(null)">
-  </resource>
-
   <resource identifier="Fresca" checksum="(null)">
   </resource>
 
@@ -5897,63 +5945,6 @@
   </resource>
 
   <resource identifier="Fugaz One" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura BdCn BT Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Bk BT" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Bk BT Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura-Black Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura-Bold Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Hv BT" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Hv BT Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Light Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Lt BT" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Lt BT Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura LtCn BT Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Md BT" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Md BT Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura Md BT Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura MdCn BT Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura XBlk BT" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura XBlk BT" checksum="(null)">
-  </resource>
-
-  <resource identifier="Futura XBlkCnIt BT Italic Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Gabriela" checksum="(null)">
@@ -6134,6 +6125,12 @@
   </resource>
 
   <resource identifier="Goha-Tibeb Zemen Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Goldman" checksum="(null)">
+  </resource>
+
+  <resource identifier="Goldman Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Gorditas" checksum="(null)">
@@ -6331,10 +6328,10 @@
   <resource identifier="Hack Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Hack Bold Oblique" checksum="(null)">
+  <resource identifier="Hack Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Hack Oblique" checksum="(null)">
+  <resource identifier="Hack Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Halant" checksum="(null)">
@@ -6377,6 +6374,9 @@
   </resource>
 
   <resource identifier="Harmattan" checksum="(null)">
+  </resource>
+
+  <resource identifier="Harmattan Bold" checksum="(null)">
   </resource>
 
   <resource identifier="HeadlandOne" checksum="(null)">
@@ -7115,18 +7115,6 @@
   </resource>
 
   <resource identifier="Inknut Antiqua Ultra-Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Input Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Input Bold Italic Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Input Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Input Italic Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Inria Sans" checksum="(null)">
@@ -7987,12 +7975,6 @@
   <resource identifier="Kite One" checksum="(null)">
   </resource>
 
-  <resource identifier="Knack" checksum="(null)">
-  </resource>
-
-  <resource identifier="Knack" checksum="(null)">
-  </resource>
-
   <resource identifier="Knewave" checksum="(null)">
   </resource>
 
@@ -8146,6 +8128,60 @@
   <resource identifier="Krub weight=275 Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Kufam" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Kufam Semi-Bold Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Kulim Park" checksum="(null)">
   </resource>
 
@@ -8222,78 +8258,6 @@
   </resource>
 
   <resource identifier="Lateef" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="Latin Modern Math" checksum="(null)">
   </resource>
 
   <resource identifier="Lato" checksum="(null)">
@@ -8536,10 +8500,46 @@
   <resource identifier="Libre Caslon Text" checksum="(null)">
   </resource>
 
+  <resource identifier="Libre Caslon Text" checksum="(null)">
+  </resource>
+
   <resource identifier="Libre Caslon Text Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="Libre Caslon Text Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Bold Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Libre Caslon Text Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Libre Caslon Text Semi-Bold Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Libre Franklin" checksum="(null)">
@@ -9106,72 +9106,6 @@
   <resource identifier="Mate SC" checksum="(null)">
   </resource>
 
-  <resource identifier="MathJax_AMS" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Caligraphic" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Caligraphic Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Fraktur" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Fraktur Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Main" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Main Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Main Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Math Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Math Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_SansSerif" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_SansSerif Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_SansSerif Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Script" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Size1" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Size2" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Size3" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Size4" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Typewriter" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Vector-Bold Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="MathJax_Vector Medium" checksum="(null)">
-  </resource>
-
   <resource identifier="Maven Pro" checksum="(null)">
   </resource>
 
@@ -9310,9 +9244,6 @@
   <resource identifier="Michroma" checksum="(null)">
   </resource>
 
-  <resource identifier="micro.pcf" checksum="(null)">
-  </resource>
-
   <resource identifier="Milonga" checksum="(null)">
   </resource>
 
@@ -9347,30 +9278,6 @@
   </resource>
 
   <resource identifier="Mirza Semi-Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Misc Fixed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Misc Fixed Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Misc Fixed Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Misc Fixed Medium Oblique" checksum="(null)">
-  </resource>
-
-  <resource identifier="Misc Fixed Medium Oblique Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Misc Fixed Medium Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Misc Fixed Wide Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Misc Fixed Wide Medium" checksum="(null)">
   </resource>
 
   <resource identifier="Miss Fajardose" checksum="(null)">
@@ -9739,82 +9646,82 @@
   <resource identifier="Mukta weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli" checksum="(null)">
+  <resource identifier="Mulish" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli" checksum="(null)">
+  <resource identifier="Mulish" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Bold" checksum="(null)">
+  <resource identifier="Mulish Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Bold Italic" checksum="(null)">
+  <resource identifier="Mulish Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Heavy" checksum="(null)">
+  <resource identifier="Mulish Heavy" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Heavy" checksum="(null)">
+  <resource identifier="Mulish Heavy" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Heavy Italic" checksum="(null)">
+  <resource identifier="Mulish Heavy Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Heavy Italic" checksum="(null)">
+  <resource identifier="Mulish Heavy Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Italic" checksum="(null)">
+  <resource identifier="Mulish Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Italic" checksum="(null)">
+  <resource identifier="Mulish Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Light" checksum="(null)">
+  <resource identifier="Mulish Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Light" checksum="(null)">
+  <resource identifier="Mulish Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Light Italic" checksum="(null)">
+  <resource identifier="Mulish Light Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Light Italic" checksum="(null)">
+  <resource identifier="Mulish Light Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Semi-Bold" checksum="(null)">
+  <resource identifier="Mulish Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Semi-Bold" checksum="(null)">
+  <resource identifier="Mulish Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Semi-Bold Italic" checksum="(null)">
+  <resource identifier="Mulish Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Semi-Bold Italic" checksum="(null)">
+  <resource identifier="Mulish Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Ultra-Bold" checksum="(null)">
+  <resource identifier="Mulish Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Ultra-Bold" checksum="(null)">
+  <resource identifier="Mulish Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Ultra-Bold Italic" checksum="(null)">
+  <resource identifier="Mulish Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Ultra-Bold Italic" checksum="(null)">
+  <resource identifier="Mulish Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Ultra-Light" checksum="(null)">
+  <resource identifier="Mulish Ultra-Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli Ultra-Light Italic" checksum="(null)">
+  <resource identifier="Mulish Ultra-Light Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli weight=275" checksum="(null)">
+  <resource identifier="Mulish weight=275" checksum="(null)">
   </resource>
 
-  <resource identifier="Muli weight=275 Italic" checksum="(null)">
+  <resource identifier="Mulish weight=275 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="MuseoModerno" checksum="(null)">
@@ -9871,15 +9778,6 @@
   <resource identifier="MuseoModerno Ultra-Light" checksum="(null)">
   </resource>
 
-  <resource identifier="MUTT ClearlyU Alternate Glyphs Wide" checksum="(null)">
-  </resource>
-
-  <resource identifier="MUTT ClearlyU PUA" checksum="(null)">
-  </resource>
-
-  <resource identifier="MUTT ClearlyU Wide" checksum="(null)">
-  </resource>
-
   <resource identifier="Myanmar Khyay" checksum="(null)">
   </resource>
 
@@ -9920,57 +9818,6 @@
   </resource>
 
   <resource identifier="NATS" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="Neo Euler Medium" checksum="(null)">
   </resource>
 
   <resource identifier="Neucha" checksum="(null)">
@@ -16411,10 +16258,10 @@
   <resource identifier="Nunito Sans Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Nunito Sans weight=275" checksum="(null)">
+  <resource identifier="Nunito Sans Ultra-Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Nunito Sans weight=275 Italic" checksum="(null)">
+  <resource identifier="Nunito Sans Ultra-Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Nunito Semi-Bold" checksum="(null)">
@@ -16849,6 +16696,105 @@
   <resource identifier="Petrona" checksum="(null)">
   </resource>
 
+  <resource identifier="Petrona" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Ultra-Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Petrona Ultra-Light Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Phetsarath" checksum="(null)">
   </resource>
 
@@ -17111,21 +17057,6 @@
   </resource>
 
   <resource identifier="Pragati Narrow Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Pragmata Medium" checksum="(null)">
-  </resource>
-
-  <resource identifier="PragmataPro" checksum="(null)">
-  </resource>
-
-  <resource identifier="PragmataPro Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="PragmataPro Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="PragmataPro Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Prata" checksum="(null)">
@@ -17449,9 +17380,6 @@
   <resource identifier="Quintessential" checksum="(null)">
   </resource>
 
-  <resource identifier="Quivira" checksum="(null)">
-  </resource>
-
   <resource identifier="Qwigley" checksum="(null)">
   </resource>
 
@@ -17485,7 +17413,19 @@
   <resource identifier="Raleway" checksum="(null)">
   </resource>
 
+  <resource identifier="Raleway" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway" checksum="(null)">
+  </resource>
+
   <resource identifier="Raleway Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Bold Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Raleway Bold Italic" checksum="(null)">
@@ -17497,7 +17437,19 @@
   <resource identifier="Raleway Heavy" checksum="(null)">
   </resource>
 
+  <resource identifier="Raleway Heavy" checksum="(null)">
+  </resource>
+
   <resource identifier="Raleway Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Raleway Italic" checksum="(null)">
@@ -17506,7 +17458,16 @@
   <resource identifier="Raleway Light" checksum="(null)">
   </resource>
 
+  <resource identifier="Raleway Light" checksum="(null)">
+  </resource>
+
   <resource identifier="Raleway Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Medium" checksum="(null)">
   </resource>
 
   <resource identifier="Raleway Medium" checksum="(null)">
@@ -17515,10 +17476,28 @@
   <resource identifier="Raleway Medium Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Raleway Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Semi-Bold" checksum="(null)">
+  </resource>
+
   <resource identifier="Raleway Semi-Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Raleway Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Ultra-Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Raleway Ultra-Bold" checksum="(null)">
@@ -17527,16 +17506,19 @@
   <resource identifier="Raleway Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Raleway weight=250" checksum="(null)">
+  <resource identifier="Raleway Ultra-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Raleway weight=250 Italic" checksum="(null)">
+  <resource identifier="Raleway Ultra-Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Raleway weight=275" checksum="(null)">
+  <resource identifier="Raleway Ultra-Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Raleway weight=275 Italic" checksum="(null)">
+  <resource identifier="Raleway Ultra-Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Raleway Ultra-Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Ramabhadra" checksum="(null)">
@@ -17842,6 +17824,15 @@
   <resource identifier="Redressed" checksum="(null)">
   </resource>
 
+  <resource identifier="Red Rose" checksum="(null)">
+  </resource>
+
+  <resource identifier="Red Rose Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Red Rose Light" checksum="(null)">
+  </resource>
+
   <resource identifier="Reem Kufi" checksum="(null)">
   </resource>
 
@@ -17881,43 +17872,19 @@
   <resource identifier="Roboto Condensed, Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Condensed, Bold Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Roboto Condensed, Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto Condensed, Bold Italic Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto Condensed, Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto Condensed, Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Condensed, Italic Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Roboto Condensed, Light" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto Condensed, Light Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto Condensed, Light Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Condensed, Light Italic Condensed" checksum="(null)">
-  </resource>
-
   <resource identifier="Roboto Heavy" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto Heavy" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto Heavy Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto Heavy Italic" checksum="(null)">
@@ -17929,16 +17896,7 @@
   <resource identifier="Roboto Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Light" checksum="(null)">
-  </resource>
-
   <resource identifier="Roboto Light Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto Light Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto Medium" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto Medium" checksum="(null)">
@@ -17947,7 +17905,7 @@
   <resource identifier="Roboto Medium Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Medium Italic" checksum="(null)">
+  <resource identifier="Roboto Mono" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto Mono" checksum="(null)">
@@ -17962,7 +17920,16 @@
   <resource identifier="Roboto Mono Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Roboto Mono Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Roboto Mono Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto Mono Light Italic" checksum="(null)">
@@ -17971,16 +17938,28 @@
   <resource identifier="Roboto Mono Medium" checksum="(null)">
   </resource>
 
+  <resource identifier="Roboto Mono Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Medium Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Roboto Mono Medium Italic" checksum="(null)">
   </resource>
 
   <resource identifier="RobotoMono Nerd Font Mono" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Mono weight=250" checksum="(null)">
+  <resource identifier="Roboto Mono Thin" checksum="(null)">
   </resource>
 
-  <resource identifier="Roboto Mono weight=250 Italic" checksum="(null)">
+  <resource identifier="Roboto Mono Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Thin Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto Slab" checksum="(null)">
@@ -18017,12 +17996,6 @@
   </resource>
 
   <resource identifier="Roboto weight=250" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto weight=250" checksum="(null)">
-  </resource>
-
-  <resource identifier="Roboto weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto weight=250 Italic" checksum="(null)">
@@ -18208,7 +18181,19 @@
   <resource identifier="Rubik" checksum="(null)">
   </resource>
 
+  <resource identifier="Rubik" checksum="(null)">
+  </resource>
+
+  <resource identifier="Rubik" checksum="(null)">
+  </resource>
+
   <resource identifier="Rubik Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Rubik Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Rubik Bold Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Rubik Bold Italic" checksum="(null)">
@@ -18217,7 +18202,16 @@
   <resource identifier="Rubik Heavy" checksum="(null)">
   </resource>
 
+  <resource identifier="Rubik Heavy" checksum="(null)">
+  </resource>
+
   <resource identifier="Rubik Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Rubik Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Rubik Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Rubik Italic" checksum="(null)">
@@ -18229,7 +18223,16 @@
   <resource identifier="Rubik Light Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Rubik Light Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Rubik Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Rubik Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Rubik Medium Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Rubik Medium Italic" checksum="(null)">
@@ -18580,24 +18583,6 @@
   <resource identifier="Schoolbell" checksum="(null)">
   </resource>
 
-  <resource identifier="Schumacher Clean" checksum="(null)">
-  </resource>
-
-  <resource identifier="Schumacher Clean Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Schumacher Clean Medium Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Schumacher Clean Wide" checksum="(null)">
-  </resource>
-
-  <resource identifier="Schumacher Clean Wide Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Schumacher Clean Wide Medium Italic" checksum="(null)">
-  </resource>
-
   <resource identifier="Scope One" checksum="(null)">
   </resource>
 
@@ -18787,7 +18772,16 @@
   <resource identifier="Signika" checksum="(null)">
   </resource>
 
+  <resource identifier="Signika" checksum="(null)">
+  </resource>
+
   <resource identifier="Signika Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika Light" checksum="(null)">
   </resource>
 
   <resource identifier="Signika Light" checksum="(null)">
@@ -18802,7 +18796,46 @@
   <resource identifier="Signika Negative Light" checksum="(null)">
   </resource>
 
+  <resource identifier="Signika Negative SC" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika Negative SC Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika Negative SC Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika Negative SC Semi-Bold" checksum="(null)">
+  </resource>
+
   <resource identifier="Signika Negative Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika SC" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika SC" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika SC Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika SC Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika SC Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika SC Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika SC Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika SC Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Signika Semi-Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Signika Semi-Bold" checksum="(null)">
@@ -18925,7 +18958,43 @@
   <resource identifier="Sonsie One" checksum="(null)">
   </resource>
 
-  <resource identifier="Sony Fixed" checksum="(null)">
+  <resource identifier="Sora" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Sora Ultra-Light" checksum="(null)">
   </resource>
 
   <resource identifier="Sorts Mill Goudy" checksum="(null)">
@@ -19021,16 +19090,34 @@
   <resource identifier="Source Serif Pro Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="Source Serif Pro Bold Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Source Serif Pro Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Serif Pro Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Serif Pro Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Source Serif Pro Light" checksum="(null)">
   </resource>
 
+  <resource identifier="Source Serif Pro Light Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Source Serif Pro Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Serif Pro weight=275" checksum="(null)">
+  <resource identifier="Source Serif Pro Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Serif Pro Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Serif Pro Ultra-Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Space Mono" checksum="(null)">
@@ -19244,171 +19331,6 @@
   </resource>
 
   <resource identifier="Stint Ultra Expanded, Expanded" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Alphabets" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Alphabets Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Alphabets Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Alphabets Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Arrows" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Arrows Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax DoubleStruck" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax DoubleStruck Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax DoubleStruck Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax DoubleStruck Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Fraktur" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Fraktur Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Latin" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Latin Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Latin Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Latin Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Main" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Main Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Main Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Main Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Marks" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Marks Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Marks Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Marks Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Misc" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Misc Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Misc Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Misc Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Monospace" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Normal, Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Normal, Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Normal, Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Operators" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Operators Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax SansSerif" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax SansSerif Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax SansSerif Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax SansSerif Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Script" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Script Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Script Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Shapes" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Shapes Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Shapes Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Size1" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Size2" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Size3" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Size4" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Size5" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Symbols" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Symbols Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Variants" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Variants Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Variants Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="STIX MathJax Variants Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Stoke" checksum="(null)">
@@ -19678,75 +19600,6 @@
   <resource identifier="TeX Gyre Pagella Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Pagella Math" checksum="(null)">
-  </resource>
-
   <resource identifier="TeX Gyre Schola" checksum="(null)">
   </resource>
 
@@ -19769,75 +19622,6 @@
   </resource>
 
   <resource identifier="TeX Gyre Termes Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
-  </resource>
-
-  <resource identifier="TeX Gyre Termes Math" checksum="(null)">
   </resource>
 
   <resource identifier="Text Me One" checksum="(null)">
@@ -20134,25 +19918,13 @@
   <resource identifier="Ubuntu" checksum="(null)">
   </resource>
 
-  <resource identifier="Ubuntu" checksum="(null)">
-  </resource>
-
   <resource identifier="Ubuntu Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Ubuntu Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Ubuntu Bold Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Ubuntu Bold Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Ubuntu Condensed," checksum="(null)">
-  </resource>
-
-  <resource identifier="Ubuntu Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Ubuntu Italic" checksum="(null)">
@@ -20167,25 +19939,10 @@
   <resource identifier="Ubuntu Mono" checksum="(null)">
   </resource>
 
-  <resource identifier="Ubuntu Mono" checksum="(null)">
-  </resource>
-
   <resource identifier="Ubuntu Mono Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Ubuntu Mono Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Ubuntu Mono derivative Powerline" checksum="(null)">
-  </resource>
-
-  <resource identifier="Ubuntu Mono derivative Powerline Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Ubuntu Mono derivative Powerline Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Ubuntu Mono derivative Powerline Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Ubuntu Mono Italic" checksum="(null)">
@@ -20210,9 +19967,6 @@
   </resource>
 
   <resource identifier="Unica One" checksum="(null)">
-  </resource>
-
-  <resource identifier="Unifont Medium" checksum="(null)">
   </resource>
 
   <resource identifier="UnifrakturCook Bold" checksum="(null)">
@@ -20278,10 +20032,22 @@
   <resource identifier="Varta" checksum="(null)">
   </resource>
 
+  <resource identifier="Varta" checksum="(null)">
+  </resource>
+
+  <resource identifier="Varta" checksum="(null)">
+  </resource>
+
+  <resource identifier="Varta Bold" checksum="(null)">
+  </resource>
+
   <resource identifier="Varta Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Varta Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Varta Semi-Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Varta Semi-Bold" checksum="(null)">
@@ -20441,6 +20207,12 @@
   </resource>
 
   <resource identifier="Webdings" checksum="(null)">
+  </resource>
+
+  <resource identifier="WebHostingHub-Glyphs" checksum="(null)">
+  </resource>
+
+  <resource identifier="WebHostingHubGlyphs" checksum="(null)">
   </resource>
 
   <resource identifier="Wellfleet" checksum="(null)">
